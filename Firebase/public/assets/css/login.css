@@ -1,0 +1,19 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.grecaptcha-badge {
+    display: none;
+}

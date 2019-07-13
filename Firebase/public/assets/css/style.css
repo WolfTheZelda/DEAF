@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Material Icons';
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 1500px) {
+    table.responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: block;
+        position: relative;
+    }
+
+    table.responsive-table td:empty:before {
+        content: '\00a0';
+    }
+
+    table.responsive-table th,
+    table.responsive-table td {
+        margin: 0;
+        vertical-align: top;
+    }
+
+    table.responsive-table th {
+        text-align: left;
+    }
+
+    table.responsive-table thead {
+        display: block;
+        float: left;
+    }
+
+    table.responsive-table thead tr {
+        display: block;
+        padding: 0 10px 0 0;
+    }
+
+    table.responsive-table thead tr th::before {
+        content: "\00a0";
+    }
+
+    table.responsive-table tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table.responsive-table tbody tr {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    table.responsive-table th {
+        display: block;
+        text-align: right;
+    }
+
+    table.responsive-table td {
+        display: block;
+        min-height: 1.25em;
+        text-align: left;
+    }
+
+    table.responsive-table tr {
+        border-bottom: none;
+        padding: 0 10px;
+    }
+
+    table.responsive-table thead {
+        border: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+    }
+}
+
+.parallax-background {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+}

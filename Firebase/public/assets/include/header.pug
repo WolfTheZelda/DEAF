@@ -1,0 +1,20 @@
+header
+  nav.blue(role='navigation')
+    .nav-wrapper.container
+      a#logo-container.brand-logo(href='#') DEAF
+      ul.right.hide-on-med-and-down
+        li
+          a(href='/') Início
+        li
+          a(href='/blog') Blog
+        li
+          a(href='/login' class='btn green waves-effect waves-light') Login
+      ul#nav-mobile.sidenav
+        li
+          a(href='/') Início
+        li
+          a(href='/blog') Blog
+        li
+          a(href='/login') Login
+      a.sidenav-trigger(href='#' data-target='nav-mobile')
+        i.material-icons menu

@@ -1,0 +1,43 @@
+doctype html
+html
+  include assets/include/head.pug
+  link(rel='stylesheet' href='/assets/css/login.min.css' media="none" onload="if (media!='all') { media='all' }")
+
+  body(style='background-image: url("https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fbackground.jpg?alt=media&token=f6cd63b6-d5c9-4641-adf6-5911072ae8bf"); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;')
+    // include assets/include/video-background.pug
+
+    #app(style='display: none')
+
+      main
+        section#telefone.row.animated.bounceIn
+          .col.s12.z-depth-4.card-panel
+            form(action='#' onsubmit='LoginTelefone(); return false;')
+              .row
+                .input-field.col.s12.center
+                  img.circle.responsive-img.animated.infinite.heartBeat(src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Ficon.png?alt=media&token=af014c48-c225-4c85-bf09-430ce2fde965')
+                  p.center.login-form-text Acesso Restrito
+              .row.margin
+                .input-field.col.s12
+                  input#telefone-input(type='tel' required='')
+                  label.center-align(for='telefone-input') Telefone
+              .row
+                .input-field.col.s12
+                  button#telefone-button.btn.waves-effect.waves-light.blue.col.s12(type='submit')
+                    | Continuar
+        section#senha.row.animated.bounceIn(style='display: none;')
+          .col.s12.z-depth-4.card-panel
+            form(action='#' onsubmit='LoginSenha(); return false;')
+              .row
+                .input-field.col.s12.center
+                  img.circle.responsive-img.animated.infinite.heartBeat(src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Ficon.png?alt=media&token=af014c48-c225-4c85-bf09-430ce2fde965')
+                  p.center.login-form-text Acesso Restrito
+              .row.margin
+                .input-field.col.s12
+                  input#senha-input(type='password' required='')
+                  label(for='senha-input') Senha
+              .row
+                .input-field.col.s12
+                  button#senha-button.btn.waves-effect.waves-light.blue.col.s12(type='submit')
+                    | Entrar
+                    
+    include assets/include/foot.pug
