@@ -1,1 +1,1 @@
-footer,header,main{padding-left:300px}@media only screen and (max-width :992px){footer,header,main{padding-left:0}}
+footer,header,main{padding-left:300px}header nav{padding-right:300px}@media only screen and (max-width :992px){footer,header,main{padding-left:0}header nav{padding-right:0}}

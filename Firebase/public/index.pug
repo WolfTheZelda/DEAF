@@ -12,10 +12,10 @@ html
             .container
               br
               br
-              h1.header.center.text-lighten-2.white-text.truncate PREPARE-SE!
-              h4.header.center.text-lighten-2.white-text.truncate DEBATE FILOSÓFICO - PORTE DE ARMAS
+              h1.header.center.text-lighten-2.white-text PREPARE-SE!
+              h4.header.center.text-lighten-2.white-text DEBATE FILOSÓFICO - PORTE DE ARMAS
               .row.center
-                h3.my-5
+                h4.my-5
                   strong#contador.white-text &nbsp;
               .row.center
                 a#download-button.btn-large.waves-effect.waves-light.blue.lighten-1(href='#') APP
@@ -117,21 +117,18 @@ html
     include assets/include/foot.pug
 
     script(type='text/javascript').
-      var countDownDate = new Date("Oct 25, 2019 16:00:00").getTime();
-      var x = setInterval(function () {
+      var date = new Date("Oct 25, 2019 16:00:00").getTime();
+      var interval = setInterval(function () {
+        var timer = document.querySelector("#contador");
         var now = new Date().getTime();
-
-        var distance = countDownDate - now;
-
+        var distance = date - now;
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("contador").innerHTML = days + " D : " + hours + " H : " + minutes + " M : " + seconds + " S";
-
+        timer.innerHTML = days + " D : " + hours + " H : " + minutes + " M : " + seconds + " S";
         if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("contador").innerHTML = "COMEÇOU!";
+          clearInterval(interval);
+          timer.innerHTML = "COMEÇOU!";
         }
       }, 1000);
