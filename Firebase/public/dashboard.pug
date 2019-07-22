@@ -2,11 +2,10 @@ doctype html
 html
   include assets/include/head.pug
   meta(name='robots' content='noindex, nofollow')
-  link(rel='stylesheet' href='/assets/css/dashboard.min.css' media="none" onload="if (media!='all') { media='all' }")
+  link(rel='stylesheet' href='/assets/css/dashboard.min.css' media='none' onload=MEDIA_CONDITION)
 
-  body(style='background-image: url("https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fbackground.jpg?alt=media&token=f6cd63b6-d5c9-4641-adf6-5911072ae8bf"); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;')
-    // include assets/include/video-background.pug
-
+  body(style='background-image: url("' + BACKGROUND_IMAGE + '"); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;')
+    
     #app(style='display: none')
 
       header
@@ -14,61 +13,51 @@ html
           nav.blue
             .nav-wrapper
               a.brand-logo.center(href='') DEAF
-              a.sidenav-trigger(href='#' data-target='slide-out')
+              a.sidenav-trigger(href='#' data-target='side-nav')
                 i.material-icons menu
               ul.right
                 li
                   a(onclick='LoginDeslogar();')
                     i.material-icons logout
-        //nav#dashboard-pesquisa.orange
-          .nav-wrapper
-            form
-              .input-field
-                input(type='search' onkeyup='Pesquisa();')
-                label.label-icon(for='search')
-                  i.material-icons search
-                i.material-icons close
-        ul#slide-out.sidenav.sidenav-fixed
+        ul#side-nav.sidenav.sidenav-fixed
           li.section.center.red.white-text
-            img.responsive-img.circle.animated.infinite.heartBeat(src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Ficon.png?alt=media&token=af014c48-c225-4c85-bf09-430ce2fde965' width='100px')
+            img.responsive-img.circle.animated.infinite.heartBeat(src=LOGO_IMAGE width='100px')
             p
               i.material-icons.white-text.animated.jackInTheBox(style='vertical-align: text-bottom;') verified_user 
               | &nbsp; Bem-vindo, {{UserName}}!
             p
               i.material-icons.white-text.animated.jackInTheBox(style='vertical-align: text-bottom;') phone 
               | &nbsp; {{UserNumber}}
+            p
+              i.material-icons.white-text.animated.jackInTheBox(style='vertical-align: text-bottom;') stars 
+              | &nbsp; {{UserNote}}
           li
-            a(href='#' onclick="ChangePage('#menu')")
-              | Menu
+            a(href='#' onclick="ChangePage('#menu')") Menu
               i.material-icons.right.grey-text.animated.swing dashboard
           li
-            a(href='#' onclick="ChangePage('#alunos')")
-              | Alunos
+            a(href='#' onclick="ChangePage('#alunos')") Alunos
               i.material-icons.right.grey-text.animated.swing face
           li
-            a(href='#' onclick="ChangePage('#registros')")
-              | Registros
+            a(href='#' onclick="ChangePage('#registros')") Registros
               i.material-icons.right.grey-text.animated.swing new_releases
           li
-            a(href='#' onclick="ChangePage('#postagens')")
-              | Postagens
+            a(href='#' onclick="ChangePage('#postagens')") Postagens
               i.material-icons.right.grey-text.animated.swing description
           li
-            a(href='#' onclick="ChangePage('#administradores')")
-              | Administradores
+            a(href='#' onclick="ChangePage('#administradores')") Administradores
               i.material-icons.right.grey-text.animated.swing mood
 
       main.container(style='min-height: 100vh;')
 
-        // Menu
+        // Menu 
         section#menu.animated.bounceIn
           .col.s12.m7
             .card.video-container
               iframe#menu-video(type='text/html' width='640' height='360' allow='autoplay' frameborder='0' :src='VideoRandom')
           .col.s12.m7
-            h2.header.white-text Aviso
+            h3.header.white-text.truncate(style='height: 64px;') Aviso
             .card.horizontal
-              img.responsive-img(src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fnyancat.gif?alt=media&token=69a3f560-6229-4c56-a236-56c4ed6af2e0')
+              img.responsive-img(src='/assets/image/nyancat.gif')
               .card-stacked
                 .card-content
                   p Olá, eu sou um cartão muito simples e também sou bom em conter pequenos bits de informação.
@@ -79,10 +68,10 @@ html
                 .card-action
                   a(href='') Acessar
 
-        // Alunos
+        // Alunos 
         section#alunos.animated.bounceIn(style='display: none;')
-          h2.header.white-text Alunos 
-            a.btn-floating.btn-large.red.right.waves-effect.waves-light.pulse(onclick="ChangePage(AlunoPagina); ModificarKey('#aluno', null);  ModificarSource(`#aluno-foto-imagem`, GalleryImage);")
+          h3.header.white-text.truncate Alunos
+            a.btn-floating.btn-large.red.right.waves-effect.waves-light(onclick="ChangePage(AlunoPagina); ModificarKey('#aluno', null);  ModificarSource('#aluno-foto-imagem', GalleryImage);")
               i.large.material-icons add
           .card
             table.dt-responsive.striped.centered(style='width: 100%;')
@@ -98,14 +87,14 @@ html
                   th Ação
               tbody#alunos-lista
 
-        // Aluno
+        // Aluno 
         section#aluno.animated.bounceIn(style='display: none;')
-          h2.header.white-text Aluno
+          h3.header.white-text.truncate(style='height: 64px;') Aluno
           .card
             .row
-              form.col.s12(action='' onsubmit='EditarAluno(); ModificarKey(`#aluno`, null); ModificarSource(`#aluno-foto-imagem`, GalleryImage); return false;')
+              form.col.s12(action='' onsubmit='EditarAluno(); ModificarKey("#aluno", null); ModificarSource("#aluno-foto-imagem", GalleryImage); return false;')
                 .row.section.center
-                  img#aluno-foto-imagem.circle(style='object-fit: cover;' src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fgallery.gif?alt=media&token=4ef3908a-d68c-4702-8cc0-8b1add9170a9' width='256px' height='256px')
+                  img#aluno-foto-imagem.circle(style='object-fit: cover;' src=GALLERY_IMAGE width='256px' height='256px')
                 .row.center
                   label.btn.green(for='aluno-foto-arquivo') Escolher Foto
                   input#aluno-foto-arquivo(style='display: none;' type='file' accept='.png, .jpg, .jpeg, .jfif' onchange="EnviarArquivo('aluno-foto-arquivo', 'aluno-foto-imagem', '/alunos/')")
@@ -113,7 +102,7 @@ html
                   .input-field.col.s4
                     input#aluno-nome.validate(placeholder='Nome' type='text' required='' onchange='this.value = NomeMask(this.value)')
                   .input-field.col.s4
-                    input#aluno-nota.validate(placeholder='Nota' type='number' min='0' max='10' required='')
+                    input#aluno-nota.validate(placeholder='Nota' type='number' min='0' max='10' required='' value='10')
                   .input-field.col.s4
                     input#aluno-telefone.validate(placeholder='Telefone' type='tel' required='')
                 .row
@@ -126,16 +115,16 @@ html
                       option(value='3° Ano') 3° Ano
                   .input-field.col.s4.m4
                     select#aluno-colegio.browser-default(required='')
-                      option(value='' disabled='' selected='') Col&eacute;gio
-                      option(value="Joana D'Arc") Joana D&apos;Arc
+                      option(value='' disabled='' selected='') Colégio
+                      option(value="Joana D'Arc") Joana D'Arc
                       option(value='Jorge Amado') Jorge Amado
                   .input-field.col.s4.m4
                     select#aluno-grupo.browser-default(required='')
                       option(value='' disabled='' selected='') Grupo
                       option(value='Tempo') Tempo
-                      option(value='Fomento') Fomento         
-                      option(value='Finanças') Finanças  
-                      option(value='Arrumação') Arrumação             
+                      option(value='Fomento') Fomento   
+                      option(value='Finanças') Finanças
+                      option(value='Arrumação') Arrumação
                       option(value='Alimentação') Alimentação
                       option(value='Produção Técnica') Produção Técnica
                       option(value='Apoio Pedagógico') Apoio Pedagógico
@@ -143,9 +132,9 @@ html
                   .col.s12
                     button.waves-effect.waves-light.btn-large.blue(type='submit') Salvar
 
-        // Registros
+        // Registros 
         section#registros.animated.bounceIn(style='display: none;')
-          h2.header.white-text Registros
+          h3.header.white-text.truncate(style='height: 64px;') Registros
           .card
             table.dt-responsive.striped.centered(style='width: 100%;')
               thead.white
@@ -154,10 +143,10 @@ html
                   th Data
               tbody#registros-lista
 
-        // Postagens
+        // Postagens 
         section#postagens.animated.bounceIn(style='display: none;')
-          h2.header.white-text Postagens
-            a.btn-floating.btn-large.red.right.waves-effect.waves-light.pulse(onclick="ChangePage('#postagem'); ModificarKey(`#postagem`, null); ModificarSource(`#postagem-foto-imagem`, GalleryImage);")
+          h3.header.white-text.truncate(style='height: 64px;') Postagens
+            a.btn-floating.btn-large.red.right.waves-effect.waves-light(onclick="ChangePage('#postagem'); ModificarKey('#postagem', null); ModificarSource('#postagem-foto-imagem', GalleryImage);")
               i.large.material-icons add
           .card
             table.dt-responsive.striped.centered(style='width: 100%;')
@@ -169,14 +158,14 @@ html
                   th Ação
               tbody#postagens-lista
 
-        // Postagem
+        // Postagem 
         section#postagem.animated.bounceIn(style='display: none;')
-          h2.header.white-text Postagem
+          h3.header.white-text.truncate(style='height: 64px;') Postagem
           .card
             .row
-              form.col.s12(action='' onsubmit='EditarAluno(); ModificarKey(`#postagem`, null); ModificarSource(`#postagem-foto-imagem`, GalleryImage); return false;')
+              form.col.s12(action='' onsubmit='EditarAluno(); ModificarKey("#postagem", null); ModificarSource("#postagem-foto-imagem", GalleryImage); return false;')
                 .row.section.center
-                  img#postagem-foto-imagem(style='object-fit: cover;' src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fgallery.gif?alt=media&token=4ef3908a-d68c-4702-8cc0-8b1add9170a9' width='256px' height='256px')
+                  img#postagem-foto-imagem(style='object-fit: cover;' src=GALLERY_IMAGE width='256px' height='256px')
                 .row.center
                   label.btn.green(for='aluno-foto-arquivo') Escolher Foto
                   input#postagem-foto-arquivo(style='display: none;' type='file' accept='.png, .jpg, .jpeg, .jfif' onchange="EnviarArquivo('postagem-foto-arquivo', 'postagem-foto-imagem', '/alunos/')")
@@ -189,10 +178,10 @@ html
                   .col.s12
                     button.waves-effect.waves-light.btn-large.blue(type='submit') Salvar
 
-        // Administradores
+        // Administradores 
         section#administradores.animated.bounceIn(style='display: none;')
-          h2.header.white-text Administradores
-            a.btn-floating.btn-large.red.right.waves-effect.waves-light.pulse(onclick="ChangePage('#administrador'); ModificarKey('#administrador', null); ModificarSource('#administrador-foto-imagem', GalleryImage); ResetarForm('#administrador form');")
+          h3.header.white-text.truncate(style='height: 64px;') Administradores
+            a.btn-floating.btn-large.red.right.waves-effect.waves-light(onclick="ChangePage('#administrador'); ModificarKey('#administrador', null); ModificarSource('#administrador-foto-imagem', GalleryImage); ResetarForm('#administrador form');")
               i.large.material-icons add
           .card
               table.dt-responsive.striped.centered(style='width: 100%;')
@@ -208,14 +197,14 @@ html
                     th Ação
                 tbody#administradores-lista
 
-        // Administrador
+        // Administrador 
         section#administrador.animated.bounceIn(style='display: none;')
-          h2.header.white-text Administrador
+          h3.header.white-text.truncate(style='height: 64px;') Administrador
           .card
             .row
-              form.col.s12(action='' onsubmit='EditarAdministrador(); ModificarKey(`#administrador`, null); ModificarSource(`#administrador-foto-imagem`, GalleryImage); return false;')
+              form.col.s12(action='' onsubmit='EditarAdministrador(); ModificarKey("#administrador", null); ModificarSource("#administrador-foto-imagem", GalleryImage); return false;')
                 .row.section.center
-                  img#administrador-foto-imagem.circle(style='object-fit: cover;' src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fgallery.gif?alt=media&token=4ef3908a-d68c-4702-8cc0-8b1add9170a9' width='256px' height='256px')
+                  img#administrador-foto-imagem.circle(style='object-fit: cover;' src=GALLERY_IMAGE width='256px' height='256px')
                 .row.center
                   label.btn.green(for='administrador-foto-arquivo') Escolher Foto
                   input#administrador-foto-arquivo(style='display: none;' type='file' accept='.png, .jpg, .jpeg, .jfif' onchange="EnviarArquivo('administrador-foto-arquivo', 'administrador-foto-imagem', '/administradores/');")
@@ -223,7 +212,7 @@ html
                   .input-field.col.s4
                     input#administrador-nome.validate(placeholder='Nome' type='text' required='' onchange='this.value = NomeMask(this.value)')
                   .input-field.col.s4
-                    input#administrador-nota.validate(placeholder='Nota' type='number' min='0' max='10' required='')
+                    input#administrador-nota.validate(placeholder='Nota' type='number' min='0' max='10' required='' value='10')
                   .input-field.col.s4
                     input#administrador-telefone.validate(placeholder='Telefone' type='tel' required='')
                 .row
@@ -242,7 +231,7 @@ html
                       option(value='Jorge Amado') Jorge Amado
                       option(value='Irrelevante') Irrelevante
                   .input-field.col.s4.m4
-                    select#administrador-grupo.browser-default(onclick='ResetarSelect(`#administrador-grupo`, 3, `Desenvolvedor`)' onchange='MudarInput(`#administrador-grupo`, `Orientador`, `Irrelevante`, [`#administrador-nota`, `#administrador-ano`, `#administrador-colegio`]);' required='')
+                    select#administrador-grupo.browser-default(onclick='ResetarSelect("#administrador-grupo", 3, "Desenvolvedor")' onchange='MudarInput("#administrador-grupo", "Orientador", "Irrelevante", ["#administrador-nota", "#administrador-ano", "#administrador-colegio"]);' required='')
                       option(value='' disabled='' selected='') Grupo
                       option(value='Líder') Líder
                       option(value='Orientador') Orientador

@@ -10,7 +10,7 @@ const admin = require("firebase-admin");
 
 admin.initializeApp();
 
-exports.DeleteUser = functions.https.onRequest((request, response) => {
+exports.CheckUser = functions.https.onRequest((request, response) => {
     const user = request.query.id;
     const phone = "+" + request.query.phone.trim();
 
@@ -96,7 +96,7 @@ exports.OneSignal = functions.https.onRequest((request, response) => {
             // SendNotification(message);
             response.send(snap.val().registro);
         } else {
-            response.send(204);
+            response.send("Nenhum novo registro foi encontrado");
         }
     }
 

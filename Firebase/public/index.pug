@@ -1,3 +1,5 @@
+- var INDEX_VIDEO = "https://www.youtube.com/embed/1A_CAkYt3GY?&fs=0&rel=0&showinfo=0&showsearch=0&controls=0&modestbranding=0&autohide=1&autoplay=1&loop=1&disablekb=1&cc_load_policy=1&iv_load_policy=3&cc_lang_pref=pt";
+
 doctype html
 html
   include assets/include/head.pug
@@ -22,27 +24,27 @@ html
               br
               br
           .parallax
-            img(class="lazy" data-src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fweapon-1.jpg?alt=media&token=ef6195dd-3b66-40d9-a8fa-2234f6d915d5')
+            img(class='lazy' data-src='/assets/image/weapon-1.jpg')
 
         section.container
           .section.center
             h2.row.header O QUE É FILOSOFIA?
             br
             .row.video-container
-              iframe(type='text/html' allow='autoplay' frameborder='0' allowfullscreen='1' data-src='https://www.youtube.com/embed/1A_CAkYt3GY?&fs=0&rel=0&showinfo=0&showsearch=0&controls=0&modestbranding=0&autohide=1&autoplay=1&loop=1&disablekb=1&cc_load_policy=1&iv_load_policy=3&cc_lang_pref=pt')
+              iframe(type='text/html' allow='autoplay' frameborder='0' allowfullscreen='1' data-src=INDEX_VIDEO)
 
         section.parallax-container.z-depth-5.parallax-background 
           .section.no-pad-bot
             .container
               .row.center
-                h1.header.col.s12.light.white-text.truncate O PORTE
+                h2.header.col.s12.light.white-text O PORTE
           .parallax
-            img(class="lazy" data-src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fweapon-2.jpg?alt=media&token=4bdc76db-4e70-4e92-979f-aa6df7bcbd40')
+            img(class='lazy' data-src='/assets/image/weapon-2.jpg')
 
         section.container
           .section
             .row
-              h4.center O QUE ESTÁ EM PAUTA?
+              h3.center O QUE ESTÁ EM PAUTA?
               .col.s12.m3
                 .icon-block
                   h2.center.yellow-text
@@ -76,15 +78,15 @@ html
           .section.no-pad-bot
             .container
               .row.center
-                h1.header.col.s12.light.white-text.truncate O TRÁFICO
+                h2.header.col.s12.light.white-text O TRÁFICO
           .parallax
-            img(class="lazy" data-src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fweapon-3.jpg?alt=media&token=f0b00237-fb1a-4077-99e0-2677def434f1')
+            img(class='lazy' data-src='/assets/image/weapon-3.jpg')
 
         section.container
           .section
             .row
               .col.s12.center
-                h4 NÃO ESTÁ CONVENCIDO?
+                h3 NÃO ESTÁ CONVENCIDO?
                 p.center-align.light
                   | TEXTO
 
@@ -92,15 +94,15 @@ html
           .section.no-pad-bot
             .container
               .row.center
-                h1.header.col.s12.light.white-text.truncate A JUSTIÇA
+                h2.header.col.s12.light.white-text A JUSTIÇA
           .parallax
-            img(class="lazy" data-src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fweapon-4.jpg?alt=media&token=2b2723e6-b2b1-4756-ba2a-8d0d8a2d6225')
+            img(class='lazy' data-src='/assets/image/weapon-4.jpg')
 
         section.container
           .section
             .row
               .col.s12.center
-                h4 FICOU INTERESSADO?
+                h3 FICOU INTERESSADO?
                 p.center-align.light 
                   | TEXTO
 
@@ -108,27 +110,13 @@ html
           .section.no-pad-bot
             .container
               .row.center
-                h1.header.col.s12.light.white-text.truncate O PRESIDENTE
+                h2.header.col.s12.light.white-text O PRESIDENTE
           .parallax
-            img(class="lazy" data-src='https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fweapon-5.jpg?alt=media&token=6589c87d-65d8-4761-aebb-f066253da90e')
+            img(class='lazy' data-src='/assets/image/weapon-5.jpg')
 
       include assets/include/footer.pug
 
     include assets/include/foot.pug
 
     script(type='text/javascript').
-      var date = new Date("Oct 25, 2019 16:00:00").getTime();
-      var interval = setInterval(function () {
-        var timer = document.querySelector("#contador");
-        var now = new Date().getTime();
-        var distance = date - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        timer.innerHTML = days + " D : " + hours + " H : " + minutes + " M : " + seconds + " S";
-        if (distance < 0) {
-          clearInterval(interval);
-          timer.innerHTML = "COMEÇOU!";
-        }
-      }, 1000);
+      var date = new Date("Oct 25, 2019 17:00:00").getTime(); var interval = setInterval(function () { var timer = document.querySelector("#contador"); var now = new Date().getTime(); var distance = date - now; var days = Math.floor(distance / (1000 * 60 * 60 * 24)); var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); var seconds = Math.floor((distance % (1000 * 60)) / 1000); timer.innerHTML = days + " D : " + hours + " H : " + minutes + " M : " + seconds + " S"; if (distance < 0) { clearInterval(interval); timer.innerHTML = "COMEÇOU!"; } }, 1000);

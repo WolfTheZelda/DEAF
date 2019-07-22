@@ -21,11 +21,11 @@
     ],
     "rewrites": [
       {
-        "source": "/DeleteUser",
-        "function": "DeleteUser"
+        "source": "/api/checkuser",
+        "function": "CheckUser"
       },
       {
-        "source": "/OneSignal",
+        "source": "/api/onesignal",
         "function": "OneSignal"
       }
     ],

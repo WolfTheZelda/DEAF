@@ -7,8 +7,9 @@ var Vue = new Vue({
     HasLogin: false,
     HasWrite: false,
     UserId: "",
-    UserName: "",
-    UserNumber: "",
+    UserName: "Usuário",
+    UserNumber: "Telefone",
+    UserNote: "∞",
     VideoRandom: "https://www.youtube.com/embed?listType=playlist&list=PLwxNMb28XmpeypJMHfNbJ4RAFkRtmAN3P&fs=0&rel=0&showinfo=0&showsearch=0&controls=0&modestbranding=0&autohide=1&autoplay=1&loop=1&disablekb=1&cc_load_policy=1&iv_load_policy=3&cc_lang_pref=pt&index=" + Math.floor((Math.random() * 34))
   }
 });
@@ -19,18 +20,6 @@ M.AutoInit();
 // Materialize - End
 
 // Firebase - Start
-const Config = {
-  apiKey: "AIzaSyDBL2ucLKsMKjX9JKpKYYWItbMiMlNHc8U",
-  authDomain: "debartefilosofico.firebaseapp.com",
-  databaseURL: "https://debartefilosofico.firebaseio.com",
-  projectId: "debartefilosofico",
-  storageBucket: "debartefilosofico.appspot.com",
-  messagingSenderId: "141885700923",
-  appId: "1:141885700923:web:0557433267ad361f"
-};
-
-firebase.initializeApp(Config);
-
 LoginChecar();
 
 const Storage = firebase.storage().ref();
@@ -52,15 +41,16 @@ const RegistrosLista = document.getElementById("registros-lista");
 const PostagensDados = Database.child("postagens");
 const PostagensLista = document.getElementById("postagens-lista");
 
-const GalleryImage = "https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Fgallery.gif?alt=media&token=4ef3908a-d68c-4702-8cc0-8b1add9170a9",
-  LoadingImage = "https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Floading.gif?alt=media&token=d420aa17-dba9-4487-86bd-ad4a9a73b37e";
+const GalleryImage = "/assets/image/gallery.gif",
+  LoadingImage = "/assets/image/loading.gif";
 
 function EnviarArquivo(Input, Img, Path) {
   Img = document.getElementById(Img);
 
   var OldLink = Img.src;
+  OldLink = OldLink.substring(OldLink.indexOf("/assets"), OldLink.lastIndexOf(""));
 
-  Img.src = "https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Floading.gif?alt=media&token=d420aa17-dba9-4487-86bd-ad4a9a73b37e";
+  Img.src = LoadingImage;
 
   var Arquivo = document.getElementById(Input).files[0];
   var Nome = Database.child(Path).push().key;
@@ -76,9 +66,9 @@ function EnviarArquivo(Input, Img, Path) {
     .then((URL) => {
       Img.src = URL;
 
-      var DeletePath = firebase.storage().refFromURL(OldLink);
-
       if (OldLink != GalleryImage && OldLink != LoadingImage) {
+        var DeletePath = firebase.storage().refFromURL(OldLink);
+
         DeletePath.delete().then(function () {
           // Deletado com sucesso
         }).catch(function (Error) {
@@ -317,7 +307,7 @@ function EditarAluno() {
   let Telefone = "+" + document.getElementById("aluno-telefone").value.replace(/[^0-9]/g, '');
   let Foto = document.getElementById("aluno-foto-imagem");
 
-  if (Foto.src != "https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Floading.gif?alt=media&token=d420aa17-dba9-4487-86bd-ad4a9a73b37e") {
+  if (Foto.src != LoadingImage) {
     var AlunoDados;
 
     var Dados = {
@@ -528,7 +518,7 @@ function EditarAdministrador() {
   let Telefone = "+" + document.getElementById("administrador-telefone").value.replace(/[^0-9]/g, '');
   let Foto = document.getElementById("administrador-foto-imagem");
 
-  if (Foto.src != "https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Floading.gif?alt=media&token=d420aa17-dba9-4487-86bd-ad4a9a73b37e") {
+  if (Foto.src != LoadingImage) {
     var AlunoDados;
 
     var Dados = {
@@ -638,34 +628,6 @@ function ChangePage(To) {
   CreateTable();
 };
 
-function Pesquisa() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("dashboard-pesquisa").getElementsByTagName("input")[0];
-  filter = input.value.toUpperCase();
-  table = document.getElementsByTagName("table");
-
-  for (var i = 0; i < table.length; i++) {
-    if (table[i].closest("section").style.display != "none" && table[i].closest("section").style.visibility != "hidden") {
-      table = table[i];
-    }
-  }
-
-  tr = table.getElementsByTagName("tr");
-
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-
 function Registrar(Registro) {
   if (Vue.HasWrite) {
     Database.child("/registros/").push().set({
@@ -765,6 +727,7 @@ function LoginRedirecionar() {
       TabelaRegistros();
       TabelaAdministradores();
       SetAdminPage();
+      SetEditor();
     } else {
       window.location.href = "/login";
     }
@@ -779,11 +742,13 @@ function LoginChecar() {
         if (Snap.exists()) {
           Vue.HasWrite = true;
           Vue.UserName = Snap.val().nome;
+          Vue.UserNote = Snap.val().nota;
         } else {
           Database.child("alunos").child(User.phoneNumber).on("value", function (SnapStudent) {
             if (SnapStudent.exists()) {
               Vue.HasWrite = false;
               Vue.UserName = SnapStudent.val().nome;
+              Vue.UserNote = SnapStudent.val().nota;
             } else {
               Notificacao("Tentativa de acesso não autorizada foi detectada");
               LoginDeslogar();
@@ -794,7 +759,7 @@ function LoginChecar() {
       Vue.UserId = User.uid;
       Vue.UserNumber = User.phoneNumber;
 
-      var URL = "https://debartefilosofico.web.app/DeleteUser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber;
+      var URL = "https://acaofilosofica.web.app/api/checkuser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber;
 
       var XHTTP = new XMLHttpRequest();
       XHTTP.open("GET", URL, false);
@@ -881,7 +846,7 @@ window.notify = {
       notify.list[id] = new Notification("DEAF", {
         body: Body,
         tag: id,
-        icon: "https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Ficon.png?alt=media&token=af014c48-c225-4c85-bf09-430ce2fde965",
+        icon: "/assets/image/icon.png",
         lang: "",
         dir: "auto",
       });
@@ -1036,13 +1001,15 @@ function SetTableEvents() {
   $("#alunos-lista").bind("click", ".aluno-mostrar-button", DeletarAdministrador);
 }
 
-var editor = new Quill('#editor', {
-  theme: 'snow'
-});
+function SetEditor() {
+  var editor = new Quill('#editor', {
+    theme: 'snow'
+  });
 
-editor.on('text-change', function () {
-  editor.root.innerHTML;
-});
+  editor.on('text-change', function () {
+    editor.root.innerHTML;
+  });
+}
 
 function ListarPostagem(Snap) {
   let Dados = Snap.val();
@@ -1109,7 +1076,7 @@ function EditarPostagem() {
   let Telefone = "+" + document.getElementById("administrador-telefone").value.replace(/[^0-9]/g, '');
   let Foto = document.getElementById("administrador-foto-imagem");
 
-  if (Foto.src != "https://firebasestorage.googleapis.com/v0/b/debartefilosofico.appspot.com/o/assets%2Fimage%2Floading.gif?alt=media&token=d420aa17-dba9-4487-86bd-ad4a9a73b37e") {
+  if (Foto.src != LoadingImage) {
     var AlunoDados;
 
     var Dados = {

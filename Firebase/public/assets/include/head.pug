@@ -4,30 +4,43 @@ head
   meta(charset='utf-8')
 
   meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(http-equiv='X-UA-Compatible' content ='IE=Edge')
 
   meta(name='description' content='Debate Filosófico em Ilhéus acerca do tema Porte de Armas, aproveite essa oportunidade para diologar sobre o futuro do Brasil.')
-  meta(name='og:title' property='og:title' content='DEAF')
-  meta(name='twitter:card' content='DEAF')
+  meta(name='og:title' property='og:title' content='DEAF - Ação Filosófica')
+  meta(name='twitter:card' content='DEAF - Ação Filosófica')
+
+  meta(name='google-site-verification' content='RIr8qDEHdt0kkwHhIVoueeFz2zqwrW79xi7PajP3bWo')
   
   link(rel='shortcut icon' type='image/x-icon' href='/assets/image/icon.ico')
-  link(rel='canonical' href='https://debartefilosofico.web.app/')
+  link(rel='canonical' href='https://acaofilosofica.web.app/')
 
-  title DEAF
+  title DEAF - Ação Filosófica
 
-  - var MEDIA_CONDITION = 'if (media!="all") { media="all" }';
+  - var MEDIA_CONDITION = "if (media!='all') { media='all' }";
   
-  // MATERIALIZE
+  // Materialize 
   link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/materialize-css/dist/css/materialize.min.css')
+  // Materialize - End 
 
-  // QUILL
-  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/quill/dist/quill.snow.css' media='none' onload='if (media!="all") { media="all" }')
+  // Quill 
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/quill/dist/quill.snow.css' media='none' onload=MEDIA_CONDITION)
+  // Quill - End 
 
-  // ANIMATECSS
-  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/animate.css/animate.min.css' media='none' onload='if (media!="all") { media="all" }')
+  // AnimateCSS 
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/animate.css/animate.min.css' media='none' onload=MEDIA_CONDITION)
+  // AnimateCSS - End 
 
-  // DATATABLES
-  link(rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' media='none' onload='if (media!="all") { media="all" }')
-  link(rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css' media='none' onload='if (media!="all") { media="all" }')
-  
-  // STYLE
-  link(rel='stylesheet' href='/assets/css/style.min.css' media='none' onload='if (media!="all") { media="all" }')
+  // DataTables 
+  link(rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' media='none' onload=MEDIA_CONDITION)
+  link(rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css' media='none' onload=MEDIA_CONDITION)
+  // DataTables - End 
+
+  // Style 
+  link(rel='stylesheet' href='/assets/css/style.min.css' media='none' onload=MEDIA_CONDITION)
+  // Style - End 
+
+  - var BACKGROUND_IMAGE = "/assets/image/background.jpg";
+  - var GALLERY_IMAGE = "/assets/image/gallery.gif";
+  - var LOADING_IMAGE = "/assets/image/loading.gif";
+  - var LOGO_IMAGE = "/assets/image/icon.png";

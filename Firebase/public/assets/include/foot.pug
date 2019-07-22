@@ -1,37 +1,43 @@
-// VUE 
+// VueJS 
 script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' defer)
+// VueJS - End 
 
-// JQUERY 
+// JQuery 
 script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js' defer)
 script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/jquery-lazy/jquery.lazy.min.js' defer)
 script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/jquery-mask-plugin/dist/jquery.mask.min.js' defer)
+// JQuery - End 
 
-// MATERIALIZE 
+// Materialize 
 script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/materialize-css/dist/js/materialize.min.js' defer)
+// Materialize - End 
 
-// DATATABLES 
+// DataTables 
 script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/datatables.net/js/jquery.dataTables.min.js' defer)
 script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/datatables.net-responsive/js/dataTables.responsive.min.js' defer)
+// DataTables - End 
 
-// QUILL 
+// Quill 
 script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/quill/dist/quill.min.js' defer)
+// Quill - End 
 
-// FIREBASE 
-- var FIREBASE_VERSION = "6.3.0";
-script(type='text/javascript' src='/__/firebase/6.3.0/firebase-app.js' defer)
-script(type='text/javascript' src='/__/firebase/6.3.0/firebase-auth.js' defer)
-script(type='text/javascript' src='/__/firebase/6.3.0/firebase-storage.js' defer)
-script(type='text/javascript' src='/__/firebase/6.3.0/firebase-database.js' defer)
+// Firebase 
+- var FIREBASE_VERSION = "6.3.1";
 
-// ONESIGNAL 
+script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-app.js' defer)
+script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-auth.js' defer)
+script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-storage.js' defer)
+script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-database.js' defer)
+
+script(type='text/javascript' src='/__/firebase/init.js' defer)
+// Firebase - End 
+
+// OneSignal 
 link(rel='manifest' href='/manifest.json')
-script(type='text/javascript' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' async='').
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: '71f7bd3c-15da-4a04-a0fd-2dadf8cdfc8b'
-    });
-  });
+script(type='text/javascript' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' async).
+  var OneSignal = window.OneSignal || []; OneSignal.push(function() { OneSignal.init({ appId: '71f7bd3c-15da-4a04-a0fd-2dadf8cdfc8b' }); });
+// OneSignal - End 
 
-// SCRIPT 
+// Script 
 script(type='text/javascript' src='/assets/js/script.min.js' defer)
+// Script - End 
