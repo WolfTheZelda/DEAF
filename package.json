@@ -1,0 +1,24 @@
+{
+  "name": "deaf",
+  "version": "1.0.0",
+  "description": "DEAF",
+  "main": "index.js",
+  "scripts": {
+    "pug": "pug Firebase/public/index.pug && pug Firebase/public/login.pug && pug Firebase/public/dashboard.pug",
+    "firebase": "cd Firebase && firebase deploy && cd ..",
+    "git": "git add * && git commit -m \"Novo commit\" && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WolfTheZelda/DEAF.git"
+  },
+  "keywords": [
+    "deaf"
+  ],
+  "author": "TecWolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WolfTheZelda/DEAF/issues"
+  },
+  "homepage": "https://github.com/WolfTheZelda/DEAF#readme"
+}

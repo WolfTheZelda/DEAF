@@ -15,6 +15,10 @@ var Vue = new Vue({
 });
 // Vue - End
 
+// Materialize - Start
+M.AutoInit();
+// Materialize - End
+
 // Firebase - Start
 LoginChecar();
 
