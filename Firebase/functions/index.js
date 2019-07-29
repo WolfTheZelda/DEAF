@@ -49,7 +49,7 @@ exports.CheckUser = functions.https.onRequest((request, response) => {
 });
 
 exports.OneSignal = functions.https.onRequest((request, response) => {
-    const MS = 900000; // 1.5 Minutos
+    const MS = 90000; // 1.5 Minutos
 
     var SendNotification = function (data) {
         var headers = {
@@ -93,10 +93,12 @@ exports.OneSignal = functions.https.onRequest((request, response) => {
         };
         
         if (time <= MS) {
+            // Enviar notificação pelo OneSignal
             // SendNotification(message);
+
             response.send(snap.val().registro);
         } else {
-            response.send("Nenhum novo registro foi encontrado");
+            response.send("Nenhum registro foi encontrado");
         }
     }
 

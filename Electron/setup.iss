@@ -22,9 +22,9 @@ DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
-OutputDir=C:\Users\WolfTheZelda\Desktop\DEAF Electron\
+OutputDir=C:\Users\WolfTheZelda\Desktop\DEAF\Electron\
 OutputBaseFilename=DEAF
-SetupIconFile=C:\Users\WolfTheZelda\Desktop\DEAF Electron\icon.ico
+SetupIconFile=C:\Users\WolfTheZelda\Desktop\DEAF\Electron\icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -36,69 +36,69 @@ Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortugue
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\DEAF.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-console-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-datetime-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-debug-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-errorhandling-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-file-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-file-l1-2-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-file-l2-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-handle-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-heap-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-interlocked-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-libraryloader-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-localization-l1-2-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-memory-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-namedpipe-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-processenvironment-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-processthreads-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-processthreads-l1-1-1.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-profile-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-rtlsupport-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-string-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-synch-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-synch-l1-2-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-sysinfo-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-timezone-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-core-util-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-conio-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-convert-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-environment-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-filesystem-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-heap-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-locale-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-math-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-multibyte-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-private-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-process-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-runtime-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-stdio-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-string-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-time-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\api-ms-win-crt-utility-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\blink_image_resources_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\content_resources_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\content_shell.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\d3dcompiler_47.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\DEAF.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\ffmpeg.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\icudtl.dat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\LICENSES.chromium.html"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\msvcp140.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\natives_blob.bin"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\node.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\ucrtbase.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\ui_resources_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\v8_context_snapshot.bin"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\vcruntime140.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\version"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\views_resources_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\locales\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\WolfTheZelda\Desktop\DEAF Electron\deaf-win32-x64\resources\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\DEAF.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-console-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-datetime-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-debug-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-errorhandling-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-file-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-file-l1-2-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-file-l2-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-handle-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-heap-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-interlocked-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-libraryloader-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-localization-l1-2-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-memory-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-namedpipe-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-processenvironment-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-processthreads-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-processthreads-l1-1-1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-profile-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-rtlsupport-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-string-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-synch-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-synch-l1-2-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-sysinfo-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-timezone-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-core-util-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-conio-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-convert-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-environment-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-filesystem-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-heap-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-locale-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-math-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-multibyte-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-private-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-process-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-runtime-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-stdio-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-string-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-time-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\api-ms-win-crt-utility-l1-1-0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\blink_image_resources_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\content_resources_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\content_shell.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\d3dcompiler_47.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\DEAF.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\ffmpeg.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\icudtl.dat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\LICENSES.chromium.html"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\msvcp140.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\natives_blob.bin"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\node.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\ucrtbase.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\ui_resources_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\v8_context_snapshot.bin"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\vcruntime140.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\version"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\views_resources_200_percent.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\locales\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\WolfTheZelda\Desktop\DEAF\Electron\deaf-win32-x64\resources\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

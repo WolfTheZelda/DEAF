@@ -41,7 +41,7 @@ html
             a(href='#' onclick="ChangePage('#registros')") Registros
               i.material-icons.right.grey-text.animated.swing new_releases
           li
-            a(href='#' onclick="ChangePage('#postagens')") Postagens
+            a(href='#' onclick="ChangePage('#manutencao')") Postagens
               i.material-icons.right.grey-text.animated.swing description
           li
             a(href='#' onclick="ChangePage('#administradores')") Administradores
@@ -102,7 +102,7 @@ html
                   .input-field.col.s4
                     input#aluno-nome.validate(placeholder='Nome' type='text' required='' onchange='this.value = NomeMask(this.value)')
                   .input-field.col.s4
-                    input#aluno-nota.validate(placeholder='Nota' type='number' min='0' max='10' required='' value='10')
+                    input#aluno-nota.validate(placeholder='Nota' type='number' min='0' max='40' required='' value='40' step='0.1')
                   .input-field.col.s4
                     input#aluno-telefone.validate(placeholder='Telefone' type='tel' required='')
                 .row
@@ -212,7 +212,7 @@ html
                   .input-field.col.s4
                     input#administrador-nome.validate(placeholder='Nome' type='text' required='' onchange='this.value = NomeMask(this.value)')
                   .input-field.col.s4
-                    input#administrador-nota.validate(placeholder='Nota' type='number' min='0' max='10' required='' value='10')
+                    input#administrador-nota.validate(placeholder='Nota' type='number' min='0' max='40' required='' value='40' step='0.1')
                   .input-field.col.s4
                     input#administrador-telefone.validate(placeholder='Telefone' type='tel' required='')
                 .row
@@ -239,6 +239,13 @@ html
                 .row.center
                   .col.s12
                     button.waves-effect.waves-light.btn-large.blue(type='submit') Salvar
+        
+        // Em Construção  
+        section#manutencao.animated.bounceIn(style='display: none;')
+          h3.header.white-text.truncate(style='height: 64px;') Em Manutenção
+          .card
+            .row.center
+              img.responsive-img#manutencao-foto-imagem(style='object-fit: cover;' src=CONSTRUCTION_IMAGE height='512px')
 
       include assets/include/footer.pug
 

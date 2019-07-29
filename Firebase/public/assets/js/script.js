@@ -15,10 +15,6 @@ var Vue = new Vue({
 });
 // Vue - End
 
-// Materialize - Start
-M.AutoInit();
-// Materialize - End
-
 // Firebase - Start
 LoginChecar();
 
@@ -158,17 +154,6 @@ function ListarRegistro(Snap) {
 
   RegistrosLista.append(Linha);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 function TabelaAlunos() {
   AlunosDados.on("child_added", Snap => {
@@ -352,15 +337,6 @@ function EditarAluno() {
   }
 }
 $("#aluno-telefone").mask("+55 (00) 0 0000-0000");
-
-
-
-
-
-
-
-
-
 
 function TabelaAdministradores() {
   AdministradoresDados.on("child_added", Snap => {
@@ -562,14 +538,6 @@ function EditarAdministrador() {
   }
 }
 $("#administrador-telefone").mask("+55 (00) 0 0000-0000");
-
-
-
-
-
-
-
-
 
 function RemoverLinha(Snap) {
   document.querySelector("tr[data-key='" + Snap.key + "']").remove();
@@ -985,7 +953,7 @@ function CreateTable() {
 
   $.fn.dataTable.ext.errMode = 'none';
 
-  $('.dataTables_filter').removeClass('dataTables_filter');
+  $('.dataTables_filter').removeClass('dataTables_filter').css('padding', '5px');
   $('.paginate_button').addClass('btn').removeClass('paginate_button').css('margin', '5px');
 
   // SetTableEvents();

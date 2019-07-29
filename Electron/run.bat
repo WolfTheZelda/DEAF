@@ -1,2 +1,2 @@
-nativefier --icon "icon.ico" --name "DEAF" "https://debartefilosofico.web.app/login"
+nativefier --icon "icon.ico" --name "DEAF" "https://acaofilosofica.web.app/login"
 PAUSE
