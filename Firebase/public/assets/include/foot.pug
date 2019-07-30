@@ -39,14 +39,14 @@ script(type='text/javascript').
 // Analytics 
 script(src='https://www.googletagmanager.com/gtag/js?id=UA-144834380-1' defer)
 script(type='text/javascript').
-    window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-144834380-1');
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-144834380-1');
 // Analytics - End
 
 // OneSignal 
 link(rel='manifest' href='/manifest.json')
 script(type='text/javascript' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' defer)
 script(typer='text/javascript').
-    var OneSignal = window.OneSignal || [];OneSignal.push(function () {OneSignal.init({appId: '71f7bd3c-15da-4a04-a0fd-2dadf8cdfc8b'});OneSignal.showNativePrompt();});
+    var OneSignal=window.OneSignal||[];OneSignal.push(function(){OneSignal.init({appId:'71f7bd3c-15da-4a04-a0fd-2dadf8cdfc8b'});OneSignal.showNativePrompt();});
 // OneSignal - End
 
 // Script 

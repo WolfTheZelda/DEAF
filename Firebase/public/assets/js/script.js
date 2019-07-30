@@ -41,8 +41,8 @@ const RegistrosLista = document.getElementById("registros-lista");
 const PostagensDados = Database.child("postagens");
 const PostagensLista = document.getElementById("postagens-lista");
 
-const GalleryImage = "/assets/image/gallery.gif",
-  LoadingImage = "/assets/image/loading.gif";
+const GalleryImage = "/assets/image/gallery.webp",
+  LoadingImage = "/assets/image/loading.webp";
 
 function EnviarArquivo(Input, Img, Path) {
   Img = document.getElementById(Img);
@@ -734,10 +734,20 @@ function LoginChecar() {
       var URL = "https://acaofilosofica.web.app/api/checkuser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber;
 
       var XHTTP = new XMLHttpRequest();
-      XHTTP.open("GET", URL, false);
-      XHTTP.send();
-
-      console.log(XHTTP.responseText);
+      XHTTP.open("GET", URL, true);
+      XHTTP.onload = function (e) {
+        if (XHTTP.readyState === 4) {
+          if (XHTTP.status === 200) {
+            console.log(XHTTP.responseText);
+          } else {
+            console.error(XHTTP.statusText);
+          }
+        }
+      };
+      XHTTP.onerror = function (e) {
+        console.error(XHTTP.statusText);
+      };
+      XHTTP.send(null);
     } else {
       Vue.HasLogin = false;
     }
@@ -815,7 +825,7 @@ window.notify = {
 
       var id = notify.id;
 
-      notify.list[id] = new Notification("DEAF", {
+      notify.list[id] = new Notification("DEAF - Ação Filosófica", {
         body: Body,
         tag: id,
         icon: "/assets/image/icon.png",
