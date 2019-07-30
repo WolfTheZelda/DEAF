@@ -22,6 +22,8 @@ M.AutoInit();
 // Firebase - Start
 LoginChecar();
 
+const Performance = firebase.performance();
+
 const Storage = firebase.storage().ref();
 const Database = firebase.database().ref();
 
