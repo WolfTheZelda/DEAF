@@ -212,12 +212,12 @@ html
                   .input-field.col.s4
                     input#administrador-nome.validate(placeholder='Nome' type='text' required='' onchange='this.value = NomeMask(this.value)')
                   .input-field.col.s4
-                    input#administrador-nota.validate(placeholder='Nota' type='number' min='0' max='40' required='' value='40' step='0.1')
+                    input#administrador-nota.validate(placeholder='Nota' type='number' min='0' max='40' required='' value='40' step='0.1' data-value='40')
                   .input-field.col.s4
                     input#administrador-telefone.validate(placeholder='Telefone' type='tel' required='')
                 .row
                   .input-field.col.s4.m4
-                    select#administrador-ano.browser-default(required='')
+                    select#administrador-ano.browser-default(required='' data-value='')
                       option(value='' disabled='' selected='') Ano
                       option(value='9° Ano') 9° Ano
                       option(value='1° Ano') 1° Ano
@@ -225,13 +225,13 @@ html
                       option(value='3° Ano') 3° Ano
                       option(value='Irrelevante') Irrelevante
                   .input-field.col.s4.m4
-                    select#administrador-colegio.browser-default(required='')
+                    select#administrador-colegio.browser-default(required='' data-value='')
                       option(value='' disabled='' selected='') Colégio
                       option(value="Joana D'Arc") Joana D'Arc
                       option(value='Jorge Amado') Jorge Amado
                       option(value='Irrelevante') Irrelevante
                   .input-field.col.s4.m4
-                    select#administrador-grupo.browser-default(onclick='ResetarSelect("#administrador-grupo", 3, "Desenvolvedor")' onchange='MudarInput("#administrador-grupo", "Orientador", "Irrelevante", ["#administrador-nota", "#administrador-ano", "#administrador-colegio"]);' required='')
+                    select#administrador-grupo.browser-default(onclick='ResetarSelect("#administrador-grupo", 3, "Desenvolvedor")' onchange='MudarInput("#administrador-grupo", "Orientador", "Irrelevante", ["#administrador-nota", "#administrador-ano", "#administrador-colegio"]);' required='' data-value='')
                       option(value='' disabled='' selected='') Grupo
                       option(value='Líder') Líder
                       option(value='Orientador') Orientador

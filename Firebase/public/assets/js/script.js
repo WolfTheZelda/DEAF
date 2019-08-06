@@ -778,7 +778,7 @@ function MudarInput(Element, Condition, Value, Children) {
       if (document.querySelector(Children[i]).type == "text") {
         document.querySelector(Children[i]).type = "number";
       }
-      $(Children[i]).val("");
+      $(Children[i]).val($(Children[i]).attr("data-value"));
     }
   }
 }
