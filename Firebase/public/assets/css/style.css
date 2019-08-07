@@ -21,17 +21,18 @@
   font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+i.material-icons::before {
+  display: none;
+}
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
 strong {
   font-weight: bold;
 }
@@ -39,7 +40,6 @@ strong {
 .parallax-background {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 .video-background {
   position: fixed;
   right: 0;

@@ -282,9 +282,10 @@ function DeletarAluno(e) {
 
   Dados.once("value", Snap => {
     Registrar("O administrador " + Vue.UserName + " removeu o aluno " + Snap.val().nome + " com a nota " + Snap.val().nota);
+  }).then(function () {
+    Dados.remove();
+    console.log("Remove succeeded.");
   });
-
-  Dados.remove();
 }
 
 function EditarAluno() {
@@ -962,15 +963,13 @@ function CreateTable() {
       info: false,
       lengthChange: false,
 
-      responsive: true
+      responsive: true,
+      autoWidth: true
     })
     .columns.adjust()
     .responsive.recalc();
 
   $.fn.dataTable.ext.errMode = 'none';
-
-  $('.dataTables_filter').removeClass('dataTables_filter').css('padding', '5px');
-  $('.paginate_button').addClass('btn').removeClass('paginate_button').css('margin', '5px');
 
   // SetTableEvents();
 }
@@ -1104,6 +1103,14 @@ function EditarPostagem() {
   }
 }
 
-var Update = setInterval(function () {
+/* var Update = setInterval(function () {
   CreateTable();
-}, 1000);
+}, 1000); */
+
+function Update(timestamp) {
+  $('.dataTables_filter').removeClass('dataTables_filter').css('padding', '5px');
+  $('.paginate_button').addClass('btn').removeClass('paginate_button').css('margin', '5px');
+  window.requestAnimationFrame(Update);
+}
+
+window.requestAnimationFrame(Update);

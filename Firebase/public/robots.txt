@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /dashboard
+Sitemap: https://acaofilosofica.web.app/sitemap.xml
