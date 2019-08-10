@@ -35,6 +35,9 @@ html
             a(href='#' onclick="ChangePage('#menu')") Menu
               i.material-icons.right.grey-text.animated.swing dashboard
           li
+            a(href='https://webmail.acaofilosofica.com/' target='_blank') Email
+              i.material-icons.right.grey-text.animated.swing email
+          li
             a(href='#' onclick="ChangePage('#alunos')") Alunos
               i.material-icons.right.grey-text.animated.swing face
           li
@@ -64,7 +67,7 @@ html
                   p Fique sempre atento aqui para quando aparecer alguma novidade.
                   br
                   p
-                    b -
+                    b - Irineu
                 .card-action
                   a(href='') Acessar
 
@@ -86,6 +89,7 @@ html
                   th Ação
                   th Ação
               tbody#alunos-lista
+          p.white-text # Apenas aqueles sem liderança devem ser adicionados como Alunos...
 
         // Aluno 
         section#aluno.animated.bounceIn(style='display: none;')
@@ -129,8 +133,13 @@ html
                       option(value='Produção Técnica') Produção Técnica
                       option(value='Apoio Pedagógico') Apoio Pedagógico
                 .row.center
-                  .col.s12
-                    button.waves-effect.waves-light.btn-large.blue(type='submit') Salvar
+                  .col.s4
+                    a.waves-effect.waves-light.btn-large.blue(onclick='ChangePage("#aluno");') Voltar
+                  .col.s4
+                    button.waves-effect.waves-light.btn-large.red(type='reset') Limpar
+                  .col.s4
+                    button.waves-effect.waves-light.btn-large.green(type='submit') Salvar
+          p.white-text # Apenas aqueles sem liderança devem ser adicionados como Alunos...
 
         // Registros 
         section#registros.animated.bounceIn(style='display: none;')
@@ -139,6 +148,7 @@ html
             table.dt-responsive.striped.centered(style='width: 100%;')
               thead.white
                 tr
+                  th Marca Temporal
                   th Registro
                   th Data
               tbody#registros-lista
@@ -175,8 +185,12 @@ html
                 .section.center
                   #editor
                 .row.center
-                  .col.s12
-                    button.waves-effect.waves-light.btn-large.blue(type='submit') Salvar
+                  .col.s4
+                    a.waves-effect.waves-light.btn-large.blue(onclick='ChangePage("#postagem");') Voltar
+                  .col.s4
+                    button.waves-effect.waves-light.btn-large.red(type='reset') Limpar
+                  .col.s4
+                    button.waves-effect.waves-light.btn-large.green(type='submit') Salvar
 
         // Administradores 
         section#administradores.animated.bounceIn(style='display: none;')
@@ -196,6 +210,7 @@ html
                     th Ação
                     th Ação
                 tbody#administradores-lista
+          p.white-text # Apenas aqueles com liderança devem ser adicionados como Administradores...
 
         // Administrador 
         section#administrador.animated.bounceIn(style='display: none;')
@@ -231,14 +246,20 @@ html
                       option(value='Jorge Amado') Jorge Amado
                       option(value='Irrelevante') Irrelevante
                   .input-field.col.s4.m4
-                    select#administrador-grupo.browser-default(onclick='ResetarSelect("#administrador-grupo", 3, "Desenvolvedor")' onchange='MudarInput("#administrador-grupo", "Orientador", "Irrelevante", ["#administrador-nota", "#administrador-ano", "#administrador-colegio"]);' required='' data-value='')
+                    select#administrador-grupo.browser-default(onclick='ResetarSelect("#administrador-grupo", 4, "Orientador")' onchange='MudarInput("#administrador-grupo", "Orientador", "Irrelevante", ["#administrador-nota", "#administrador-ano", "#administrador-colegio"]);' required='' data-value='')
                       option(value='' disabled='' selected='') Grupo
                       option(value='Líder') Líder
+                      option(value='Vice-Líder') Vice-Líder
                       option(value='Orientador') Orientador
                       option(value='Desenvolvedor') Desenvolvedor
                 .row.center
-                  .col.s12
-                    button.waves-effect.waves-light.btn-large.blue(type='submit') Salvar
+                  .col.s4
+                    a.waves-effect.waves-light.btn-large.blue(onclick='ChangePage("#administrador");') Voltar
+                  .col.s4
+                    button.waves-effect.waves-light.btn-large.red(type='reset') Limpar
+                  .col.s4
+                    button.waves-effect.waves-light.btn-large.green(type='submit') Salvar
+          p.white-text # Apenas aqueles com liderança devem ser adicionados como Administradores...
         
         // Em Construção  
         section#manutencao.animated.bounceIn(style='display: none;')

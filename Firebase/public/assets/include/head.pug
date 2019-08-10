@@ -1,3 +1,10 @@
+- var HOST_FIREBASE_APP_COM = "acaofilosofica.firebaseapp.com";
+- var HOST_WEB_APP = "acaofilosofica.web.app";
+- var URL_COM = "https://acaofilosofica.com";
+
+script(type='text/javascript').
+  const HOST="acaofilosofica.com";if(location.host!==HOST)location.href="https://"+HOST+"/"+location.href.split('/')[location.href.split('/').length-1];
+
 head
   meta(http-equiv='content-type' content='text/html')
 
@@ -9,11 +16,9 @@ head
   meta(name='description' content='Debate Filosófico em Itabuna acerca do tema Porte de Armas, aproveite essa oportunidade para diologar sobre o futuro do Brasil.')
   meta(name='og:title' property='og:title' content='DEAF - Ação Filosófica')
   meta(name='twitter:card' content='DEAF - Ação Filosófica')
-
-  meta(name='google-site-verification' content='RIr8qDEHdt0kkwHhIVoueeFz2zqwrW79xi7PajP3bWo')
   
   link(rel='shortcut icon' type='image/x-icon' href='/assets/image/icon.ico')
-  link(rel='canonical' href='https://acaofilosofica.web.app/')
+  link(rel='canonical' href='https://acaofilosofica.com')
 
   title DEAF - Ação Filosófica
 
@@ -24,20 +29,20 @@ head
   // Materialize - End 
 
   // Quill 
-  link(rel='stylesheet' href='/node_modules/quill/dist/quill.snow.css' media='all' onload=MEDIA_CONDITION)
+  link(rel='stylesheet' href='/node_modules/quill/dist/quill.snow.css' media='none' onload=MEDIA_CONDITION)
   // Quill - End 
 
   // AnimateCSS 
-  link(rel='stylesheet' href='/node_modules/animate.css/animate.min.css' media='all' onload=MEDIA_CONDITION)
+  link(rel='stylesheet' href='/node_modules/animate.css/animate.min.css' media='none' onload=MEDIA_CONDITION)
   // AnimateCSS - End 
 
   // DataTables 
-  link(rel='stylesheet' href='/node_modules/datatables.net-dt/css/jquery.dataTables.min.css' media='all' onload=MEDIA_CONDITION)
-  link(rel='stylesheet' href='/node_modules/datatables.net-responsive-dt/css/responsive.dataTables.min.css' media='all' onload=MEDIA_CONDITION)
+  link(rel='stylesheet' href='/node_modules/datatables.net-dt/css/jquery.dataTables.min.css' media='none' onload=MEDIA_CONDITION)
+  link(rel='stylesheet' href='/node_modules/datatables.net-responsive-dt/css/responsive.dataTables.min.css' media='none' onload=MEDIA_CONDITION)
   // DataTables - End 
 
   // Style 
-  link(rel='stylesheet' href='/assets/css/style.min.css' media='all' onload=MEDIA_CONDITION)
+  link(rel='stylesheet' href='/assets/css/style.min.css')
   // Style - End 
 
   - var BACKGROUND_IMAGE = "/assets/image/background.jpg";

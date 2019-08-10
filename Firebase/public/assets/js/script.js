@@ -10,7 +10,7 @@ var Vue = new Vue({
     UserName: "Usuário",
     UserNumber: "Telefone",
     UserNote: "∞",
-    VideoRandom: "https://www.youtube.com/embed?listType=playlist&list=PLwxNMb28XmpeypJMHfNbJ4RAFkRtmAN3P&fs=0&rel=0&showinfo=0&showsearch=0&controls=0&modestbranding=0&autohide=1&autoplay=1&loop=1&disablekb=1&cc_load_policy=1&iv_load_policy=3&cc_lang_pref=pt&index=" + Math.floor((Math.random() * 34))
+    VideoRandom: "https://www.youtube.com/embed?listType=playlist&list=PLwxNMb28XmpeypJMHfNbJ4RAFkRtmAN3P&fs=0&rel=0&showinfo=0&showsearch=0&controls=0&modestbranding=0&autohide=1&autoplay=0&loop=1&disablekb=1&cc_load_policy=1&iv_load_policy=3&cc_lang_pref=pt&origin=https://acaofilosofica.com&index=" + Math.floor((Math.random() * 34))
   }
 });
 // Vue - End
@@ -45,6 +45,16 @@ const PostagensLista = document.getElementById("postagens-lista");
 
 const GalleryImage = "/assets/image/gallery.webp",
   LoadingImage = "/assets/image/loading.webp";
+
+const PhoneMask = "+55 (73) 9 0000-0000";
+const PhoneTrans = {
+  translation: {
+    '9': {
+      pattern: /9/,
+      fallback: 9
+    }
+  }
+};
 
 function EnviarArquivo(Input, Img, Path) {
   Img = document.getElementById(Img);
@@ -147,12 +157,15 @@ function ListarRegistro(Snap) {
 
   let Linha = document.createElement("tr");
 
+  let Timestamp = document.createElement("td");
   let Nome = document.createElement("td");
   let Ano = document.createElement("td");
 
+  Timestamp.innerHTML = Aluno.timestamp;
   Nome.innerHTML = Aluno.registro;
   Ano.innerHTML = new Date(Aluno.timestamp).toLocaleString();
 
+  Linha.append(Timestamp);
   Linha.append(Nome);
   Linha.append(Ano);
 
@@ -343,7 +356,7 @@ function EditarAluno() {
     ChangePage(Alunos);
   }
 }
-$("#aluno-telefone").mask("+55 (00) 0 0000-0000");
+$("#aluno-telefone").mask(PhoneMask, PhoneTrans);
 
 function TabelaAdministradores() {
   AdministradoresDados.on("child_added", Snap => {
@@ -544,7 +557,7 @@ function EditarAdministrador() {
     ChangePage(AdministradoresPagina);
   }
 }
-$("#administrador-telefone").mask("+55 (00) 0 0000-0000");
+$("#administrador-telefone").mask(PhoneMask, PhoneTrans);
 
 function RemoverLinha(Snap) {
   document.querySelector("tr[data-key='" + Snap.key + "']").remove();
@@ -631,7 +644,7 @@ function ChecarTimestamp(Snap) {
 }
 
 // Login - Start
-$("#telefone-input").mask("+55 (00) 0 0000-0000");
+$("#telefone-input").mask(PhoneMask, PhoneTrans);
 
 function LoginRecaptcha() {
   window.RecaptchaVerificador = new firebase.auth.RecaptchaVerifier("telefone-button", {
@@ -718,12 +731,16 @@ function LoginChecar() {
           Vue.HasWrite = true;
           Vue.UserName = Snap.val().nome;
           Vue.UserNote = Snap.val().nota;
+
+          $("#app").show();
         } else {
           Database.child("alunos").child(User.phoneNumber).on("value", function (SnapStudent) {
             if (SnapStudent.exists()) {
               Vue.HasWrite = false;
               Vue.UserName = SnapStudent.val().nome;
               Vue.UserNote = SnapStudent.val().nota;
+
+              $("#app").show();
             } else {
               Notificacao("Tentativa de acesso não autorizada foi detectada");
               LoginDeslogar();
@@ -785,7 +802,9 @@ function MudarInput(Element, Condition, Value, Children) {
 }
 
 window.onload = function () {
-  $("#app").show();
+  if (Vue.Page != "dashboard") {
+    $("#app").show();
+  }
   LoadIframe();
 
   CreateTable();
@@ -964,7 +983,7 @@ function CreateTable() {
       lengthChange: false,
 
       responsive: true,
-      autoWidth: true
+      autoWidth: false
     })
     .columns.adjust()
     .responsive.recalc();
@@ -1105,7 +1124,15 @@ function EditarPostagem() {
 
 /* var Update = setInterval(function () {
   CreateTable();
-}, 1000); */
+}, 1000);*/
+
+$('table').on('column-sizing', () => {
+  CreateTable();
+});
+
+$('table').on('responsive-resize', () => {
+  CreateTable();
+});
 
 function Update(timestamp) {
   $('.dataTables_filter').removeClass('dataTables_filter').css('padding', '5px');
@@ -1114,3 +1141,23 @@ function Update(timestamp) {
 }
 
 window.requestAnimationFrame(Update);
+
+const messaging = firebase.messaging();
+messaging
+  .requestPermission()
+  .then(function () {
+    console.log("Notification permission granted.");
+
+    // get the token in the form of promise
+    return messaging.getToken()
+  })
+  .then(function (token) {
+    console.log("token is : " + token);
+  })
+  .catch(function (err) {
+    console.log("Unable to get permission to notify.", err);
+  });
+
+messaging.onMessage(function (payload) {
+  console.log("Message received. ", payload);
+});

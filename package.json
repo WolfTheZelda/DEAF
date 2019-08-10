@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/WolfTheZelda/DEAF/issues"
   },
-  "homepage": "https://github.com/WolfTheZelda/DEAF#readme"
+  "homepage": "https://github.com/WolfTheZelda/DEAF#readme",
+  "dependencies": {}
 }

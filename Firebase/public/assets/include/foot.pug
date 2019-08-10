@@ -22,12 +22,13 @@ script(type='text/javascript' src='/node_modules/quill/dist/quill.min.js' defer)
 // Quill - End 
 
 // Firebase 
-- var FIREBASE_VERSION = "6.3.1";
+- var FIREBASE_VERSION = "6.3.5";
 
 script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-app.js' defer)
 script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-auth.js' defer)
 script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-storage.js' defer)
 script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-database.js' defer)
+script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-messaging.js' defer)
 script(type='text/javascript' src='/__/firebase/' + FIREBASE_VERSION + '/firebase-performance.js' defer)
 
 script(type='text/javascript' src='/__/firebase/init.js' defer)
@@ -43,9 +44,9 @@ script(type='text/javascript').
 // Analytics - End
 
 // OneSignal 
-link(rel='manifest' href='/manifest.json')
-script(type='text/javascript' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' defer)
-script(typer='text/javascript').
+// link(rel='manifest' href='/manifest.json')
+// script(type='text/javascript' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' defer)
+// script(typer='text/javascript').
     var OneSignal=window.OneSignal||[];OneSignal.push(function(){OneSignal.init({appId:'71f7bd3c-15da-4a04-a0fd-2dadf8cdfc8b'});OneSignal.showNativePrompt();});
 // OneSignal - End
 
