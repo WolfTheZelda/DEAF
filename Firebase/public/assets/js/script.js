@@ -255,7 +255,11 @@ function ListarAluno(Snap) {
 }
 
 function MostrarAluno(e) {
-  var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  if (e.target !== "undefined") {
+    var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  } else {
+    var AlunoChave = e;
+  };
   var AlunoDados = Database.child("/alunos/" + AlunoChave);
 
   AlunoPagina.setAttribute("data-key", AlunoChave);
@@ -290,7 +294,11 @@ function MostrarAluno(e) {
 }
 
 function DeletarAluno(e) {
-  var Chave = e.target.closest("tr").getAttribute("data-key");
+  if (e.target !== "undefined") {
+    var Chave = e.target.closest("tr").getAttribute("data-key");
+  } else {
+    var Chave = e;
+  };
   var Path = e.target.getAttribute("data-path");
   var Dados = Database.child(Path + Chave);
 
@@ -381,7 +389,11 @@ function TabelaAdministradores() {
 }
 
 function DeletarAdministrador(e) {
-  var Chave = e.target.closest("tr").getAttribute("data-key");
+  if (e.target !== "undefined") {
+    var Chave = e.target.closest("tr").getAttribute("data-key");
+  } else {
+    var Chave = e;
+  };
   var Path = e.target.getAttribute("data-path");
   var Dados = Database.child(Path + Chave);
 
@@ -457,7 +469,11 @@ function ListarAdministrador(Snap) {
 }
 
 function MostrarAdministrador(e) {
-  var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  if (e.target !== "undefined") {
+    var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  } else {
+    var AlunoChave = e;
+  };
   var AlunoDados = Database.child("/administradores/" + AlunoChave);
 
   AdministradorPagina.setAttribute("data-key", AlunoChave);
@@ -997,13 +1013,21 @@ function CreateTable() {
 }
 
 function SetTableEvents() {
-  $("#administradores-lista").on("click", ".administrador-mostrar-button", MostrarAdministrador);
+  $("#administradores-lista").on("click", ".administrador-mostrar-button", () => {
+    MostrarAdministrador($(this).closest("tr").attr("data-key"));
+  });
 
-  $("#administradores-lista").on("click", ".administrador-deletar-button", DeletarAdministrador);
+  $("#administradores-lista").on("click", ".administrador-deletar-button", () => {
+    DeletarAdministrador($(this).closest("tr").attr("data-key"));
+  });
 
-  $("#alunos-lista").on("click", ".aluno-mostrar-button", MostrarAluno);
+  $("#alunos-lista").on("click", ".aluno-mostrar-button", () => {
+    MostrarAluno($(this).closest("tr").attr("data-key"));
+  });
 
-  $("#alunos-lista").on("click", ".aluno-mostrar-button", DeletarAdministrador);
+  $("#alunos-lista").on("click", ".aluno-mostrar-button", () => {
+    DeletarAluno($(this).closest("tr").attr("data-key"));
+  });
 }
 
 function SetEditor() {
@@ -1046,7 +1070,11 @@ function ListarPostagem(Snap) {
 }
 
 function MostrarPostagem(e) {
-  var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  if (e.target !== "undefined") {
+    var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  } else {
+    var AlunoChave = e;
+  };
   var AlunoDados = Database.child("/postagens/" + AlunoChave);
 
   PostagemPagina.setAttribute("data-key", AlunoChave);

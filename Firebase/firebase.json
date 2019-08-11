@@ -42,8 +42,8 @@
             "value": "*"
           },
           {
-            "key": "Accept-Encoding",
-            "value": "gzip"
+            "key": "Vary",
+            "value": "Accept-Encoding, Cookie"
           },
           {
             "key": "Content-Encoding",
