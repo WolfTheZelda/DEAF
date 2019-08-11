@@ -10,6 +10,7 @@ var Vue = new Vue({
     UserName: "Usuário",
     UserNumber: "Telefone",
     UserNote: "∞",
+    UserGroup: "Grupo",
     VideoRandom: "https://www.youtube.com/embed?listType=playlist&list=PLwxNMb28XmpeypJMHfNbJ4RAFkRtmAN3P&fs=0&rel=0&showinfo=0&showsearch=0&controls=0&modestbranding=0&autohide=1&autoplay=0&loop=1&disablekb=1&cc_load_policy=1&iv_load_policy=3&cc_lang_pref=pt&origin=https://acaofilosofica.com&index=" + Math.floor((Math.random() * 34))
   }
 });
@@ -294,7 +295,7 @@ function DeletarAluno(e) {
   var Dados = Database.child(Path + Chave);
 
   Dados.once("value", Snap => {
-    Registrar("O administrador " + Vue.UserName + " removeu o aluno " + Snap.val().nome + " com a nota " + Snap.val().nota);
+    Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o aluno(a) " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota);
   }).then(function () {
     Dados.remove();
     console.log("Remove succeeded.");
@@ -329,7 +330,7 @@ function EditarAluno() {
       AlunoDados = Database.child("/alunos/" + Telefone);
       AlunoDados.update(Dados);
 
-      Registrar("O administrador " + Vue.UserName + " atualizou o aluno " + Nome.value + " com a nota " + Nota.value);
+      Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
 
       if (AlunoChave != Telefone) {
         AlunoDados = Database.child("/alunos/" + AlunoChave);
@@ -339,14 +340,14 @@ function EditarAluno() {
       Database.child("alunos").child(Telefone).once("value", function (Snap) {
         if (Snap.exists()) {
 
-          Notificacao("Já existe um aluno com esse telefone");
+          Notificacao("Já existe um aluno(a) com esse telefone");
 
         } else {
           AlunoDados = Database.child("/alunos/" + Telefone);
 
           AlunoDados.set(Dados);
 
-          Registrar("O administrador " + Vue.UserName + " adicionou o aluno " + Nome.value + " com a nota " + Nota.value);
+          Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
         }
       });
     }
@@ -385,7 +386,7 @@ function DeletarAdministrador(e) {
   var Dados = Database.child(Path + Chave);
 
   Dados.once("value", Snap => {
-    Registrar("O administrador " + Vue.UserName + " removeu o administrador " + Snap.val().nome + " com o telefone " + Snap.key);
+    Registrar("O administrador " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o administrador " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota + " e com o telefone " + Snap.key);
   });
 
   Dados.remove();
@@ -531,7 +532,7 @@ function EditarAdministrador() {
       AlunoDados = Database.child("/administradores/" + Telefone);
       AlunoDados.update(Dados);
 
-      Registrar("O administrador " + Vue.UserName + " atualizou o administrador " + Nome.value + " com o telefone " + Telefone);
+      Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o administrador(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value + " e com o telefone " + Telefone);
 
       if (AlunoChave != Telefone) {
         AlunoDados = Database.child("/administradores/" + AlunoChave);
@@ -541,13 +542,13 @@ function EditarAdministrador() {
     } else {
       Database.child("administradores").child(Telefone).once("value", function (Snap) {
         if (Snap.exists()) {
-          Notificacao("Ja existe um Administrador com esse Telefone");
+          Notificacao("Ja existe um administrador(a) com esse Telefone");
         } else {
           AlunoDados = Database.child("/administradores/" + Telefone);
 
           AlunoDados.set(Dados);
 
-          Registrar("O administrador " + Vue.UserName + " adicionou o administrador " + Nome.value + " com o telefone " + Telefone);
+          Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o administrador(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value + " e com o telefone " + Telefone);
         }
       });
     }
@@ -623,7 +624,7 @@ function Registrar(Registro) {
       timestamp: Date.now()
     });
   } else {
-    Notificacao("Usuário não tem permissão de administrador");
+    Notificacao("Usuário não tem permissão de administrador(a)");
   }
 }
 
@@ -731,6 +732,7 @@ function LoginChecar() {
           Vue.HasWrite = true;
           Vue.UserName = Snap.val().nome;
           Vue.UserNote = Snap.val().nota;
+          Vue.UserGroup = Snap.val().grupo;
 
           $("#app").show();
         } else {
@@ -739,6 +741,7 @@ function LoginChecar() {
               Vue.HasWrite = false;
               Vue.UserName = SnapStudent.val().nome;
               Vue.UserNote = SnapStudent.val().nota;
+              Vue.UserGroup = SnapStudent.val().grupo;
 
               $("#app").show();
             } else {
@@ -990,17 +993,17 @@ function CreateTable() {
 
   $.fn.dataTable.ext.errMode = 'none';
 
-  // SetTableEvents();
+  SetTableEvents();
 }
 
 function SetTableEvents() {
-  $("#administradores-lista").bind("click", ".administrador-mostrar-button", MostrarAdministrador);
+  $("#administradores-lista").on("click", ".administrador-mostrar-button", MostrarAdministrador);
 
-  $("#administradores-lista").bind("click", ".administrador-deletar-button", DeletarAdministrador);
+  $("#administradores-lista").on("click", ".administrador-deletar-button", DeletarAdministrador);
 
-  $("#alunos-lista").bind("click", ".aluno-mostrar-button", MostrarAluno);
+  $("#alunos-lista").on("click", ".aluno-mostrar-button", MostrarAluno);
 
-  $("#alunos-lista").bind("click", ".aluno-mostrar-button", DeletarAdministrador);
+  $("#alunos-lista").on("click", ".aluno-mostrar-button", DeletarAdministrador);
 }
 
 function SetEditor() {
@@ -1095,7 +1098,7 @@ function EditarPostagem() {
       AlunoDados = Database.child("/administradores/" + Telefone);
       AlunoDados.update(Dados);
 
-      Registrar("O administrador " + Vue.UserName + " atualizou o administrador " + Nome.value + " com o telefone " + Telefone);
+      Registrar("O administrador " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o administrador " + Nome.value + " (" + Grupo.value + ") com o telefone " + Telefone);
 
       if (AlunoChave != Telefone) {
         AlunoDados = Database.child("/administradores/" + AlunoChave);
@@ -1105,13 +1108,13 @@ function EditarPostagem() {
     } else {
       Database.child("administradores").child(Telefone).once("value", function (Snap) {
         if (Snap.exists()) {
-          Notificacao("Ja existe um Administrador com esse Telefone");
+          Notificacao("Ja existe um administrador(a) com esse telefone");
         } else {
           AlunoDados = Database.child("/administradores/" + Telefone);
 
           AlunoDados.set(Dados);
 
-          Registrar("O administrador " + Vue.UserName + " adicionou o administrador " + Nome.value + " com o telefone " + Telefone);
+          Registrar("O administrador " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o administrador " + Nome.value + " (" + Grupo.value + ") com o telefone " + Telefone);
         }
       });
     }

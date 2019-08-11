@@ -1,6 +1,26 @@
 {
   "rules": {
-    ".read": true,
-    ".write": "auth != null && root.child('administradores').child(auth.token.phone_number).exists()"
+    "administradores": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('administradores').child(auth.token.phone_number).exists()"
+    },
+    "alunos": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('administradores').child(auth.token.phone_number).exists()"
+    },
+
+    "registros": {
+      ".read": "auth != null",
+      ".write": "!data.exists()"
+    },
+
+    "postagens": {
+      ".read": true,
+      ".write": "auth != null && root.child('administradores').child(auth.token.phone_number).exists()"
+    },
+    "cronometro": {
+      ".read": true,
+      ".write": "auth != null && root.child('administradores').child(auth.token.phone_number).exists()"
+    }
   }
 }
