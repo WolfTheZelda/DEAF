@@ -236,13 +236,17 @@ function ListarAluno(Snap) {
 
   MostrarBotao.className = "btn waves-effect waves-light blue aluno-mostrar-button";
   MostrarBotao.innerHTML = "Mostrar";
-  MostrarBotao.addEventListener("click", MostrarAluno);
+  MostrarBotao.addEventListener("click", (e) => {
+    MostrarAluno(e.target);
+  });
   Mostrar.append(MostrarBotao);
   Linha.append(Mostrar);
 
   DeletarBotao.className = "btn waves-effect waves-light red aluno-deletar-button";
   DeletarBotao.innerHTML = "Deletar";
-  DeletarBotao.addEventListener("click", DeletarAluno);
+  DeletarBotao.addEventListener("click", (e) => {
+    DeletarAluno(e.target);
+  });
 
   DeletarBotao.setAttribute("data-path", "/alunos/");
 
@@ -255,11 +259,11 @@ function ListarAluno(Snap) {
 }
 
 function MostrarAluno(e) {
-  if (typeof(e).target !== "undefined") {
-    var AlunoChave = e.target.closest("tr").getAttribute("data-key");
-  } else {
+  // if (typeof(e).target !== "undefined") {
+    // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // } else {
     var AlunoChave = e;
-  };
+  // };
   var AlunoDados = Database.child("/alunos/" + AlunoChave);
 
   AlunoPagina.setAttribute("data-key", AlunoChave);
@@ -294,16 +298,16 @@ function MostrarAluno(e) {
 }
 
 function DeletarAluno(e) {
-  if (typeof(e).target !== "undefined") {
-    var Chave = e.target.closest("tr").getAttribute("data-key");
-  } else {
+  // if (typeof(e).target !== "undefined") {
+    // var Chave = e.target.closest("tr").getAttribute("data-key");
+  // } else {
     var Chave = e;
-  };
+  // };
   var Path = e.target.getAttribute("data-path");
   var Dados = Database.child(Path + Chave);
 
   Dados.once("value", Snap => {
-    Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o aluno(a) " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota);
+    Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) aluno(a) " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota);
   }).then(function () {
     Dados.remove();
     console.log("Remove succeeded.");
@@ -338,7 +342,7 @@ function EditarAluno() {
       AlunoDados = Database.child("/alunos/" + Telefone);
       AlunoDados.update(Dados);
 
-      Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
+      Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
 
       if (AlunoChave != Telefone) {
         AlunoDados = Database.child("/alunos/" + AlunoChave);
@@ -348,14 +352,14 @@ function EditarAluno() {
       Database.child("alunos").child(Telefone).once("value", function (Snap) {
         if (Snap.exists()) {
 
-          Notificacao("Já existe um aluno(a) com esse telefone");
+          Notificacao("Já existe um(a) aluno(a) com esse telefone");
 
         } else {
           AlunoDados = Database.child("/alunos/" + Telefone);
 
           AlunoDados.set(Dados);
 
-          Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
+          Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
         }
       });
     }
@@ -389,16 +393,16 @@ function TabelaAdministradores() {
 }
 
 function DeletarAdministrador(e) {
-  if (typeof(e).target !== "undefined") {
-    var Chave = e.target.closest("tr").getAttribute("data-key");
-  } else {
+  // if (typeof(e).target !== "undefined") {
+    // var Chave = e.target.closest("tr").getAttribute("data-key");
+  // } else {
     var Chave = e;
-  };
+  // };
   var Path = e.target.getAttribute("data-path");
   var Dados = Database.child(Path + Chave);
 
   Dados.once("value", Snap => {
-    Registrar("O administrador " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o administrador " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota + " e com o telefone " + Snap.key);
+    Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) administrador " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota + " e com o telefone " + Snap.key);
   });
 
   Dados.remove();
@@ -444,7 +448,9 @@ function ListarAdministrador(Snap) {
 
   MostrarBotao.className = "btn waves-effect waves-light blue administrador-mostrar-button";
   MostrarBotao.innerHTML = "Mostrar";
-  MostrarBotao.addEventListener("click", MostrarAdministrador);
+  MostrarBotao.addEventListener("click", (e) => {
+    MostrarAdministrador(e.target);
+  });
   Mostrar.append(MostrarBotao);
   Linha.append(Mostrar);
 
@@ -453,7 +459,9 @@ function ListarAdministrador(Snap) {
   if (Aluno.grupo != "Desenvolvedor") {
     DeletarBotao.className = "btn waves-effect waves-light red administrador-deletar-button";
 
-    DeletarBotao.addEventListener("click", DeletarAdministrador);
+    DeletarBotao.addEventListener("click", (e) => {
+      DeletarAdministrador(e.target);
+    });
   } else {
     DeletarBotao.className = "btn waves-effect waves-light red administrador-deletar-button disabled";
   }
@@ -469,11 +477,11 @@ function ListarAdministrador(Snap) {
 }
 
 function MostrarAdministrador(e) {
-  if (typeof(e).target !== "undefined") {
-    var AlunoChave = e.target.closest("tr").getAttribute("data-key");
-  } else {
+  // if (typeof(e).target !== "undefined") {
+    // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // } else {
     var AlunoChave = e;
-  };
+  // };
   var AlunoDados = Database.child("/administradores/" + AlunoChave);
 
   AdministradorPagina.setAttribute("data-key", AlunoChave);
@@ -548,7 +556,7 @@ function EditarAdministrador() {
       AlunoDados = Database.child("/administradores/" + Telefone);
       AlunoDados.update(Dados);
 
-      Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o administrador(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value + " e com o telefone " + Telefone);
+      Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o(a) administrador(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value + " e com o telefone " + Telefone);
 
       if (AlunoChave != Telefone) {
         AlunoDados = Database.child("/administradores/" + AlunoChave);
@@ -558,13 +566,13 @@ function EditarAdministrador() {
     } else {
       Database.child("administradores").child(Telefone).once("value", function (Snap) {
         if (Snap.exists()) {
-          Notificacao("Ja existe um administrador(a) com esse Telefone");
+          Notificacao("Ja existe um(a) administrador(a) com esse telefone");
         } else {
           AlunoDados = Database.child("/administradores/" + Telefone);
 
           AlunoDados.set(Dados);
 
-          Registrar("O administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o administrador(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value + " e com o telefone " + Telefone);
+          Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o(a) administrador(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value + " e com o telefone " + Telefone);
         }
       });
     }
@@ -684,13 +692,13 @@ function LoginTelefone() {
     .then(function (Result) {
       window.RecaptchaResultado = Result;
       ChangePage("#senha");
-      Notificacao("Uma nova senha foi enviada para o telefone");
+      Notificacao("Uma nova senha foi enviada para o seu telefone");
       console.log(Result);
     }).catch(function (Error) {
       window.RecaptchaVerificador.render().then(function (WidgetId) {
         grecaptcha.reset(WidgetId);
       });
-      Notificacao("Houve um erro ao enviar a senha para o telefone");
+      Notificacao("Houve um erro ao enviar a senha para o seu telefone");
       console.error(Error);
     });
 }
@@ -1073,11 +1081,11 @@ function ListarPostagem(Snap) {
 }
 
 function MostrarPostagem(e) {
-  if (typeof(e).target !== "undefined") {
-    var AlunoChave = e.target.closest("tr").getAttribute("data-key");
-  } else {
+  // if (typeof(e).target !== "undefined") {
+    // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // } else {
     var AlunoChave = e;
-  };
+  // };
   var AlunoDados = Database.child("/postagens/" + AlunoChave);
 
   PostagemPagina.setAttribute("data-key", AlunoChave);
@@ -1129,7 +1137,7 @@ function EditarPostagem() {
       AlunoDados = Database.child("/administradores/" + Telefone);
       AlunoDados.update(Dados);
 
-      Registrar("O administrador " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o administrador " + Nome.value + " (" + Grupo.value + ") com o telefone " + Telefone);
+      Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o(a) administrador " + Nome.value + " (" + Grupo.value + ") com o telefone " + Telefone);
 
       if (AlunoChave != Telefone) {
         AlunoDados = Database.child("/administradores/" + AlunoChave);
@@ -1145,7 +1153,7 @@ function EditarPostagem() {
 
           AlunoDados.set(Dados);
 
-          Registrar("O administrador " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o administrador " + Nome.value + " (" + Grupo.value + ") com o telefone " + Telefone);
+          Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o(a) administrador " + Nome.value + " (" + Grupo.value + ") com o telefone " + Telefone);
         }
       });
     }
