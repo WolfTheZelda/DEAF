@@ -6,6 +6,11 @@ html
 
   body(style='background-image: url('+ BACKGROUND_IMAGE +'); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;')
     
+    #loading.pace.pace-active
+      .pace-progress(data-progress="50" data-progress-text="50%" style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);")
+        .pace-progress-inner
+      .pace-activity
+
     #app(style='display: none')
 
       main

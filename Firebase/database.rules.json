@@ -11,7 +11,7 @@
 
     "registros": {
       ".read": "auth != null",
-      ".write": "!data.exists()"
+      ".write": "auth != null && root.child('administradores').child(auth.token.phone_number).exists()"
     },
 
     "postagens": {

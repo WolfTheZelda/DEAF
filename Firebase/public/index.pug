@@ -4,7 +4,13 @@ doctype html
 html
   include assets/include/head.pug
 
-  body
+  body(style='background-image: url('+ BACKGROUND_IMAGE +'); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;')
+    
+    //#loading.pace.pace-active
+      .pace-progress(data-progress="50" data-progress-text="50%" style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);")
+        .pace-progress-inner
+      .pace-activity
+    
     #app
       include assets/include/header.pug
 
@@ -26,7 +32,7 @@ html
           .parallax
             img(class='lazy' data-src='/assets/image/weapon-1.jpg')
 
-        section.container
+        section.container.white-text
           .section.center
             h2.row.header O QUE É FILOSOFIA?
             br
@@ -41,7 +47,7 @@ html
           .parallax
             img(class='lazy' data-src='/assets/image/weapon-2.jpg')
 
-        section.container
+        section.container.white-text
           .section
             .row
               h3.center O QUE ESTÁ EM PAUTA?
@@ -82,7 +88,7 @@ html
           .parallax
             img(class='lazy' data-src='/assets/image/weapon-3.jpg')
 
-        section.container
+        section.container.white-text
           .section
             .row
               .col.s12.center
@@ -98,7 +104,7 @@ html
           .parallax
             img(class='lazy' data-src='/assets/image/weapon-4.jpg')
 
-        section.container
+        section.container.white-text
           .section
             .row
               .col.s12.center

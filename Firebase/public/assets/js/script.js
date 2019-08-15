@@ -255,7 +255,7 @@ function ListarAluno(Snap) {
 }
 
 function MostrarAluno(e) {
-  if (e.target !== "undefined") {
+  if (typeof(e).target !== "undefined") {
     var AlunoChave = e.target.closest("tr").getAttribute("data-key");
   } else {
     var AlunoChave = e;
@@ -294,7 +294,7 @@ function MostrarAluno(e) {
 }
 
 function DeletarAluno(e) {
-  if (e.target !== "undefined") {
+  if (typeof(e).target !== "undefined") {
     var Chave = e.target.closest("tr").getAttribute("data-key");
   } else {
     var Chave = e;
@@ -389,7 +389,7 @@ function TabelaAdministradores() {
 }
 
 function DeletarAdministrador(e) {
-  if (e.target !== "undefined") {
+  if (typeof(e).target !== "undefined") {
     var Chave = e.target.closest("tr").getAttribute("data-key");
   } else {
     var Chave = e;
@@ -469,7 +469,7 @@ function ListarAdministrador(Snap) {
 }
 
 function MostrarAdministrador(e) {
-  if (e.target !== "undefined") {
+  if (typeof(e).target !== "undefined") {
     var AlunoChave = e.target.closest("tr").getAttribute("data-key");
   } else {
     var AlunoChave = e;
@@ -750,6 +750,7 @@ function LoginChecar() {
           Vue.UserNote = Snap.val().nota;
           Vue.UserGroup = Snap.val().grupo;
 
+          $("#loading-dashboard").hide();
           $("#app").show();
         } else {
           Database.child("alunos").child(User.phoneNumber).on("value", function (SnapStudent) {
@@ -759,6 +760,7 @@ function LoginChecar() {
               Vue.UserNote = SnapStudent.val().nota;
               Vue.UserGroup = SnapStudent.val().grupo;
 
+              $("#loading-dashboard").hide();
               $("#app").show();
             } else {
               Notificacao("Tentativa de acesso não autorizada foi detectada");
@@ -822,6 +824,7 @@ function MudarInput(Element, Condition, Value, Children) {
 
 window.onload = function () {
   if (Vue.Page != "dashboard") {
+    $("#loading").hide();
     $("#app").show();
   }
   LoadIframe();
@@ -1070,7 +1073,7 @@ function ListarPostagem(Snap) {
 }
 
 function MostrarPostagem(e) {
-  if (e.target !== "undefined") {
+  if (typeof(e).target !== "undefined") {
     var AlunoChave = e.target.closest("tr").getAttribute("data-key");
   } else {
     var AlunoChave = e;
