@@ -6,15 +6,12 @@ html
 
   body(style='background-image: url('+ BACKGROUND_IMAGE +'); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;')
     
-    #loading.pace.pace-active
-      .pace-progress(data-progress="50" data-progress-text="50%" style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);")
-        .pace-progress-inner
-      .pace-activity
+    #loading
+      include assets/include/loading.pug
 
     #app(style='display: none')
 
       main
-
         section#telefone.row.animated.bounceIn
           .col.s12.z-depth-4.card-panel
             form(action='#' onsubmit='LoginTelefone(); return false;')
@@ -24,12 +21,11 @@ html
                   p.center.login-form-text Acesso Restrito
               .row.margin
                 .input-field.col.s12
-                  input#telefone-input(type='tel' required)
+                  input#telefone-input.phone-input(type='tel' required)
                   label.center-align(for='telefone-input') Telefone
               .row
                 .input-field.col.s12
                   button#telefone-button.btn.waves-effect.waves-light.blue.col.s12(type='submit') Continuar
-
         section#senha.row.animated.bounceIn(style='display: none;')
           .col.s12.z-depth-4.card-panel
             form(action='#' onsubmit='LoginSenha(); return false;')

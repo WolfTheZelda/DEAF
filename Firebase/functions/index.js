@@ -8,8 +8,6 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 
-const express = require("express");
-
 admin.initializeApp();
 
 exports.CheckUser = functions.https.onRequest((request, response) => {
@@ -108,34 +106,3 @@ exports.OneSignal = functions.https.onRequest((request, response) => {
         VerifyTimestamp(snap);
     });
 });
-
-const app = express();
-
-app.all('**', (request, response) => {
-    // response.set('Cache-Control', 'public, max-age=86400, s-maxage=86400');
-    // console.log('Cache-Control Success');
-});
-
-app.use(require('prerender-node'));
-
-var cors = require('cors');
-
-app.use(cors());
-app.use(
-    require('prerender-node').set('appToken', 'MJrYkjntZGMGbkxykvU3')
-);
-app.use(require('prerender-node').set('beforeRender', function (req, done) {
-    console.log('Rendering URL:', req.path);
-    done();
-}));
-app.use(require('prerender-node').set('afterRender', function (err, req, res) {
-    console.log(req.path + 'rendering completed!');
-    console.log('Errors:', err);
-}));
-app.get('*', (req, res) => {
-    console.log('Calling function for URL:', req.path);
-    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
-    res.status(200).send(fs.readFileSync('./www/index.html').toString());
-});
-
-exports.app = functions.https.onRequest(app);

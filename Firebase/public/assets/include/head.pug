@@ -3,7 +3,7 @@
 - var URL_COM = "https://acaofilosofica.com";
 
 script(type='text/javascript').
-  const HOST="acaofilosofica.com";if(location.host!==HOST)location.href="https://"+HOST+"/"+location.href.split('/')[location.href.split('/').length-1];
+  if(location.host==="acaofilosofica.firebaseapp.com"||location.host==="acaofilosofica.web.app")location.href="https://"+"acaofilosofica.com"+"/"+location.href.split('/')[location.href.split('/').length-1];
 
 head
   meta(http-equiv='content-type' content='text/html')

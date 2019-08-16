@@ -6,10 +6,8 @@ html
 
   body(style='background-image: url('+ BACKGROUND_IMAGE +'); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;')
     
-    #loading-dashboard.pace.pace-active
-      .pace-progress(data-progress="50" data-progress-text="50%" style="-webkit-transform: translate3d(50%, 0px, 0px); -ms-transform: translate3d(50%, 0px, 0px); transform: translate3d(50%, 0px, 0px);")
-        .pace-progress-inner
-      .pace-activity
+    #loading-dashboard
+      include assets/include/loading.pug
 
     #app(style='display: none')
 
@@ -113,7 +111,7 @@ html
                   .input-field.col.s4
                     input#aluno-nota.validate(placeholder='Nota' type='number' min='0' max='40' required='' value='40' step='0.1')
                   .input-field.col.s4
-                    input#aluno-telefone.validate(placeholder='Telefone' type='tel' required='')
+                    input#aluno-telefone.phone-input.validate(placeholder='Telefone' type='tel' required='')
                 .row
                   .input-field.col.s4.m4
                     select#aluno-ano.browser-default(required='')
@@ -234,7 +232,7 @@ html
                   .input-field.col.s4
                     input#administrador-nota.validate(placeholder='Nota' type='number' min='0' max='40' required='' value='40' step='0.1' data-value='40')
                   .input-field.col.s4
-                    input#administrador-telefone.validate(placeholder='Telefone' type='tel' required='')
+                    input#administrador-telefone.phone-input.validate(placeholder='Telefone' type='tel' required='')
                 .row
                   .input-field.col.s4.m4
                     select#administrador-ano.browser-default(required='' data-value='')

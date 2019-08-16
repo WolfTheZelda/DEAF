@@ -21,10 +21,6 @@
     ],
     "rewrites": [
       {
-        "source": "/",
-        "function": "app"
-      },
-      {
         "source": "/api/checkuser",
         "function": "CheckUser"
       },
@@ -40,14 +36,6 @@
           {
             "key": "Access-Control-Allow-Origin",
             "value": "*"
-          },
-          {
-            "key": "Vary",
-            "value": "Accept-Encoding, Cookie"
-          },
-          {
-            "key": "Content-Encoding",
-            "value": "gzip"
           },
           {
             "key": "Cache-Control",

@@ -47,16 +47,6 @@ const PostagensLista = document.getElementById("postagens-lista");
 const GalleryImage = "/assets/image/gallery.webp",
   LoadingImage = "/assets/image/loading.webp";
 
-const PhoneMask = "+55 (73) 9 0000-0000";
-const PhoneTrans = {
-  translation: {
-    '9': {
-      pattern: /9/,
-      fallback: 9
-    }
-  }
-};
-
 function EnviarArquivo(Input, Img, Path) {
   Img = document.getElementById(Img);
 
@@ -236,19 +226,24 @@ function ListarAluno(Snap) {
 
   MostrarBotao.className = "btn waves-effect waves-light blue aluno-mostrar-button";
   MostrarBotao.innerHTML = "Mostrar";
-  MostrarBotao.addEventListener("click", (e) => {
-    MostrarAluno(e.target);
-  });
+  // MostrarBotao.addEventListener("click", (e) => {
+  // MostrarAluno(e.target);
+  // });
+
+  MostrarBotao.setAttribute("data-key", Snap.key);
+
   Mostrar.append(MostrarBotao);
   Linha.append(Mostrar);
 
   DeletarBotao.className = "btn waves-effect waves-light red aluno-deletar-button";
   DeletarBotao.innerHTML = "Deletar";
-  DeletarBotao.addEventListener("click", (e) => {
-    DeletarAluno(e.target);
-  });
+  // DeletarBotao.addEventListener("click", (e) => {
+  // DeletarAluno(e.target);
+  // });
 
   DeletarBotao.setAttribute("data-path", "/alunos/");
+  DeletarBotao.setAttribute("data-key", Snap.key);
+
 
   Deletar.append(DeletarBotao);
   Linha.append(Deletar);
@@ -260,9 +255,9 @@ function ListarAluno(Snap) {
 
 function MostrarAluno(e) {
   // if (typeof(e).target !== "undefined") {
-    // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
   // } else {
-    var AlunoChave = e;
+  var AlunoChave = e;
   // };
   var AlunoDados = Database.child("/alunos/" + AlunoChave);
 
@@ -281,29 +276,33 @@ function MostrarAluno(e) {
     let Telefone = document.getElementById("aluno-telefone");
     let Foto = document.getElementById("aluno-foto-imagem");
 
-    Nome.value = Aluno.nome;
-    Ano.value = Aluno.ano;
-    Colegio.value = Aluno.colegio;
-    Grupo.value = Aluno.grupo;
-    Nota.value = Aluno.nota;
-    // Telefone.value = Snap.key;
-    $(Telefone).val(Snap.key).trigger('input');
+    if (Snap.key !== "null") {
 
-    Foto.setAttribute("src", Aluno.foto);
+      Nome.value = Aluno.nome;
+      Ano.value = Aluno.ano;
+      Colegio.value = Aluno.colegio;
+      Grupo.value = Aluno.grupo;
+      Nota.value = Aluno.nota;
+      // Telefone.value = Snap.key;
+      $(Telefone).val(Snap.key).trigger('input');
 
-    if (Aluno.foto == "" || Aluno.foto == null) {
-      Foto.setAttribute("src", GalleryImage);
+      Foto.setAttribute("src", Aluno.foto);
+
+      if (Aluno.foto == "" || Aluno.foto == null) {
+        Foto.setAttribute("src", GalleryImage);
+      }
+
     }
   });
 }
 
-function DeletarAluno(e) {
+function DeletarAluno(e, path) {
   // if (typeof(e).target !== "undefined") {
-    // var Chave = e.target.closest("tr").getAttribute("data-key");
+  // var Chave = e.target.closest("tr").getAttribute("data-key");
   // } else {
-    var Chave = e;
+  var Chave = e;
   // };
-  var Path = e.target.getAttribute("data-path");
+  var Path = path;
   var Dados = Database.child(Path + Chave);
 
   Dados.once("value", Snap => {
@@ -369,7 +368,6 @@ function EditarAluno() {
     ChangePage(Alunos);
   }
 }
-$("#aluno-telefone").mask(PhoneMask, PhoneTrans);
 
 function TabelaAdministradores() {
   AdministradoresDados.on("child_added", Snap => {
@@ -392,13 +390,13 @@ function TabelaAdministradores() {
   });
 }
 
-function DeletarAdministrador(e) {
+function DeletarAdministrador(e, path) {
   // if (typeof(e).target !== "undefined") {
-    // var Chave = e.target.closest("tr").getAttribute("data-key");
+  // var Chave = e.target.closest("tr").getAttribute("data-key");
   // } else {
-    var Chave = e;
+  var Chave = e;
   // };
-  var Path = e.target.getAttribute("data-path");
+  var Path = path;
   var Dados = Database.child(Path + Chave);
 
   Dados.once("value", Snap => {
@@ -448,20 +446,23 @@ function ListarAdministrador(Snap) {
 
   MostrarBotao.className = "btn waves-effect waves-light blue administrador-mostrar-button";
   MostrarBotao.innerHTML = "Mostrar";
-  MostrarBotao.addEventListener("click", (e) => {
-    MostrarAdministrador(e.target);
-  });
+  // MostrarBotao.addEventListener("click", (e) => {
+  // MostrarAdministrador(e.target);
+  // });
+  MostrarBotao.setAttribute("data-key", Snap.key);
+
   Mostrar.append(MostrarBotao);
   Linha.append(Mostrar);
 
   DeletarBotao.innerHTML = "Deletar";
+  DeletarBotao.setAttribute("data-key", Snap.key);
 
   if (Aluno.grupo != "Desenvolvedor") {
     DeletarBotao.className = "btn waves-effect waves-light red administrador-deletar-button";
 
-    DeletarBotao.addEventListener("click", (e) => {
-      DeletarAdministrador(e.target);
-    });
+    // DeletarBotao.addEventListener("click", (e) => {
+    // DeletarAdministrador(e.target);
+    // });
   } else {
     DeletarBotao.className = "btn waves-effect waves-light red administrador-deletar-button disabled";
   }
@@ -478,9 +479,9 @@ function ListarAdministrador(Snap) {
 
 function MostrarAdministrador(e) {
   // if (typeof(e).target !== "undefined") {
-    // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
   // } else {
-    var AlunoChave = e;
+  var AlunoChave = e;
   // };
   var AlunoDados = Database.child("/administradores/" + AlunoChave);
 
@@ -499,31 +500,35 @@ function MostrarAdministrador(e) {
     let Telefone = document.getElementById("administrador-telefone");
     let Foto = document.getElementById("administrador-foto-imagem");
 
-    Nome.value = Aluno.nome;
-    Ano.value = Aluno.ano;
-    Colegio.value = Aluno.colegio;
-    Grupo.value = Aluno.grupo;
-    Nota.value = Aluno.nota;
-    // Telefone.value = Snap.key;
-    $(Telefone).val(Snap.key).trigger('input');
+    if (Snap.key !== "null") {
 
-    Foto.setAttribute("src", Aluno.foto);
+      Nome.value = Aluno.nome;
+      Ano.value = Aluno.ano;
+      Colegio.value = Aluno.colegio;
+      Grupo.value = Aluno.grupo;
+      Nota.value = Aluno.nota;
+      // Telefone.value = Snap.key;
+      $(Telefone).val(Snap.key).trigger('input');
 
-    if (Aluno.foto == "" || Aluno.foto == null) {
-      Foto.setAttribute("src", GalleryImage);
-    }
+      Foto.setAttribute("src", Aluno.foto);
 
-    if (Grupo.value == "Desenvolvedor") {
-      Grupo.childNodes[1].setAttribute("disabled", "");
-      Grupo.childNodes[2].setAttribute("disabled", "");
+      if (Aluno.foto == "" || Aluno.foto == null) {
+        Foto.setAttribute("src", GalleryImage);
+      }
 
-      Grupo.childNodes[3].removeAttribute("disabled");
-    } else {
+      if (Grupo.value == "Desenvolvedor") {
+        Grupo.childNodes[1].setAttribute("disabled", "");
+        Grupo.childNodes[2].setAttribute("disabled", "");
 
-      Grupo.childNodes[1].removeAttribute("disabled");
-      Grupo.childNodes[2].removeAttribute("disabled");
+        Grupo.childNodes[3].removeAttribute("disabled");
+      } else {
 
-      Grupo.childNodes[3].setAttribute("disabled", "");
+        Grupo.childNodes[1].removeAttribute("disabled");
+        Grupo.childNodes[2].removeAttribute("disabled");
+
+        Grupo.childNodes[3].setAttribute("disabled", "");
+      }
+
     }
   });
 }
@@ -582,7 +587,6 @@ function EditarAdministrador() {
     ChangePage(AdministradoresPagina);
   }
 }
-$("#administrador-telefone").mask(PhoneMask, PhoneTrans);
 
 function RemoverLinha(Snap) {
   document.querySelector("tr[data-key='" + Snap.key + "']").remove();
@@ -669,8 +673,6 @@ function ChecarTimestamp(Snap) {
 }
 
 // Login - Start
-$("#telefone-input").mask(PhoneMask, PhoneTrans);
-
 function LoginRecaptcha() {
   window.RecaptchaVerificador = new firebase.auth.RecaptchaVerifier("telefone-button", {
     "size": "invisible",
@@ -780,7 +782,7 @@ function LoginChecar() {
       Vue.UserId = User.uid;
       Vue.UserNumber = User.phoneNumber;
 
-      var URL = "https://acaofilosofica.web.app/api/checkuser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber;
+      var URL = "https://acaofilosofica.com/api/checkuser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber;
 
       var XHTTP = new XMLHttpRequest();
       XHTTP.open("GET", URL, true);
@@ -835,8 +837,8 @@ window.onload = function () {
     $("#loading").hide();
     $("#app").show();
   }
-  LoadIframe();
 
+  LoadIframe();
   CreateTable();
 };
 
@@ -1019,26 +1021,6 @@ function CreateTable() {
     .responsive.recalc();
 
   $.fn.dataTable.ext.errMode = 'none';
-
-  SetTableEvents();
-}
-
-function SetTableEvents() {
-  $("#administradores-lista").on("click", ".administrador-mostrar-button", () => {
-    MostrarAdministrador($(this).closest("tr").attr("data-key"));
-  });
-
-  $("#administradores-lista").on("click", ".administrador-deletar-button", () => {
-    DeletarAdministrador($(this).closest("tr").attr("data-key"));
-  });
-
-  $("#alunos-lista").on("click", ".aluno-mostrar-button", () => {
-    MostrarAluno($(this).closest("tr").attr("data-key"));
-  });
-
-  $("#alunos-lista").on("click", ".aluno-mostrar-button", () => {
-    DeletarAluno($(this).closest("tr").attr("data-key"));
-  });
 }
 
 function SetEditor() {
@@ -1082,9 +1064,9 @@ function ListarPostagem(Snap) {
 
 function MostrarPostagem(e) {
   // if (typeof(e).target !== "undefined") {
-    // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
   // } else {
-    var AlunoChave = e;
+  var AlunoChave = e;
   // };
   var AlunoDados = Database.child("/postagens/" + AlunoChave);
 
@@ -1164,42 +1146,33 @@ function EditarPostagem() {
   }
 }
 
-/* var Update = setInterval(function () {
-  CreateTable();
-}, 1000);*/
-
-$('table').on('column-sizing', () => {
-  CreateTable();
-});
-
-$('table').on('responsive-resize', () => {
-  CreateTable();
-});
-
-function Update(timestamp) {
+function Update() {
   $('.dataTables_filter').removeClass('dataTables_filter').css('padding', '5px');
   $('.paginate_button').addClass('btn').removeClass('paginate_button').css('margin', '5px');
-  window.requestAnimationFrame(Update);
+
+  requestAnimationFrame(Update);
 }
 
-window.requestAnimationFrame(Update);
+requestAnimationFrame(Update);
 
-const messaging = firebase.messaging();
-messaging
-  .requestPermission()
-  .then(function () {
-    console.log("Notification permission granted.");
+$('#administradores-lista').on('click', '.administrador-mostrar-button', function () {
+  MostrarAdministrador($(this).attr('data-key'));
+});
+$('#administradores-lista').on('click', '.administrador-deletar-button', function () {
+  DeletarAdministrador($(this).attr('data-key'), $(this).attr('data-path'));
+});
+$('#alunos-lista').on('click', '.aluno-mostrar-button', function () {
+  MostrarAluno($(this).attr('data-key'));
+});
+$('#alunos-lista').on('click', '.aluno-deletar-button', function () {
+  DeletarAluno($(this).attr('data-key', $(this).attr('data-path')));
+});
 
-    // get the token in the form of promise
-    return messaging.getToken()
-  })
-  .then(function (token) {
-    console.log("token is : " + token);
-  })
-  .catch(function (err) {
-    console.log("Unable to get permission to notify.", err);
-  });
-
-messaging.onMessage(function (payload) {
-  console.log("Message received. ", payload);
+$(".phone-input").mask("+55 (73) 9 0000-0000", {
+  translation: {
+    '9': {
+      pattern: /9/,
+      fallback: 9
+    }
+  }
 });
