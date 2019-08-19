@@ -6,7 +6,7 @@ html
 
   body(style='background-image: url('+ BACKGROUND_IMAGE +'); background-repeat: no-repeat; background-attachment: fixed; background-position: center center; background-size: cover;')
     
-    #loading-dashboard
+    //#loading-dashboard
       include assets/include/loading.pug
 
     #app(style='display: none')
@@ -34,29 +34,29 @@ html
             p
               i.material-icons.white-text.animated.jackInTheBox(style='vertical-align: text-bottom;') stars 
               | &nbsp; {{UserNote}}
-          li
-            a(href='#' onclick="ChangePage('#menu')") Menu
+          li#menu-url
+            a.url(href='?p=menu') Menu
               i.material-icons.right.grey-text.animated.swing dashboard
-          li
-            a(href='https://webmail.acaofilosofica.com/' target='_blank') Email
+          li#email-url
+            a.url(href='https://webmail.acaofilosofica.com/' target='_blank') Email
               i.material-icons.right.grey-text.animated.swing email
-          li
-            a(href='#' onclick="ChangePage('#alunos')") Alunos
+          li#alunos-url
+            a.url(href="?p=alunos") Alunos
               i.material-icons.right.grey-text.animated.swing face
-          li
-            a(href='#' onclick="ChangePage('#registros')") Registros
+          li#registros-url
+            a.url(href="?p=registros") Registros
               i.material-icons.right.grey-text.animated.swing new_releases
-          li
-            a(href='#' onclick="ChangePage('#manutencao')") Postagens
+          li#manutencao-url
+            a.url(href="?p=manutencao") Postagens
               i.material-icons.right.grey-text.animated.swing description
-          li
-            a(href='#' onclick="ChangePage('#administradores')") Administradores
+          li#administradores-url
+            a.url(href="?p=administradores") Administradores
               i.material-icons.right.grey-text.animated.swing mood
 
       main.container(style='min-height: 100vh;')
 
         // Menu 
-        section#menu.animated.bounceIn
+        section#menu.animated.bounceIn(style='display: none;')
           .col.s12.m7
             .card.video-container
               iframe#menu-video(type='text/html' width='640' height='360' allow='autoplay' frameborder='0' :src='VideoRandom')
@@ -129,7 +129,7 @@ html
                     select#aluno-grupo.browser-default(required='')
                       option(value='' disabled='' selected='') Grupo
                       option(value='Tempo') Tempo
-                      option(value='Fomento') Fomento   
+                      option(value='Fomento') Fomento
                       option(value='Finanças') Finanças
                       option(value='Arrumação') Arrumação
                       option(value='Alimentação') Alimentação

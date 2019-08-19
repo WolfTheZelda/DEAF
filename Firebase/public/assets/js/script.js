@@ -3,6 +3,7 @@ var Vue = new Vue({
   el: "#app",
   data: {
     Page: location.pathname.split("/").slice(-1)[0].replace(".html", ""),
+    AdminPage: "menu",
 
     HasLogin: false,
     HasWrite: false,
@@ -115,6 +116,8 @@ function TabelaRegistros() {
     DestroyTable();
     ListarRegistro(Snap);
     CreateTable();
+    //var DataSet = [Snap.val().timestamp, Snap.val().registro, new Date(Snap.val().timestamp).toLocaleString()];
+    //$('#registros table').DataTable().rows.add([DataSet]).draw();
   });
   RegistrosDados.on("child_changed", Snap => {
     DestroyTable();
@@ -129,10 +132,6 @@ function TabelaRegistros() {
     RemoverLinha(Snap);
     CreateTable();
   });
-
-  RegistrosDados.endAt().limitToLast(1).on("child_added", Snap => {
-    ChecarTimestamp(Snap);
-  });
   /*
   RegistrosDados.endAt().limitToLast(1).on("child_changed", Snap => {
     ChecarTimestamp(Snap);
@@ -142,6 +141,10 @@ function TabelaRegistros() {
   });
   */
 }
+
+RegistrosDados.endAt().limitToLast(1).on("child_added", Snap => {
+  ChecarTimestamp(Snap);
+});
 
 function ListarRegistro(Snap) {
   let Aluno = Snap.val();
@@ -297,75 +300,80 @@ function MostrarAluno(e) {
 }
 
 function DeletarAluno(e, path) {
-  // if (typeof(e).target !== "undefined") {
-  // var Chave = e.target.closest("tr").getAttribute("data-key");
-  // } else {
-  var Chave = e;
-  // };
-  var Path = path;
-  var Dados = Database.child(Path + Chave);
 
-  Dados.once("value", Snap => {
-    Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) aluno(a) " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota);
-  }).then(function () {
-    Dados.remove();
-    console.log("Remove succeeded.");
-  });
-}
+  if (confirm('Atenção, você está prestes a deletar um aluno!')) {
 
-function EditarAluno() {
-  var AlunoChave = AlunoPagina.getAttribute("data-key");
 
-  let Nome = document.getElementById("aluno-nome");
-  let Ano = document.getElementById("aluno-ano");
-  let Colegio = document.getElementById("aluno-colegio");
-  let Grupo = document.getElementById("aluno-grupo");
-  let Nota = document.getElementById("aluno-nota");
-  let Telefone = "+" + document.getElementById("aluno-telefone").value.replace(/[^0-9]/g, '');
-  let Foto = document.getElementById("aluno-foto-imagem");
+    // if (typeof(e).target !== "undefined") {
+    // var Chave = e.target.closest("tr").getAttribute("data-key");
+    // } else {
+    var Chave = e;
+    // };
+    var Path = path;
+    var Dados = Database.child(Path + Chave);
 
-  if (Foto.src != LoadingImage) {
-    var AlunoDados;
+    Dados.once("value", Snap => {
+      Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) aluno(a) " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota);
+    }).then(function () {
+      Dados.remove();
+      console.log("Remove succeeded.");
+    });
+  }
 
-    var Dados = {
-      nome: NomeMask(Nome.value),
-      ano: Ano.value,
-      colegio: Colegio.value,
-      grupo: Grupo.value,
-      nota: Nota.value,
-      foto: Foto.src
-    };
+  function EditarAluno() {
+    var AlunoChave = AlunoPagina.getAttribute("data-key");
 
-    if (AlunoChave != null && AlunoChave != "null") {
+    let Nome = document.getElementById("aluno-nome");
+    let Ano = document.getElementById("aluno-ano");
+    let Colegio = document.getElementById("aluno-colegio");
+    let Grupo = document.getElementById("aluno-grupo");
+    let Nota = document.getElementById("aluno-nota");
+    let Telefone = "+" + document.getElementById("aluno-telefone").value.replace(/[^0-9]/g, '');
+    let Foto = document.getElementById("aluno-foto-imagem");
 
-      AlunoDados = Database.child("/alunos/" + Telefone);
-      AlunoDados.update(Dados);
+    if (Foto.src != LoadingImage) {
+      var AlunoDados;
 
-      Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
+      var Dados = {
+        nome: NomeMask(Nome.value),
+        ano: Ano.value,
+        colegio: Colegio.value,
+        grupo: Grupo.value,
+        nota: Nota.value,
+        foto: Foto.src
+      };
 
-      if (AlunoChave != Telefone) {
-        AlunoDados = Database.child("/alunos/" + AlunoChave);
-        AlunoDados.remove();
-      }
-    } else {
-      Database.child("alunos").child(Telefone).once("value", function (Snap) {
-        if (Snap.exists()) {
+      if (AlunoChave != null && AlunoChave != "null") {
 
-          Notificacao("Já existe um(a) aluno(a) com esse telefone");
+        AlunoDados = Database.child("/alunos/" + Telefone);
+        AlunoDados.update(Dados);
 
-        } else {
-          AlunoDados = Database.child("/alunos/" + Telefone);
+        Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
 
-          AlunoDados.set(Dados);
-
-          Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
+        if (AlunoChave != Telefone) {
+          AlunoDados = Database.child("/alunos/" + AlunoChave);
+          AlunoDados.remove();
         }
-      });
+      } else {
+        Database.child("alunos").child(Telefone).once("value", function (Snap) {
+          if (Snap.exists()) {
+
+            Notificacao("Já existe um(a) aluno(a) com esse telefone");
+
+          } else {
+            AlunoDados = Database.child("/alunos/" + Telefone);
+
+            AlunoDados.set(Dados);
+
+            Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
+          }
+        });
+      }
+
+      Foto.src = GalleryImage;
+
+      ChangePage(Alunos);
     }
-
-    Foto.src = GalleryImage;
-
-    ChangePage(Alunos);
   }
 }
 
@@ -391,19 +399,24 @@ function TabelaAdministradores() {
 }
 
 function DeletarAdministrador(e, path) {
-  // if (typeof(e).target !== "undefined") {
-  // var Chave = e.target.closest("tr").getAttribute("data-key");
-  // } else {
-  var Chave = e;
-  // };
-  var Path = path;
-  var Dados = Database.child(Path + Chave);
 
-  Dados.once("value", Snap => {
-    Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) administrador " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota + " e com o telefone " + Snap.key);
-  });
+  if (confirm('Atenção, você está prestes a deletar um administrador!')) {
 
-  Dados.remove();
+
+    // if (typeof(e).target !== "undefined") {
+    // var Chave = e.target.closest("tr").getAttribute("data-key");
+    // } else {
+    var Chave = e;
+    // };
+    var Path = path;
+    var Dados = Database.child(Path + Chave);
+
+    Dados.once("value", Snap => {
+      Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) administrador " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota + " e com o telefone " + Snap.key);
+    });
+
+    Dados.remove();
+  }
 }
 
 function ListarAdministrador(Snap) {
@@ -620,7 +633,7 @@ var GET = (function (a) {
 })(window.location.search.substr(1).split("&"));
 
 function SetAdminPage() {
-  // Vue.AdminPage = GET["p"] == null ? "menu" : GET["p"];
+  Vue.AdminPage = GET["p"] == null ? "menu" : GET["p"];
 
   var AdminElement = document.getElementById(Vue.AdminPage);
 
@@ -630,6 +643,8 @@ function SetAdminPage() {
     document.getElementById("menu").style.display = "block";
     Vue.AdminPage = "menu";
   }
+
+  document.getElementById(Vue.AdminPage + '-url').className = 'active';
 }
 
 function SetStudentPage() {
@@ -735,13 +750,20 @@ function LoginRedirecionar() {
       window.location.href = "/dashboard";
     }
   }
-
   if (Vue.Page == "dashboard") {
     if (Vue.HasLogin) {
-      TabelaAlunos();
-      TabelaRegistros();
-      TabelaAdministradores();
       SetAdminPage();
+      switch (Vue.AdminPage) {
+        case "alunos":
+          TabelaAlunos();
+          break;
+        case "registros":
+          TabelaRegistros();
+          break;
+        case "administradores":
+          TabelaAdministradores();
+          break;
+      }
       SetEditor();
     } else {
       window.location.href = "/login";
@@ -840,6 +862,13 @@ window.onload = function () {
 
   LoadIframe();
   CreateTable();
+
+  $('#' + Vue.AdminPage + '-url a').on('click', function () {
+    ChangePage('#' + Vue.AdminPage)
+  });
+
+  var URLS = [...document.getElementsByClassName("url")];
+  URLS.forEach(CheckURL);
 };
 
 window.notify = {
@@ -1014,8 +1043,8 @@ function CreateTable() {
       info: false,
       lengthChange: false,
 
-      responsive: true,
-      autoWidth: false
+      autoWidth: false,
+      responsive: true
     })
     .columns.adjust()
     .responsive.recalc();
@@ -1146,6 +1175,12 @@ function EditarPostagem() {
   }
 }
 
+function ResizeTable() {
+  $('table').DataTable().columns.adjust()
+    .responsive.recalc()
+  $.fn.dataTable.ext.errMode = 'none';
+}
+
 function Update() {
   $('.dataTables_filter').removeClass('dataTables_filter').css('padding', '5px');
   $('.paginate_button').addClass('btn').removeClass('paginate_button').css('margin', '5px');
@@ -1168,11 +1203,38 @@ $('#alunos-lista').on('click', '.aluno-deletar-button', function () {
   DeletarAluno($(this).attr('data-key', $(this).attr('data-path')));
 });
 
-$(".phone-input").mask("+55 (73) 9 0000-0000", {
+$('table').on('page', ResizeTable);
+$('table').on('search', ResizeTable);
+$('table').on('column-sizing', ResizeTable);
+$('table').on('responsive-resize', ResizeTable);
+
+// setInterval(ResizeTable(), 1000);
+
+$(".phone-input").mask("+55 (73) N ZZZZ-ZZZZ", {
   translation: {
-    '9': {
+    'N': {
       pattern: /9/,
       fallback: 9
+    },
+    'Z': {
+      pattern: /[0-9]/
     }
-  }
+  },
+  keepStatic: true
 });
+
+function CheckURL(item, index) {
+  if (GET['p'] !== undefined) {
+    if (item.href === window.location.href || item.href + "#" === window.location.href) {
+      item.href = '#';
+    }
+  } else if(index === 0) {
+    item.href = '#';
+  }
+}
+
+window.onresize = function () {
+  ResizeTable();
+}
+
+// window.addEventListener("resize", ResizeTable);
