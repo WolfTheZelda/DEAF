@@ -39,8 +39,8 @@ const AdministradoresPagina = document.getElementById("administradores");
 const AdministradoresDados = Database.child("administradores");
 const AdministradoresLista = document.getElementById("administradores-lista");
 
-const RegistrosDados = Database.child("registros");
-const RegistrosLista = document.getElementById("registros-lista");
+const REGISTROS_DATABASE = Database.child("registros");
+const REGISTROS_LIST = document.getElementById("registros-lista");
 
 const PostagensDados = Database.child("postagens");
 const PostagensLista = document.getElementById("postagens-lista");
@@ -51,19 +51,19 @@ const GalleryImage = "/assets/image/gallery.webp",
 function EnviarArquivo(Input, Img, Path) {
   Img = document.getElementById(Img);
 
-  var OldLink = Img.src;
+  let OldLink = Img.src;
   OldLink = OldLink.substring(OldLink.indexOf("/assets"), OldLink.lastIndexOf(""));
 
   Img.src = LoadingImage;
 
-  var Arquivo = document.getElementById(Input).files[0];
-  var Nome = Database.child(Path).push().key;
+  let Arquivo = document.getElementById(Input).files[0];
+  let Nome = Database.child(Path).push().key;
 
-  var MetaData = {
+  let MetaData = {
     contentType: Arquivo.type
   };
 
-  var Task = Storage.child(Path + Nome).put(Arquivo, MetaData);
+  let Task = Storage.child(Path + Nome).put(Arquivo, MetaData);
 
   Task
     .then(Snap => Snap.ref.getDownloadURL())
@@ -71,7 +71,7 @@ function EnviarArquivo(Input, Img, Path) {
       Img.src = URL;
 
       if (OldLink != GalleryImage && OldLink != LoadingImage) {
-        var DeletePath = firebase.storage().refFromURL(OldLink);
+        let DeletePath = firebase.storage().refFromURL(OldLink);
 
         DeletePath.delete().then(function () {
           // Deletado com sucesso
@@ -112,14 +112,21 @@ function ResetarSelect(Element, Child, Condition) {
 }
 
 function TabelaRegistros() {
-  RegistrosDados.on("child_added", Snap => {
+  REGISTROS_DATABASE.on("child_added", Snap => {
     DestroyTable();
     ListarRegistro(Snap);
     CreateTable();
-    //var DataSet = [Snap.val().timestamp, Snap.val().registro, new Date(Snap.val().timestamp).toLocaleString()];
+    //let DataSet = [Snap.val().timestamp, Snap.val().registro, new Date(Snap.val().timestamp).toLocaleString()];
     //$('#registros table').DataTable().rows.add([DataSet]).draw();
   });
-  RegistrosDados.on("child_changed", Snap => {
+
+  /*
+  REGISTROS_DATABASE.endAt().limitToLast(1).on("child_added", () => {
+    CreateTable();
+  });
+  */
+
+  REGISTROS_DATABASE.on("child_changed", Snap => {
     DestroyTable();
     RemoverLinha(Snap);
     ListarRegistro(Snap);
@@ -127,51 +134,46 @@ function TabelaRegistros() {
 
     // Notificacao(Snap.val().registro);
   });
-  RegistrosDados.on("child_removed", Snap => {
+  REGISTROS_DATABASE.on("child_removed", Snap => {
     DestroyTable();
     RemoverLinha(Snap);
     CreateTable();
   });
   /*
-  RegistrosDados.endAt().limitToLast(1).on("child_changed", Snap => {
+  REGISTROS_DATABASE.endAt().limitToLast(1).on("child_changed", Snap => {
     ChecarTimestamp(Snap);
   });
-  RegistrosDados.endAt().limitToLast(1).on("child_removed", Snap => {
+  REGISTROS_DATABASE.endAt().limitToLast(1).on("child_removed", Snap => {
     ChecarTimestamp(Snap);
   });
   */
 }
 
-RegistrosDados.endAt().limitToLast(1).on("child_added", Snap => {
+REGISTROS_DATABASE.endAt().limitToLast(1).on("child_added", Snap => {
   ChecarTimestamp(Snap);
+  // CreateTable();
 });
 
 function ListarRegistro(Snap) {
   let Aluno = Snap.val();
 
-  let Linha = document.createElement("tr");
+  let StringHTML =
+    '<tr data-key=\'' + Snap.key + '\'>' +
+    '<td>' + Aluno.timestamp + '</td>' +
+    '<td>' + Aluno.registro + '</td>' +
+    '<td>' + new Date(Aluno.timestamp).toLocaleString() + '</td>' +
+    '</tr>';
 
-  let Timestamp = document.createElement("td");
-  let Nome = document.createElement("td");
-  let Ano = document.createElement("td");
-
-  Timestamp.innerHTML = Aluno.timestamp;
-  Nome.innerHTML = Aluno.registro;
-  Ano.innerHTML = new Date(Aluno.timestamp).toLocaleString();
-
-  Linha.append(Timestamp);
-  Linha.append(Nome);
-  Linha.append(Ano);
-
-  Linha.setAttribute("data-key", Snap.key);
-
-  RegistrosLista.append(Linha);
+  REGISTROS_LIST.innerHTML += StringHTML;
 }
 
 function TabelaAlunos() {
   AlunosDados.on("child_added", Snap => {
     DestroyTable();
     ListarAluno(Snap);
+  });
+
+  AlunosDados.endAt().limitToLast(1).on("child_added", () => {
     CreateTable();
   });
 
@@ -179,19 +181,20 @@ function TabelaAlunos() {
     DestroyTable();
     RemoverLinha(Snap);
     ListarAluno(Snap);
-    CreateTable();
+    // CreateTable();
   });
 
   AlunosDados.on("child_removed", Snap => {
     DestroyTable();
     RemoverLinha(Snap);
-    CreateTable();
+    // CreateTable();
   });
 }
 
 function ListarAluno(Snap) {
   let Aluno = Snap.val();
 
+  /*
   let Linha = document.createElement("tr");
 
   let Nome = document.createElement("td");
@@ -254,15 +257,29 @@ function ListarAluno(Snap) {
   Linha.setAttribute("data-key", Snap.key);
 
   AlunosLista.append(Linha);
+  */
+
+  let StringHTML = '<tr data-key=\'' + Snap.key + '\'>' +
+    '<td>' + Aluno.nome + '</td>' +
+    '<td>' + Aluno.ano + '</td>' +
+    '<td>' + Aluno.colegio + '</td>' +
+    '<td>' + Aluno.grupo + '</td>' +
+    '<td>' + Aluno.nota + '</td>' +
+    '<td><a class=\'btn waves-effect waves-light green\' href=\'https://wa.me/' + Snap.key.replace("+", "") + '\' target=\'_blank\'>' + Snap.key + '</a></td>' +
+    '<td><button data-key=\'' + Snap.key + '\' class=\'btn waves-effect waves-light blue aluno-mostrar-button\'>Mostrar</button></td>' +
+    '<td><button data-key=\'' + Snap.key + '\' data-path=\'/alunos/\' class=\'btn waves-effect waves-light red aluno-deletar-button\'>Deletar</button></td>' +
+    '</tr>';
+  
+  AlunosLista.innerHTML += StringHTML;
 }
 
 function MostrarAluno(e) {
   // if (typeof(e).target !== "undefined") {
-  // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // let AlunoChave = e.target.closest("tr").getAttribute("data-key");
   // } else {
-  var AlunoChave = e;
+  let AlunoChave = e;
   // };
-  var AlunoDados = Database.child("/alunos/" + AlunoChave);
+  let AlunoDados = Database.child("/alunos/" + AlunoChave);
 
   AlunoPagina.setAttribute("data-key", AlunoChave);
 
@@ -305,12 +322,12 @@ function DeletarAluno(e, path) {
 
 
     // if (typeof(e).target !== "undefined") {
-    // var Chave = e.target.closest("tr").getAttribute("data-key");
+    // let Chave = e.target.closest("tr").getAttribute("data-key");
     // } else {
-    var Chave = e;
+    let Chave = e;
     // };
-    var Path = path;
-    var Dados = Database.child(Path + Chave);
+    let Path = path;
+    let Dados = Database.child(Path + Chave);
 
     Dados.once("value", Snap => {
       Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) aluno(a) " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota);
@@ -321,7 +338,7 @@ function DeletarAluno(e, path) {
   }
 
   function EditarAluno() {
-    var AlunoChave = AlunoPagina.getAttribute("data-key");
+    let AlunoChave = AlunoPagina.getAttribute("data-key");
 
     let Nome = document.getElementById("aluno-nome");
     let Ano = document.getElementById("aluno-ano");
@@ -332,9 +349,9 @@ function DeletarAluno(e, path) {
     let Foto = document.getElementById("aluno-foto-imagem");
 
     if (Foto.src != LoadingImage) {
-      var AlunoDados;
+      let AlunoDados;
 
-      var Dados = {
+      let Dados = {
         nome: NomeMask(Nome.value),
         ano: Ano.value,
         colegio: Colegio.value,
@@ -381,6 +398,9 @@ function TabelaAdministradores() {
   AdministradoresDados.on("child_added", Snap => {
     DestroyTable();
     ListarAdministrador(Snap);
+  });
+
+  AdministradoresDados.endAt().limitToLast(1).on("child_added", () => {
     CreateTable();
   });
 
@@ -388,13 +408,11 @@ function TabelaAdministradores() {
     DestroyTable();
     RemoverLinha(Snap);
     ListarAdministrador(Snap);
-    CreateTable();
   });
 
   AdministradoresDados.on("child_removed", Snap => {
     DestroyTable();
     RemoverLinha(Snap);
-    CreateTable();
   });
 }
 
@@ -404,12 +422,12 @@ function DeletarAdministrador(e, path) {
 
 
     // if (typeof(e).target !== "undefined") {
-    // var Chave = e.target.closest("tr").getAttribute("data-key");
+    // let Chave = e.target.closest("tr").getAttribute("data-key");
     // } else {
-    var Chave = e;
+    let Chave = e;
     // };
-    var Path = path;
-    var Dados = Database.child(Path + Chave);
+    let Path = path;
+    let Dados = Database.child(Path + Chave);
 
     Dados.once("value", Snap => {
       Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) administrador " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota + " e com o telefone " + Snap.key);
@@ -422,81 +440,41 @@ function DeletarAdministrador(e, path) {
 function ListarAdministrador(Snap) {
   let Aluno = Snap.val();
 
-  let Linha = document.createElement("tr");
+  let disabled_button = 'enabled';
 
-  let Nome = document.createElement("td");
-  let Ano = document.createElement("td");
-  let Colegio = document.createElement("td");
-  let Grupo = document.createElement("td");
-  let Nota = document.createElement("td");
-  let Telefone = document.createElement("td");
-  let TelefoneBotao = document.createElement("a");
-
-  let Mostrar = document.createElement("td");
-  let MostrarBotao = document.createElement("button");
-
-  let Deletar = document.createElement("td");
-  let DeletarBotao = document.createElement("button");
-
-  Nome.innerHTML = Aluno.nome;
-  Ano.innerHTML = Aluno.ano;
-  Colegio.innerHTML = Aluno.colegio;
-  Grupo.innerHTML = Aluno.grupo;
-  Nota.innerHTML = Aluno.nota;
-
-  Linha.append(Nome);
-  Linha.append(Ano);
-  Linha.append(Colegio);
-  Linha.append(Grupo);
-  Linha.append(Nota);
-
-  TelefoneBotao.innerHTML = Snap.key;
-  TelefoneBotao.className = "btn waves-effect waves-light green";
-  TelefoneBotao.setAttribute("target", "_blank");
-  TelefoneBotao.setAttribute("href", "https://wa.me/" + Snap.key.replace("+", ""));
-  Telefone.append(TelefoneBotao);
-  Linha.append(Telefone);
-
-  MostrarBotao.className = "btn waves-effect waves-light blue administrador-mostrar-button";
-  MostrarBotao.innerHTML = "Mostrar";
-  // MostrarBotao.addEventListener("click", (e) => {
-  // MostrarAdministrador(e.target);
-  // });
-  MostrarBotao.setAttribute("data-key", Snap.key);
-
-  Mostrar.append(MostrarBotao);
-  Linha.append(Mostrar);
-
-  DeletarBotao.innerHTML = "Deletar";
-  DeletarBotao.setAttribute("data-key", Snap.key);
-
-  if (Aluno.grupo != "Desenvolvedor") {
-    DeletarBotao.className = "btn waves-effect waves-light red administrador-deletar-button";
-
-    // DeletarBotao.addEventListener("click", (e) => {
-    // DeletarAdministrador(e.target);
-    // });
-  } else {
-    DeletarBotao.className = "btn waves-effect waves-light red administrador-deletar-button disabled";
+  switch (Aluno.grupo) {
+    case "Desenvolvedor":
+      disabled_button = 'disabled';
+      break;
+    case "Orientador":
+      disabled_button = 'enabled';
+      break;
+    default:
+      disabled_button = 'enabled';
+      break;
   }
 
-  DeletarBotao.setAttribute("data-path", "/administradores/");
+  let StringHTML = '<tr data-key=\'' + Snap.key + '\'>' +
+    '<td>' + Aluno.nome + '</td>' +
+    '<td>' + Aluno.ano + '</td>' +
+    '<td>' + Aluno.colegio + '</td>' +
+    '<td>' + Aluno.grupo + '</td>' +
+    '<td>' + Aluno.nota + '</td>' +
+    '<td><a class=\'btn waves-effect waves-light green\' href=\'https://wa.me/' + Snap.key.replace("+", "") + '\' target=\'_blank\'>' + Snap.key + '</a></td>' +
+    '<td><button data-key=\'' + Snap.key + '\' class=\'btn waves-effect waves-light blue administrador-mostrar-button\'>Mostrar</button></td>' +
+    '<td><button data-key=\'' + Snap.key + '\' data-path=\'/administradores/\' class=\'btn waves-effect waves-light red administrador-deletar-button ' + disabled_button + '\'>Deletar</button></td>' +
+    '</tr>';
 
-  Deletar.append(DeletarBotao);
-  Linha.append(Deletar);
-
-  Linha.setAttribute("data-key", Snap.key);
-
-  AdministradoresLista.append(Linha);
+  AdministradoresLista.innerHTML += StringHTML;
 }
 
 function MostrarAdministrador(e) {
   // if (typeof(e).target !== "undefined") {
-  // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // let AlunoChave = e.target.closest("tr").getAttribute("data-key");
   // } else {
-  var AlunoChave = e;
+  let AlunoChave = e;
   // };
-  var AlunoDados = Database.child("/administradores/" + AlunoChave);
+  let AlunoDados = Database.child("/administradores/" + AlunoChave);
 
   AdministradorPagina.setAttribute("data-key", AlunoChave);
 
@@ -547,7 +525,7 @@ function MostrarAdministrador(e) {
 }
 
 function EditarAdministrador() {
-  var AlunoChave = AdministradorPagina.getAttribute("data-key");
+  let AlunoChave = AdministradorPagina.getAttribute("data-key");
 
   let Nome = document.getElementById("administrador-nome");
   let Ano = document.getElementById("administrador-ano");
@@ -558,9 +536,9 @@ function EditarAdministrador() {
   let Foto = document.getElementById("administrador-foto-imagem");
 
   if (Foto.src != LoadingImage) {
-    var AlunoDados;
+    let AlunoDados;
 
-    var Dados = {
+    let Dados = {
       nome: NomeMask(Nome.value),
       ano: Ano.value,
       colegio: Colegio.value,
@@ -617,10 +595,10 @@ var GET = (function (a) {
     return {};
   }
 
-  var b = {};
+  let b = {};
 
-  for (var i = 0; i < a.length; ++i) {
-    var c = a[i].split("=", 2);
+  for (let i = 0; i < a.length; ++i) {
+    let c = a[i].split("=", 2);
 
     if (c.length == 1) {
       b[c[0]] = "";
@@ -635,7 +613,7 @@ var GET = (function (a) {
 function SetAdminPage() {
   Vue.AdminPage = GET["p"] == null ? "menu" : GET["p"];
 
-  var AdminElement = document.getElementById(Vue.AdminPage);
+  let AdminElement = document.getElementById(Vue.AdminPage);
 
   if (AdminElement) {
     document.getElementById(Vue.AdminPage).style.display = "block";
@@ -678,7 +656,7 @@ function Notificacao(Mensagem) {
 }
 
 function ChecarTimestamp(Snap) {
-  var Time = new Date().getTime() - Snap.val().timestamp;
+  let Time = new Date().getTime() - Snap.val().timestamp;
 
   if (Time <= 1000) {
     Notificacao(Snap.val().registro);
@@ -702,8 +680,8 @@ function LoginRecaptcha() {
 }
 
 function LoginTelefone() {
-  var Telefone = document.getElementById("telefone-input").value;
-  var RecaptchaVerificador = window.RecaptchaVerificador;
+  let Telefone = document.getElementById("telefone-input").value;
+  let RecaptchaVerificador = window.RecaptchaVerificador;
 
   firebase.auth().signInWithPhoneNumber(Telefone, RecaptchaVerificador)
     .then(function (Result) {
@@ -721,7 +699,7 @@ function LoginTelefone() {
 }
 
 function LoginSenha() {
-  var Senha = document.getElementById("senha-input").value;
+  let Senha = document.getElementById("senha-input").value;
 
   RecaptchaResultado.confirm(Senha).then(function (Result) {
     Notificacao("Conectado com sucesso");
@@ -804,9 +782,9 @@ function LoginChecar() {
       Vue.UserId = User.uid;
       Vue.UserNumber = User.phoneNumber;
 
-      var URL = "https://acaofilosofica.com/api/checkuser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber;
+      let URL = "https://acaofilosofica.com/api/checkuser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber;
 
-      var XHTTP = new XMLHttpRequest();
+      let XHTTP = new XMLHttpRequest();
       XHTTP.open("GET", URL, true);
       XHTTP.onload = function (e) {
         if (XHTTP.readyState === 4) {
@@ -863,12 +841,12 @@ window.onload = function () {
   LoadIframe();
   CreateTable();
 
+  let URL = [...document.getElementsByClassName("url")];
+  URL.forEach(CheckURL);
+
   $('#' + Vue.AdminPage + '-url a').on('click', function () {
     ChangePage('#' + Vue.AdminPage)
   });
-
-  var URLS = [...document.getElementsByClassName("url")];
-  URLS.forEach(CheckURL);
 };
 
 window.notify = {
@@ -906,7 +884,7 @@ window.notify = {
 
       notify.id++;
 
-      var id = notify.id;
+      let id = notify.id;
 
       notify.list[id] = new Notification("DEAF - Ação Filosófica", {
         body: Body,
@@ -950,14 +928,14 @@ function NotificacaoDesktop(Body) {
 
 function NomeMask(Text) {
   if (Text != null && Text != "") {
-    var Texto = Text.toLowerCase().trim();
+    let Texto = Text.toLowerCase().trim();
 
-    var Palavras = Texto.split(" ");
+    let Palavras = Texto.split(" ");
 
-    for (var i = 0; i < Palavras.length; i++) {
-      var Palavra = Palavras[i];
+    for (let i = 0; i < Palavras.length; i++) {
+      let Palavra = Palavras[i];
 
-      var PrimeiraLetra = Palavra[0];
+      let PrimeiraLetra = Palavra[0];
 
       if (Palavra.length > 2) {
         Palavra = PrimeiraLetra.toUpperCase() + Palavra.slice(1);
@@ -1001,8 +979,8 @@ Cordova();
 $("img.lazy").Lazy();
 
 function LoadIframe() {
-  var vidDefer = document.getElementsByTagName('iframe');
-  for (var i = 0; i < vidDefer.length; i++) {
+  let vidDefer = document.getElementsByTagName('iframe');
+  for (let i = 0; i < vidDefer.length; i++) {
     if (vidDefer[i].getAttribute('data-src')) {
       vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
     }
@@ -1053,7 +1031,7 @@ function CreateTable() {
 }
 
 function SetEditor() {
-  var editor = new Quill('#editor', {
+  let editor = new Quill('#editor', {
     theme: 'snow'
   });
 
@@ -1093,11 +1071,11 @@ function ListarPostagem(Snap) {
 
 function MostrarPostagem(e) {
   // if (typeof(e).target !== "undefined") {
-  // var AlunoChave = e.target.closest("tr").getAttribute("data-key");
+  // let AlunoChave = e.target.closest("tr").getAttribute("data-key");
   // } else {
-  var AlunoChave = e;
+  let AlunoChave = e;
   // };
-  var AlunoDados = Database.child("/postagens/" + AlunoChave);
+  let AlunoDados = Database.child("/postagens/" + AlunoChave);
 
   PostagemPagina.setAttribute("data-key", AlunoChave);
 
@@ -1121,7 +1099,7 @@ function MostrarPostagem(e) {
 }
 
 function EditarPostagem() {
-  var AlunoChave = AdministradorPagina.getAttribute("data-key");
+  let AlunoChave = AdministradorPagina.getAttribute("data-key");
 
   let Nome = document.getElementById("administrador-nome");
   let Ano = document.getElementById("administrador-ano");
@@ -1132,9 +1110,9 @@ function EditarPostagem() {
   let Foto = document.getElementById("administrador-foto-imagem");
 
   if (Foto.src != LoadingImage) {
-    var AlunoDados;
+    let AlunoDados;
 
-    var Dados = {
+    let Dados = {
       nome: NomeMask(Nome.value),
       ano: Ano.value,
       colegio: Colegio.value,
@@ -1182,7 +1160,7 @@ function ResizeTable() {
 }
 
 function Update() {
-  $('.dataTables_filter').removeClass('dataTables_filter').css('padding', '5px');
+  $('.dataTables_filter').removeClass('dataTables_filter').css('padding', '5px').append('<i class=\'material-icons\' style=\'bottom: 4vh; position: relative; float: right;\'>search</i>');
   $('.paginate_button').addClass('btn').removeClass('paginate_button').css('margin', '5px');
 
   requestAnimationFrame(Update);
@@ -1228,7 +1206,7 @@ function CheckURL(item, index) {
     if (item.href === window.location.href || item.href + "#" === window.location.href) {
       item.href = '#';
     }
-  } else if(index === 0) {
+  } else if (index === 0) {
     item.href = '#';
   }
 }
