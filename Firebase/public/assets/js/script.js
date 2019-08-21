@@ -48,6 +48,25 @@ const PostagensLista = document.getElementById("postagens-lista");
 const GalleryImage = "/assets/image/gallery.webp",
   LoadingImage = "/assets/image/loading.webp";
 
+const editor = document.getElementById('editor') !== null ? new Quill('#editor', {
+  theme: 'snow'
+}) : "";
+
+const administrador_editor = document.getElementById('administrador-editor') !== null ? new Quill('#administrador-editor', {
+  theme: 'snow'
+}) : "";
+
+if (document.getElementById('administrador-editor') !== null) {
+  administrador_editor.root.innerHTML = "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>";
+}
+const aluno_editor = document.getElementById('aluno-editor') !== null ? new Quill('#aluno-editor', {
+  theme: 'snow'
+}) : "";
+
+if (document.getElementById('aluno-editor') !== null) {
+  aluno_editor.root.innerHTML = "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>";
+}
+
 function EnviarArquivo(Input, Img, Path) {
   Img = document.getElementById(Img);
 
@@ -114,45 +133,60 @@ function ResetarSelect(Element, Child, Condition) {
 function TabelaRegistros() {
   REGISTROS_DATABASE.on("child_added", Snap => {
     DestroyTable();
-    ListarRegistro(Snap);
-    CreateTable();
-    //let DataSet = [Snap.val().timestamp, Snap.val().registro, new Date(Snap.val().timestamp).toLocaleString()];
-    //$('#registros table').DataTable().rows.add([DataSet]).draw();
-  });
 
-  /*
-  REGISTROS_DATABASE.endAt().limitToLast(1).on("child_added", () => {
+    ListarRegistro(Snap);
+
     CreateTable();
   });
-  */
 
   REGISTROS_DATABASE.on("child_changed", Snap => {
     DestroyTable();
+
     RemoverLinha(Snap);
     ListarRegistro(Snap);
-    CreateTable();
 
-    // Notificacao(Snap.val().registro);
+    CreateTable();
   });
   REGISTROS_DATABASE.on("child_removed", Snap => {
     DestroyTable();
+
     RemoverLinha(Snap);
+
     CreateTable();
   });
-  /*
-  REGISTROS_DATABASE.endAt().limitToLast(1).on("child_changed", Snap => {
-    ChecarTimestamp(Snap);
-  });
-  REGISTROS_DATABASE.endAt().limitToLast(1).on("child_removed", Snap => {
-    ChecarTimestamp(Snap);
-  });
-  */
 }
 
 REGISTROS_DATABASE.endAt().limitToLast(1).on("child_added", Snap => {
   ChecarTimestamp(Snap);
   // CreateTable();
 });
+
+function TabelaAlunos() {
+  AlunosDados.on("child_added", Snap => {
+    DestroyTable();
+
+    ListarAluno(Snap);
+
+    CreateTable();
+  });
+
+  AlunosDados.on("child_changed", Snap => {
+    DestroyTable();
+
+    RemoverLinha(Snap);
+    ListarAluno(Snap);
+
+    CreateTable();
+  });
+
+  AlunosDados.on("child_removed", Snap => {
+    DestroyTable();
+
+    RemoverLinha(Snap);
+
+    CreateTable();
+  });
+}
 
 function ListarRegistro(Snap) {
   let Aluno = Snap.val();
@@ -167,97 +201,8 @@ function ListarRegistro(Snap) {
   REGISTROS_LIST.innerHTML += StringHTML;
 }
 
-function TabelaAlunos() {
-  AlunosDados.on("child_added", Snap => {
-    DestroyTable();
-    ListarAluno(Snap);
-  });
-
-  AlunosDados.endAt().limitToLast(1).on("child_added", () => {
-    CreateTable();
-  });
-
-  AlunosDados.on("child_changed", Snap => {
-    DestroyTable();
-    RemoverLinha(Snap);
-    ListarAluno(Snap);
-    // CreateTable();
-  });
-
-  AlunosDados.on("child_removed", Snap => {
-    DestroyTable();
-    RemoverLinha(Snap);
-    // CreateTable();
-  });
-}
-
 function ListarAluno(Snap) {
   let Aluno = Snap.val();
-
-  /*
-  let Linha = document.createElement("tr");
-
-  let Nome = document.createElement("td");
-  let Ano = document.createElement("td");
-  let Colegio = document.createElement("td");
-  let Grupo = document.createElement("td");
-  let Nota = document.createElement("td");
-  let Telefone = document.createElement("td");
-  let TelefoneBotao = document.createElement("a");
-
-  let Mostrar = document.createElement("td");
-  let MostrarBotao = document.createElement("button");
-
-  let Deletar = document.createElement("td");
-  let DeletarBotao = document.createElement("button");
-
-  Nome.innerHTML = Aluno.nome;
-  Ano.innerHTML = Aluno.ano;
-  Colegio.innerHTML = Aluno.colegio;
-  Grupo.innerHTML = Aluno.grupo;
-  Nota.innerHTML = Aluno.nota;
-
-  Linha.append(Nome);
-  Linha.append(Ano);
-  Linha.append(Colegio);
-  Linha.append(Grupo);
-  Linha.append(Nota);
-
-  TelefoneBotao.innerHTML = Snap.key;
-  TelefoneBotao.className = "btn waves-effect waves-light green";
-  TelefoneBotao.setAttribute("target", "_blank");
-  TelefoneBotao.setAttribute("href", "https://wa.me/" + Snap.key.replace("+", ""));
-  Telefone.append(TelefoneBotao);
-  Linha.append(Telefone);
-
-  MostrarBotao.className = "btn waves-effect waves-light blue aluno-mostrar-button";
-  MostrarBotao.innerHTML = "Mostrar";
-  // MostrarBotao.addEventListener("click", (e) => {
-  // MostrarAluno(e.target);
-  // });
-
-  MostrarBotao.setAttribute("data-key", Snap.key);
-
-  Mostrar.append(MostrarBotao);
-  Linha.append(Mostrar);
-
-  DeletarBotao.className = "btn waves-effect waves-light red aluno-deletar-button";
-  DeletarBotao.innerHTML = "Deletar";
-  // DeletarBotao.addEventListener("click", (e) => {
-  // DeletarAluno(e.target);
-  // });
-
-  DeletarBotao.setAttribute("data-path", "/alunos/");
-  DeletarBotao.setAttribute("data-key", Snap.key);
-
-
-  Deletar.append(DeletarBotao);
-  Linha.append(Deletar);
-
-  Linha.setAttribute("data-key", Snap.key);
-
-  AlunosLista.append(Linha);
-  */
 
   let StringHTML = '<tr data-key=\'' + Snap.key + '\'>' +
     '<td>' + Aluno.nome + '</td>' +
@@ -269,179 +214,14 @@ function ListarAluno(Snap) {
     '<td><button data-key=\'' + Snap.key + '\' class=\'btn waves-effect waves-light blue aluno-mostrar-button\'>Mostrar</button></td>' +
     '<td><button data-key=\'' + Snap.key + '\' data-path=\'/alunos/\' class=\'btn waves-effect waves-light red aluno-deletar-button\'>Deletar</button></td>' +
     '</tr>';
-  
+
   AlunosLista.innerHTML += StringHTML;
-}
-
-function MostrarAluno(e) {
-  // if (typeof(e).target !== "undefined") {
-  // let AlunoChave = e.target.closest("tr").getAttribute("data-key");
-  // } else {
-  let AlunoChave = e;
-  // };
-  let AlunoDados = Database.child("/alunos/" + AlunoChave);
-
-  AlunoPagina.setAttribute("data-key", AlunoChave);
-
-  ChangePage(AlunoPagina);
-
-  AlunoDados.on("value", Snap => {
-    let Aluno = Snap.val();
-
-    let Nome = document.getElementById("aluno-nome");
-    let Ano = document.getElementById("aluno-ano");
-    let Colegio = document.getElementById("aluno-colegio");
-    let Grupo = document.getElementById("aluno-grupo");
-    let Nota = document.getElementById("aluno-nota");
-    let Telefone = document.getElementById("aluno-telefone");
-    let Foto = document.getElementById("aluno-foto-imagem");
-
-    if (Snap.key !== "null") {
-
-      Nome.value = Aluno.nome;
-      Ano.value = Aluno.ano;
-      Colegio.value = Aluno.colegio;
-      Grupo.value = Aluno.grupo;
-      Nota.value = Aluno.nota;
-      // Telefone.value = Snap.key;
-      $(Telefone).val(Snap.key).trigger('input');
-
-      Foto.setAttribute("src", Aluno.foto);
-
-      if (Aluno.foto == "" || Aluno.foto == null) {
-        Foto.setAttribute("src", GalleryImage);
-      }
-
-    }
-  });
-}
-
-function DeletarAluno(e, path) {
-
-  if (confirm('Atenção, você está prestes a deletar um aluno!')) {
-
-
-    // if (typeof(e).target !== "undefined") {
-    // let Chave = e.target.closest("tr").getAttribute("data-key");
-    // } else {
-    let Chave = e;
-    // };
-    let Path = path;
-    let Dados = Database.child(Path + Chave);
-
-    Dados.once("value", Snap => {
-      Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) aluno(a) " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota);
-    }).then(function () {
-      Dados.remove();
-      console.log("Remove succeeded.");
-    });
-  }
-
-  function EditarAluno() {
-    let AlunoChave = AlunoPagina.getAttribute("data-key");
-
-    let Nome = document.getElementById("aluno-nome");
-    let Ano = document.getElementById("aluno-ano");
-    let Colegio = document.getElementById("aluno-colegio");
-    let Grupo = document.getElementById("aluno-grupo");
-    let Nota = document.getElementById("aluno-nota");
-    let Telefone = "+" + document.getElementById("aluno-telefone").value.replace(/[^0-9]/g, '');
-    let Foto = document.getElementById("aluno-foto-imagem");
-
-    if (Foto.src != LoadingImage) {
-      let AlunoDados;
-
-      let Dados = {
-        nome: NomeMask(Nome.value),
-        ano: Ano.value,
-        colegio: Colegio.value,
-        grupo: Grupo.value,
-        nota: Nota.value,
-        foto: Foto.src
-      };
-
-      if (AlunoChave != null && AlunoChave != "null") {
-
-        AlunoDados = Database.child("/alunos/" + Telefone);
-        AlunoDados.update(Dados);
-
-        Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
-
-        if (AlunoChave != Telefone) {
-          AlunoDados = Database.child("/alunos/" + AlunoChave);
-          AlunoDados.remove();
-        }
-      } else {
-        Database.child("alunos").child(Telefone).once("value", function (Snap) {
-          if (Snap.exists()) {
-
-            Notificacao("Já existe um(a) aluno(a) com esse telefone");
-
-          } else {
-            AlunoDados = Database.child("/alunos/" + Telefone);
-
-            AlunoDados.set(Dados);
-
-            Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
-          }
-        });
-      }
-
-      Foto.src = GalleryImage;
-
-      ChangePage(Alunos);
-    }
-  }
-}
-
-function TabelaAdministradores() {
-  AdministradoresDados.on("child_added", Snap => {
-    DestroyTable();
-    ListarAdministrador(Snap);
-  });
-
-  AdministradoresDados.endAt().limitToLast(1).on("child_added", () => {
-    CreateTable();
-  });
-
-  AdministradoresDados.on("child_changed", Snap => {
-    DestroyTable();
-    RemoverLinha(Snap);
-    ListarAdministrador(Snap);
-  });
-
-  AdministradoresDados.on("child_removed", Snap => {
-    DestroyTable();
-    RemoverLinha(Snap);
-  });
-}
-
-function DeletarAdministrador(e, path) {
-
-  if (confirm('Atenção, você está prestes a deletar um administrador!')) {
-
-
-    // if (typeof(e).target !== "undefined") {
-    // let Chave = e.target.closest("tr").getAttribute("data-key");
-    // } else {
-    let Chave = e;
-    // };
-    let Path = path;
-    let Dados = Database.child(Path + Chave);
-
-    Dados.once("value", Snap => {
-      Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) administrador " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota + " e com o telefone " + Snap.key);
-    });
-
-    Dados.remove();
-  }
 }
 
 function ListarAdministrador(Snap) {
   let Aluno = Snap.val();
 
   let disabled_button = 'enabled';
-
   switch (Aluno.grupo) {
     case "Desenvolvedor":
       disabled_button = 'disabled';
@@ -468,12 +248,166 @@ function ListarAdministrador(Snap) {
   AdministradoresLista.innerHTML += StringHTML;
 }
 
-function MostrarAdministrador(e) {
-  // if (typeof(e).target !== "undefined") {
-  // let AlunoChave = e.target.closest("tr").getAttribute("data-key");
-  // } else {
+function MostrarAluno(e) {
   let AlunoChave = e;
-  // };
+  let AlunoDados = Database.child("/alunos/" + AlunoChave);
+
+  AlunoPagina.setAttribute("data-key", AlunoChave);
+
+  ChangePage(AlunoPagina);
+
+  AlunoDados.on("value", Snap => {
+    let Aluno = Snap.val();
+
+    let Nome = document.getElementById("aluno-nome");
+    let Ano = document.getElementById("aluno-ano");
+    let Colegio = document.getElementById("aluno-colegio");
+    let Grupo = document.getElementById("aluno-grupo");
+    let Nota = document.getElementById("aluno-nota");
+    let Telefone = document.getElementById("aluno-telefone");
+    let Foto = document.getElementById("aluno-foto-imagem");
+    let Editor = document.querySelector("#aluno-editor .ql-editor");
+
+    if (Snap.key !== "null") {
+
+      Nome.value = Aluno.nome;
+      Ano.value = Aluno.ano;
+      Colegio.value = Aluno.colegio;
+      Grupo.value = Aluno.grupo;
+      Nota.value = Aluno.nota;
+      // Telefone.value = Snap.key;
+      $(Telefone).val(Snap.key).trigger('input');
+
+      Foto.setAttribute("src", Aluno.foto);
+
+      if (Aluno.foto == "" || Aluno.foto == null) {
+        Foto.setAttribute("src", GalleryImage);
+      }
+
+      if (Snap.hasChild('criterios')) {
+        aluno_editor.root.innerHTML = Aluno.criterios;
+      } else {
+        aluno_editor.root.innerHTML = "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>";
+      }
+    }
+  });
+}
+
+function DeletarAluno(e, path) {
+  if (confirm('Atenção, você está prestes a deletar um aluno!')) {
+    let Chave = e;
+    let Path = path;
+    let Dados = Database.child(Path + Chave);
+
+    Dados.once("value", Snap => {
+      Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) aluno(a) " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota);
+    });
+
+    Dados.remove();
+  }
+}
+
+function EditarAluno() {
+  let AlunoChave = AlunoPagina.getAttribute("data-key");
+
+  let Nome = document.getElementById("aluno-nome");
+  let Ano = document.getElementById("aluno-ano");
+  let Colegio = document.getElementById("aluno-colegio");
+  let Grupo = document.getElementById("aluno-grupo");
+  let Nota = document.getElementById("aluno-nota");
+  let Telefone = "+" + document.getElementById("aluno-telefone").value.replace(/[^0-9]/g, '');
+  let Foto = document.getElementById("aluno-foto-imagem");
+  let Editor = document.querySelector("#aluno-editor .ql-editor");
+
+  if (Foto.src != LoadingImage) {
+    let AlunoDados;
+
+    let Dados = {
+      nome: NomeMask(Nome.value),
+      ano: Ano.value,
+      colegio: Colegio.value,
+      grupo: Grupo.value,
+      nota: Nota.value,
+      foto: Foto.src,
+      criterios: Editor.innerHTML
+    };
+
+    if (AlunoChave != null && AlunoChave != "null") {
+
+      AlunoDados = Database.child("/alunos/" + Telefone);
+      AlunoDados.update(Dados);
+
+      Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
+
+      if (AlunoChave != Telefone) {
+        AlunoDados = Database.child("/alunos/" + AlunoChave);
+        AlunoDados.remove();
+      }
+    } else {
+      Database.child("alunos").child(Telefone).once("value", function (Snap) {
+        if (Snap.exists()) {
+
+          Notificacao("Já existe um(a) aluno(a) com esse telefone");
+
+        } else {
+          AlunoDados = Database.child("/alunos/" + Telefone);
+
+          AlunoDados.set(Dados);
+
+          Registrar("O(a) administrador(a) " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o(a) aluno(a) " + Nome.value + " (" + Grupo.value + ") com a nota " + Nota.value);
+        }
+      });
+    }
+
+    Foto.src = GalleryImage;
+
+    ChangePage(Alunos);
+  }
+}
+
+function TabelaAdministradores() {
+  AdministradoresDados.on("child_added", Snap => {
+    DestroyTable();
+
+    ListarAdministrador(Snap);
+
+    CreateTable();
+  });
+
+  AdministradoresDados.on("child_changed", Snap => {
+    DestroyTable();
+
+    RemoverLinha(Snap);
+    ListarAdministrador(Snap);
+
+    CreateTable();
+  });
+
+  AdministradoresDados.on("child_removed", Snap => {
+    DestroyTable();
+
+    RemoverLinha(Snap);
+
+    CreateTable();
+  });
+}
+
+function DeletarAdministrador(e, path) {
+  if (confirm('Atenção, você está prestes a deletar um administrador!')) {
+    let Chave = e;
+    let Path = path;
+    let Dados = Database.child(Path + Chave);
+
+    Dados.once("value", Snap => {
+      Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") removeu o(a) administrador " + Snap.val().nome + " (" + Snap.val().grupo + ") com a nota " + Snap.val().nota + " e com o telefone " + Snap.key);
+    });
+
+    Dados.remove();
+  }
+}
+
+function MostrarAdministrador(e) {
+  let AlunoChave = e;
   let AlunoDados = Database.child("/administradores/" + AlunoChave);
 
   AdministradorPagina.setAttribute("data-key", AlunoChave);
@@ -490,6 +424,7 @@ function MostrarAdministrador(e) {
     let Nota = document.getElementById("administrador-nota");
     let Telefone = document.getElementById("administrador-telefone");
     let Foto = document.getElementById("administrador-foto-imagem");
+    let Editor = document.querySelector("#administrador-editor .ql-editor");
 
     if (Snap.key !== "null") {
 
@@ -498,7 +433,7 @@ function MostrarAdministrador(e) {
       Colegio.value = Aluno.colegio;
       Grupo.value = Aluno.grupo;
       Nota.value = Aluno.nota;
-      // Telefone.value = Snap.key;
+
       $(Telefone).val(Snap.key).trigger('input');
 
       Foto.setAttribute("src", Aluno.foto);
@@ -520,6 +455,11 @@ function MostrarAdministrador(e) {
         Grupo.childNodes[3].setAttribute("disabled", "");
       }
 
+      if (Snap.hasChild('criterios')) {
+        administrador_editor.root.innerHTML = Aluno.criterios;
+      } else {
+        administrador_editor.root.innerHTML = "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>";
+      }
     }
   });
 }
@@ -534,6 +474,7 @@ function EditarAdministrador() {
   let Nota = document.getElementById("administrador-nota");
   let Telefone = "+" + document.getElementById("administrador-telefone").value.replace(/[^0-9]/g, '');
   let Foto = document.getElementById("administrador-foto-imagem");
+  let Editor = document.querySelector("#administrador-editor .ql-editor");
 
   if (Foto.src != LoadingImage) {
     let AlunoDados;
@@ -544,7 +485,8 @@ function EditarAdministrador() {
       colegio: Colegio.value,
       grupo: Grupo.value,
       nota: Nota.value,
-      foto: Foto.src
+      foto: Foto.src,
+      criterios: Editor.innerHTML
     };
 
     if (AlunoChave != null && AlunoChave != "null") {
@@ -614,7 +556,6 @@ function SetAdminPage() {
   Vue.AdminPage = GET["p"] == null ? "menu" : GET["p"];
 
   let AdminElement = document.getElementById(Vue.AdminPage);
-
   if (AdminElement) {
     document.getElementById(Vue.AdminPage).style.display = "block";
   } else {
@@ -623,6 +564,10 @@ function SetAdminPage() {
   }
 
   document.getElementById(Vue.AdminPage + '-url').className = 'active';
+
+  checkPermission();
+
+  Update();
 }
 
 function SetStudentPage() {
@@ -661,7 +606,6 @@ function ChecarTimestamp(Snap) {
   if (Time <= 1000) {
     Notificacao(Snap.val().registro);
     NotificacaoDesktop(Snap.val().registro);
-    NotificacaoCordova(Snap.val().registro);
   }
 }
 
@@ -742,7 +686,6 @@ function LoginRedirecionar() {
           TabelaAdministradores();
           break;
       }
-      SetEditor();
     } else {
       window.location.href = "/login";
     }
@@ -781,24 +724,6 @@ function LoginChecar() {
       });
       Vue.UserId = User.uid;
       Vue.UserNumber = User.phoneNumber;
-
-      let URL = "https://acaofilosofica.com/api/checkuser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber;
-
-      let XHTTP = new XMLHttpRequest();
-      XHTTP.open("GET", URL, true);
-      XHTTP.onload = function (e) {
-        if (XHTTP.readyState === 4) {
-          if (XHTTP.status === 200) {
-            console.log(XHTTP.responseText);
-          } else {
-            console.error(XHTTP.statusText);
-          }
-        }
-      };
-      XHTTP.onerror = function (e) {
-        console.error(XHTTP.statusText);
-      };
-      XHTTP.send(null);
     } else {
       Vue.HasLogin = false;
     }
@@ -808,13 +733,25 @@ function LoginChecar() {
 }
 // Login - End
 
-function AudioHover(Value, Play) {
-  if (Play) {
-    $("audio")[Value].play();
-  } else {
-    $("audio")[Value].pause();
-  }
-}
+var checkPermission = () => {
+  let URL = "https://acaofilosofica.com/api/checkuser?id=" + Vue.UserId + "&phone=" + Vue.UserNumber + "&page=" + Vue.AdminPage;
+
+  let XHTTP = new XMLHttpRequest();
+  XHTTP.open("GET", URL, true);
+  XHTTP.onload = function (e) {
+    if (XHTTP.readyState === 4) {
+      if (XHTTP.status === 200) {
+        console.log(XHTTP.responseText);
+      } else {
+        console.error(XHTTP.statusText);
+      }
+    }
+  };
+  XHTTP.onerror = function (e) {
+    console.error(XHTTP.statusText);
+  };
+  XHTTP.send(null);
+};
 
 function MudarInput(Element, Condition, Value, Children) {
   for (i = 0; i < Children.length; i++) {
@@ -831,23 +768,6 @@ function MudarInput(Element, Condition, Value, Children) {
     }
   }
 }
-
-window.onload = function () {
-  if (Vue.Page != "dashboard") {
-    $("#loading").hide();
-    $("#app").show();
-  }
-
-  LoadIframe();
-  CreateTable();
-
-  let URL = [...document.getElementsByClassName("url")];
-  URL.forEach(CheckURL);
-
-  $('#' + Vue.AdminPage + '-url a').on('click', function () {
-    ChangePage('#' + Vue.AdminPage)
-  });
-};
 
 window.notify = {
   list: [],
@@ -950,39 +870,13 @@ function NomeMask(Text) {
   }
 }
 
-function Cordova() {
-  if (window.hasOwnProperty("cordova")) {
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    eval("require('https://raw.githubusercontent.com/katzer/cordova-plugin-background-mode/master/www/background-mode.js')");
-    eval("require('https://raw.githubusercontent.com/katzer/cordova-plugin-local-notifications/master/www/local-notification.js')");
-
-    cordova.plugins.backgroundMode.enable();
-    cordova.plugins.backgroundMode.setDefaults({
-      silent: true
-    });
-  }
-}
-
-function NotificacaoCordova(Body) {
-  if (window.hasOwnProperty("cordova")) {
-    cordova.plugins.notification.local.schedule({
-      title: 'DEAF',
-      text: Body,
-      foreground: true
-    });
-  }
-}
-
-Cordova();
-
 $("img.lazy").Lazy();
 
-function LoadIframe() {
-  let vidDefer = document.getElementsByTagName('iframe');
-  for (let i = 0; i < vidDefer.length; i++) {
-    if (vidDefer[i].getAttribute('data-src')) {
-      vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+function LazyIframe() {
+  let iframe = document.getElementsByTagName('iframe');
+  for (let i = 0; i < iframe.length; i++) {
+    if (iframe[i].getAttribute('data-src')) {
+      iframe[i].setAttribute('src', iframe[i].getAttribute('data-src'));
     }
   }
 }
@@ -1021,7 +915,7 @@ function CreateTable() {
       info: false,
       lengthChange: false,
 
-      autoWidth: false,
+      autoWidth: true,
       responsive: true
     })
     .columns.adjust()
@@ -1030,132 +924,21 @@ function CreateTable() {
   $.fn.dataTable.ext.errMode = 'none';
 }
 
-function SetEditor() {
-  let editor = new Quill('#editor', {
-    theme: 'snow'
-  });
-
-  editor.on('text-change', function () {
-    editor.root.innerHTML;
-  });
-}
-
 function ListarPostagem(Snap) {
-  let Dados = Snap.val();
 
-  let Linha = document.createElement("tr");
-
-  let Texto = document.createElement("td");
-  let Data = document.createElement("td");
-
-  let Mostrar = document.createElement("td");
-  let MostrarBotao = document.createElement("button");
-  let Deletar = document.createElement("td");
-  let DeletarBotao = document.createElement("button");
-
-  Texto.innerHTML = Dados.texto;
-  Data.innerHTML = new Date(Dados.timestamp).toLocaleString();
-
-  Mostrar.append(MostrarBotao);
-  Deletar.append(DeletarBotao);
-
-  Linha.append(Texto);
-  Linha.append(Data);
-  Linha.append(Mostrar);
-  Linha.append(Deletar);
-
-  Linha.setAttribute("data-key", Snap.key);
-
-  PostagensLista.append(Linha);
 }
 
 function MostrarPostagem(e) {
-  // if (typeof(e).target !== "undefined") {
-  // let AlunoChave = e.target.closest("tr").getAttribute("data-key");
-  // } else {
-  let AlunoChave = e;
-  // };
-  let AlunoDados = Database.child("/postagens/" + AlunoChave);
 
-  PostagemPagina.setAttribute("data-key", AlunoChave);
-
-  ChangePage(PostagemPagina);
-
-  PostagensDados.on("value", Snap => {
-    let Aluno = Snap.val();
-
-    let Nome = document.getElementById("postagem-titulo");
-    let Editor = document.getElementById("postagem-editor");
-    let Foto = document.getElementById("postagem-foto-imagem");
-
-    Nome.value = Aluno.titulo;
-
-    Foto.setAttribute("src", Aluno.foto);
-
-    if (Aluno.foto == "" || Aluno.foto == null) {
-      Foto.setAttribute("src", GalleryImage);
-    }
-  });
 }
 
 function EditarPostagem() {
-  let AlunoChave = AdministradorPagina.getAttribute("data-key");
 
-  let Nome = document.getElementById("administrador-nome");
-  let Ano = document.getElementById("administrador-ano");
-  let Colegio = document.getElementById("administrador-colegio");
-  let Grupo = document.getElementById("administrador-grupo");
-  let Nota = document.getElementById("administrador-nota");
-  let Telefone = "+" + document.getElementById("administrador-telefone").value.replace(/[^0-9]/g, '');
-  let Foto = document.getElementById("administrador-foto-imagem");
-
-  if (Foto.src != LoadingImage) {
-    let AlunoDados;
-
-    let Dados = {
-      nome: NomeMask(Nome.value),
-      ano: Ano.value,
-      colegio: Colegio.value,
-      grupo: Grupo.value,
-      nota: Nota.value,
-      foto: Foto.src
-    };
-
-    if (AlunoChave != null && AlunoChave != "null") {
-
-      AlunoDados = Database.child("/administradores/" + Telefone);
-      AlunoDados.update(Dados);
-
-      Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") atualizou o(a) administrador " + Nome.value + " (" + Grupo.value + ") com o telefone " + Telefone);
-
-      if (AlunoChave != Telefone) {
-        AlunoDados = Database.child("/administradores/" + AlunoChave);
-        AlunoDados.remove();
-      }
-
-    } else {
-      Database.child("administradores").child(Telefone).once("value", function (Snap) {
-        if (Snap.exists()) {
-          Notificacao("Ja existe um administrador(a) com esse telefone");
-        } else {
-          AlunoDados = Database.child("/administradores/" + Telefone);
-
-          AlunoDados.set(Dados);
-
-          Registrar("O(a) administrador " + Vue.UserName + " (" + Vue.UserGroup + ") adicionou o(a) administrador " + Nome.value + " (" + Grupo.value + ") com o telefone " + Telefone);
-        }
-      });
-    }
-
-    Foto.src = GalleryImage;
-
-    ChangePage(AdministradoresPagina);
-  }
 }
 
 function ResizeTable() {
   $('table').DataTable().columns.adjust()
-    .responsive.recalc()
+    .responsive.recalc();
   $.fn.dataTable.ext.errMode = 'none';
 }
 
@@ -1168,39 +951,6 @@ function Update() {
 
 requestAnimationFrame(Update);
 
-$('#administradores-lista').on('click', '.administrador-mostrar-button', function () {
-  MostrarAdministrador($(this).attr('data-key'));
-});
-$('#administradores-lista').on('click', '.administrador-deletar-button', function () {
-  DeletarAdministrador($(this).attr('data-key'), $(this).attr('data-path'));
-});
-$('#alunos-lista').on('click', '.aluno-mostrar-button', function () {
-  MostrarAluno($(this).attr('data-key'));
-});
-$('#alunos-lista').on('click', '.aluno-deletar-button', function () {
-  DeletarAluno($(this).attr('data-key', $(this).attr('data-path')));
-});
-
-$('table').on('page', ResizeTable);
-$('table').on('search', ResizeTable);
-$('table').on('column-sizing', ResizeTable);
-$('table').on('responsive-resize', ResizeTable);
-
-// setInterval(ResizeTable(), 1000);
-
-$(".phone-input").mask("+55 (73) N ZZZZ-ZZZZ", {
-  translation: {
-    'N': {
-      pattern: /9/,
-      fallback: 9
-    },
-    'Z': {
-      pattern: /[0-9]/
-    }
-  },
-  keepStatic: true
-});
-
 function CheckURL(item, index) {
   if (GET['p'] !== undefined) {
     if (item.href === window.location.href || item.href + "#" === window.location.href) {
@@ -1211,8 +961,48 @@ function CheckURL(item, index) {
   }
 }
 
-window.onresize = function () {
+window.onresize = () => {
   ResizeTable();
 }
 
-// window.addEventListener("resize", ResizeTable);
+window.onload = function () {
+  if (Vue.Page != "dashboard") {
+    $("#loading").hide();
+    $("#app").show();
+  }
+
+  LazyIframe();
+  CreateTable();
+
+  [...document.getElementsByClassName("url")].forEach(CheckURL);
+
+  $('#' + Vue.AdminPage + '-url a').on('click', function () {
+    ChangePage('#' + Vue.AdminPage)
+  });
+
+  $('#administradores-lista').on('click', '.administrador-mostrar-button', function () {
+    MostrarAdministrador($(this).attr('data-key'));
+  });
+  $('#administradores-lista').on('click', '.administrador-deletar-button', function () {
+    DeletarAdministrador($(this).attr('data-key'), $(this).attr('data-path'));
+  });
+  $('#alunos-lista').on('click', '.aluno-mostrar-button', function () {
+    MostrarAluno($(this).attr('data-key'));
+  });
+  $('#alunos-lista').on('click', '.aluno-deletar-button', function () {
+    DeletarAluno($(this).attr('data-key'), $(this).attr('data-path'));
+  });
+
+  $(".phone-input").mask("+55 (00) N ZZZZ-ZZZZ", {
+    translation: {
+      'N': {
+        pattern: /9/,
+        fallback: 9
+      },
+      'Z': {
+        pattern: /[0-9]/
+      }
+    },
+    keepStatic: true
+  });
+};

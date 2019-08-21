@@ -13,8 +13,30 @@ admin.initializeApp();
 exports.CheckUser = functions.https.onRequest((request, response) => {
     const user = request.query.id;
     const phone = "+" + request.query.phone.trim();
+    
+    let page = request.query.page;
 
-    if (user !== null && phone !== null) {
+    switch (page) {
+        case "alunos":
+            page = "Alunos"
+            break;
+        case "registros":
+            page = "Registros"
+            break;
+        case "postagens":
+            page = "Postagens"
+            break;
+        case "administradores":
+            page = "Administradores"
+            break;
+        case "manutencao":
+            page = "Manutenção"
+            break;
+        default:
+            page = "Menu";
+    }
+
+    if (user !== null && phone !== null && page !== null) {
         admin.database().ref().child("administradores").child(phone).once("value", snap_admin => {
 
             if (!snap_admin.exists()) {
@@ -33,6 +55,10 @@ exports.CheckUser = functions.https.onRequest((request, response) => {
 
                     } else {
 
+                        let name = snap_student.val().nome;
+
+                        registrarAcesso("O(a) aluno(a) " + name + " acessou a página de " + page + " com o telefone " + phone);
+
                         response.send("Usuário tem permissão de aluno");
 
                     }
@@ -41,11 +67,22 @@ exports.CheckUser = functions.https.onRequest((request, response) => {
 
             } else {
 
+                let name = snap_admin.val().nome;
+
+                registrarAcesso("O(a) administrador(a) " + name + " acessou a página de " + page + " com o telefone " + phone);
+
                 response.send("Usuário tem permissão de administrador");
 
             }
         });
     }
+
+    var registrarAcesso = (registro) => {
+        admin.database().ref().child("acessos").push().set({
+            registro: registro,
+            timestamp: Date.now()
+        });
+    };
 });
 
 exports.OneSignal = functions.https.onRequest((request, response) => {
@@ -91,7 +128,7 @@ exports.OneSignal = functions.https.onRequest((request, response) => {
             },
             included_segments: ["All"]
         };
-        
+
         if (time <= MS) {
             // Enviar notificação pelo OneSignal
             // SendNotification(message);
