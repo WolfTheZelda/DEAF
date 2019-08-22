@@ -12,7 +12,8 @@ var Vue = new Vue({
     UserNumber: "Telefone",
     UserNote: "∞",
     UserGroup: "Grupo",
-    VideoRandom: "https://www.youtube.com/embed?listType=playlist&list=PLwxNMb28XmpeypJMHfNbJ4RAFkRtmAN3P&fs=0&rel=0&showinfo=0&showsearch=0&controls=0&modestbranding=0&autohide=1&autoplay=0&loop=1&disablekb=1&cc_load_policy=1&iv_load_policy=3&cc_lang_pref=pt&origin=https://acaofilosofica.com&index=" + Math.floor((Math.random() * 34))
+    VideoRandom: "https://www.youtube.com/embed?listType=playlist&list=PLwxNMb28XmpeypJMHfNbJ4RAFkRtmAN3P&fs=0&rel=0&showinfo=0&showsearch=0&controls=0&modestbranding=0&autohide=1&autoplay=0&loop=1&disablekb=1&cc_load_policy=1&iv_load_policy=3&cc_lang_pref=pt&origin=https://acaofilosofica.com&index=" + Math.floor((Math.random() * 34)),
+    UserText: "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>"
   }
 });
 // Vue - End
@@ -703,6 +704,8 @@ function LoginChecar() {
           Vue.UserNote = Snap.val().nota;
           Vue.UserGroup = Snap.val().grupo;
 
+          Vue.UserText = Snap.hasChild('criterios') ? Snap.val().criterios : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>";
+
           $("#loading-dashboard").hide();
           $("#app").show();
         } else {
@@ -712,6 +715,8 @@ function LoginChecar() {
               Vue.UserName = SnapStudent.val().nome;
               Vue.UserNote = SnapStudent.val().nota;
               Vue.UserGroup = SnapStudent.val().grupo;
+
+              Vue.UserText = SnapStudent.hasChild('criterios') ? SnapStudent.val().criterios : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>";
 
               $("#loading-dashboard").hide();
               $("#app").show();
