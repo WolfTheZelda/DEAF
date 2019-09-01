@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "acaofilosofica",
+  "private_key_id": "47d00284f90da4b36aa671b486945c37488b36a1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDo3Od5MGM/000J\nsOCjfnSjnqzf41Pg0lkRXVVA68NsKQHUwpFVoMGMCYvQJZwlNAp1stFw2JxePWyo\nNaNqdU4omfXPDpEISbaFPpYs4EFWs4LCmK6Mqn0zGokA5ZWwS/11Kggp3W8/P8XS\n6byiI3dibKnY8zLyGQxoGcvnwUvfJ9ubbtD2BVfiwiv8W2EVI7OG6cqDOdl+HB7l\ngcz3Hbek9NjlK6tM0FaBGPdgtVkL9XDy8AahLY4ZIpn0vtva7Fn/1T1i+busxLB6\nxC4EqRl4zuYMfSR0dpuPvC2PXAigKLrmb6qV3fTwNkaq8C0X1NJE1Uq9c+7ES0Rg\n+utv974pAgMBAAECggEAByx/CRG/jQDSd8D2OrMznrLNupwDQoLYcZuBe92HiLZ+\nsvJHje7E566HmyL9e3vt8pBOuX5C2vhjd48neKkifke39egJ+cpjkBlMgRdri+M9\n3QbdIcJC1yczH07zXJoKtehUlg2XVsh9LLE8uXYEQIj+douPfzvcUPyydnJTBw3h\nP0SwZv4Y5LDtsjUvQtq9iiP9RTEvcjmIXpMZavQs3fxBdG3dKUYkiuhZvRsWzr8h\noOtM/YpQxJn3YTpiJ7VJYV3j9689fp7PYj8Co0XEwZyyTUE1rVzv53ccNApBfbkP\nCSWEP8Me5aIkBWYis9EEkmBgU7Pv+WEgCLt/VWmHAQKBgQD4m1zSz0Ozu8MQV/Ma\npGU12ChklyqR2sI8kOLXk/GDTDUlAShHCZbW48NZRwdQ6fG0hubMGBNvMw0hhNFG\nkSIg0AbDGRfQQNJQhlKNUweV/fLEQ8OFf54iz7WNSy6SjNGlnNC9dr49LYHQYUwW\nmA0DoSVYr3nmpVH4SYZU1ldNiQKBgQDvya7haMDlGTLKmkdgLMgT0tM5ZNaFdldm\nT53Rf19z2c+fhD4F6MfpvGmyM/LEEIZJqm2pgHDvvcvudYl+MyoRzBxqHNgBwV5G\n+BIqW5yxE/ir/08fEvHsdpwIeR6vhD7E34y+jWOYuhP7m6hi1glwIHXpKzugPEBA\nEGoOTnRjoQKBgQC4B0HKJ3VFWetGcORbR3BIUG9uLtxrRZVdAh95V2GDQOliMB4h\nn76R6d4Ue1i2E8dBTE8Sq4vPV+oTct77rrmlsnge+bdACIvm4dfAF8NYy7hmgob8\njoB/4mPRaOLbxvP19UQry/d9D++1UiDh5MJVendL0/GXw68O7VZL/LJ5iQKBgQDu\nZNEdAQxluLuqed/kWiFAtCWTthEg9xrFePoqQjwf7bhhmxQew+OdGdjrdoIxM0yP\nCIWmMzAU6dlJ5kkf0rZMo2TMioimlhyo6hEFU7dgxb5BIb8D4c3rjbBrLB+51/yf\ntrEy8VbHjJg5WfP671jKxTr06iqJj91A1BDc0FsegQKBgEX1dznu84Ai/Q8buhCB\nTH63GJn5xzXgKQea9YcYOy1eqfcV22NwqGN7dq8/t6r7YN9WIg8x99tkvuX29hin\ncXEHs8AFO6IyB++S+Vo2Dc3GiMgzplrDdOdIU9f0VXbPeqxvNSemXdefDZKser+7\n/AYN2U3ZPNbhEhc/zjGEAMqr\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-s90qs@acaofilosofica.iam.gserviceaccount.com",
+  "client_id": "114234946647090881818",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-s90qs%40acaofilosofica.iam.gserviceaccount.com"
+}
