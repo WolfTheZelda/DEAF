@@ -19,7 +19,7 @@ import { db, firebase, auth } from "../firebase";
 
 import { mixin } from "../mixin";
 
-import { M } from "materialize-css";
+import M from "materialize-css";
 
 export default {
   name: "Dashboard",

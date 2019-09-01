@@ -52,9 +52,11 @@ export default {
       input: null
     };
   },
+  beforeMount() {    
+    this.checkAuth();
+  },
   mounted() {
     this.checkRecaptcha();
-    this.checkAuth();
   },
   mixins: [mixin],
   methods: {
@@ -98,18 +100,20 @@ export default {
       }
     },
     checkRecaptcha() {
-      auth.languageCode = "pt-BR";
+      if (!this.$store.state.auth.value) {
+        auth.languageCode = "pt-BR";
 
-      window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-        "sign-in-button",
-        {
-          size: "invisible"
-        }
-      );
+        window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+          "sign-in-button",
+          {
+            size: "invisible"
+          }
+        );
 
-      window.recaptchaVerifier.render().then(function(widgetId) {
-        window.recaptchaWidgetId = widgetId;
-      });
+        window.recaptchaVerifier.render().then(function(widgetId) {
+          window.recaptchaWidgetId = widgetId;
+        });
+      }
     }
   }
 };

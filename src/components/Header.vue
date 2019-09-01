@@ -13,7 +13,7 @@
             </li>
             <li>
               <router-link class="btn green waves-effect waves-light" to="/login">
-                <span v-if="login">Dashboard</span>
+                <span v-if="this.$store.state.auth.value">Dashboard</span>
                 <span v-else>Login</span>
               </router-link>
             </li>
@@ -42,9 +42,13 @@
 </template>
 
 <script>
+import { mixin } from "../mixin";
+
 export default {
-  props: {
-    login: Boolean
+  mixins: [mixin],
+  props: {},
+  beforeMount() {
+    this.checkAuth();
   }
 };
 </script>

@@ -25,16 +25,9 @@ import {
 
 // Vue Config
 Vue.config.productionTip = false;
-
-if (process.env.NODE_ENV === "development") {
-  Vue.config.devtools = true;
-  Vue.config.performance = true;
-  Vue.config.silent = false;
-} else if (process.env.NODE_ENV === "production") {
-  Vue.config.devtools = false;
-  Vue.config.performance = false;
-  Vue.config.silent = true;
-}
+Vue.config.devtools = true;
+Vue.config.performance = true;
+Vue.config.silent = false;
 
 // Vue Use
 Vue.use(rtdbPlugin);
