@@ -5,8 +5,9 @@
     :tableBody="tableBody"
     titleAddTo="/dashboard/managers/edit/new"
     titleText="Administradores"
-    userRemovedGroup="aluno"
+    userRemovedGroup="administrador"
     groupMaster="Desenvolvedor"
+    tableReference="administradores"
   />
 </template>
 

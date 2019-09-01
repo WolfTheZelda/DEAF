@@ -33,7 +33,7 @@
       </li>
       <li>
         <router-link to="/login">
-          <span v-if="login">Dashboard</span>
+          <span v-if="this.$store.state.auth.value">Dashboard</span>
           <span v-else>Login</span>
         </router-link>
       </li>

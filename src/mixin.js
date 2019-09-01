@@ -38,7 +38,7 @@ export const mixin = {
       });
     },
     checkPermission() {
-      let URL = "https://acaofilosofica.com/api/checkuser?id=" + this.$store.state.auth.id + "&phone=" + this.$store.state.auth.phone;
+      let URL = "https://us-central1-acaofilosofica.cloudfunctions.net/CheckUser?id=" + this.$store.state.auth.id + "&phone=" + this.$store.state.auth.phone;
 
       let XHTTP = new XMLHttpRequest();
       XHTTP.open("GET", URL, true);

@@ -15,7 +15,7 @@
 import Navbar from "../components/Dashboard/Navbar";
 import Sidebar from "../components/Dashboard/Sidebar";
 
-import { db, firebase, auth } from "../firebase";
+import { db, auth } from "../firebase";
 
 import { mixin } from "../mixin";
 

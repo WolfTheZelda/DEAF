@@ -5,6 +5,7 @@
     :years="years"
     :notice="notice"
     databaseReference="administradores"
+    userRemovedGroup="administrador"
   />
 </template>
 

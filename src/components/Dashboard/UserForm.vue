@@ -143,6 +143,8 @@ export default {
   },
   methods: {
     addUser() {
+      let photoInput = this.photo;
+
       let nameInput = this.nameMask(this.name);
       let noteInput = this.note;
       let phoneInput = "+" + this.phone.replace(/\D/g, "");
@@ -164,6 +166,8 @@ export default {
         db.ref(this.databaseReference)
           .child(phoneInput)
           .set({
+            foto: photoInput,
+
             nome: nameInput,
             nota: noteInput,
 
@@ -308,6 +312,8 @@ export default {
         ]
       }
     });
+
+    this.editor.root.innerHTML = this.$store.state.default.criteria;
 
     this.getUser();
 

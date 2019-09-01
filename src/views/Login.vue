@@ -12,7 +12,23 @@
 
         <div class="row margin">
           <div class="input-field col s12">
-            <input id="input" :type="type" v-model="input" required />
+            <input
+              v-if="type === 'tel'"
+              id="input"
+              type="tel"
+              v-model="input"
+              v-imask="mask"
+              maxlength="20"
+              minlength="20"
+              required
+            />
+            <input
+              v-else
+              id="input"
+              type="password"
+              v-model="input"
+              required
+            />
 
             <label class="center-align" for="input">{{ label }}</label>
           </div>
@@ -38,9 +54,10 @@
 
 <script>
 import { firebase, auth } from "../firebase";
-import { setTimeout } from "timers";
 
 import { mixin } from "../mixin";
+
+import { IMaskDirective } from "vue-imask";
 
 export default {
   name: "Login",
@@ -49,10 +66,17 @@ export default {
       title: "Acesso Restrito",
       label: "Telefone",
       type: "tel",
-      input: null
+      input: null,
+      mask: {
+        mask: "{+55} {(00)} {9} {0000}{-}{0000}",
+        lazy: true
+      }
     };
   },
-  beforeMount() {    
+  directives: {
+    imask: IMaskDirective
+  },
+  beforeMount() {
     this.checkAuth();
   },
   mounted() {

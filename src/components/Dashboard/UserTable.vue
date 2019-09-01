@@ -28,7 +28,11 @@
               </button>
             </td>
             <td>
-              <button v-if="body.grupo != groupMaster" class="btn red" v-on:click="removeUser(body)">
+              <button
+                v-if="body.grupo != groupMaster"
+                class="btn red"
+                v-on:click="removeUser(body)"
+              >
                 <i class="material-icons">delete</i>
               </button>
               <button v-else class="btn red disabled">
@@ -76,9 +80,27 @@ export default {
       if (confirm("Tenha cuidado ao cometer o ato de remover um usuário(a)")) {
         db.ref(this.tableReference)
           .child(user[".key"])
-          .remove();
-
-        this.$store.dispatch("record", "O(a) administrador(a) " + this.$store.state.auth.name + " (" + this.$store.state.auth.group + ") removeu o(a) "+ this.userRemovedGroup +"(a) " + user.nome + " (" + user.grupo + ") com a nota " + user.nota);
+          .remove()
+          .then(() => {
+            this.$store.dispatch(
+              "record",
+              "O(a) administrador(a) " +
+                this.$store.state.auth.name +
+                " (" +
+                this.$store.state.auth.group +
+                ") removeu o(a) " +
+                this.userRemovedGroup +
+                "(a) " +
+                user.nome +
+                " (" +
+                user.grupo +
+                ") com a nota " +
+                user.nota
+            );
+          })
+          .catch(() => {
+            this.$store.dispatch("toast", "Você não tem permissão para isso");
+          });
       }
     },
     showUser(user) {

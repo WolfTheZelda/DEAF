@@ -8,9 +8,16 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 
+const cors = require("cors")({
+    origin: true
+});
+
 admin.initializeApp();
 
 exports.CheckUser = functions.https.onRequest((request, response) => {
+    cors(request, response, () => {});
+    response.set("Access-Control-Allow-Origin", "*");
+
     const user = request.query.id;
     const phone = "+" + request.query.phone.trim();
 

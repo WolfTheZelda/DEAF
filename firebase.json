@@ -24,12 +24,8 @@
     ],
     "rewrites": [
       {
-        "source": "/*",
+        "source": "**",
         "destination": "/index.html"
-      },
-      {
-        "source": "/api/checkuser",
-        "function": "CheckUser"
       }
     ],
     "headers": [
