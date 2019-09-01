@@ -18,7 +18,10 @@
     "cordova-serve-android": "cross-env CORDOVA_PLATFORM=android vue-cli-service cordova-serve-android",
     "cordova-serve-browser": "cross-env CORDOVA_PLATFORM=browser vue-cli-service cordova-serve-browser",
     "cordova-serve-ios": "cross-env CORDOVA_PLATFORM=ios vue-cli-service cordova-serve-ios",
-    "cordova-serve-osx": "cross-env CORDOVA_PLATFORM=osx vue-cli-service cordova-serve-osx"
+    "cordova-serve-osx": "cross-env CORDOVA_PLATFORM=osx vue-cli-service cordova-serve-osx",
+
+    "cordova-keytool": "keytool -genkey -v -keystore deaf.keystore -alias DEAF -keyalg RSA -keysize 2048 -validity 365000",
+    "cordova-jarsigner": "jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore deaf.keystore app-release-unsigned.apk DEAF"
   },
   "dependencies": {
     "animate.css": "^3.7.2",

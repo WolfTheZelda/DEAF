@@ -20,6 +20,8 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+
+  overflow-x: hidden;
 }
 
 /* Background */

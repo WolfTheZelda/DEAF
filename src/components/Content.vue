@@ -1,42 +1,26 @@
 <template>
-  <section class="container white-text">
+  <section v-if="type == 0" class="container white-text">
     <div class="section">
       <div class="row">
-        <h3 class="center">O QUE ESTÁ EM PAUTA?</h3>
-        <div class="col s12 m3">
-          <div class="icon-block">
-            <h2 class="center yellow-text">
-              <i class="material-icons large">wb_sunny</i>
-            </h2>
-            <h5 class="center">TEXTO</h5>
-            <p class="center-align light">TEXTO</p>
-          </div>
+        <div class="col s12 center">
+          <h3>{{title}}</h3>
+          <p class="center-align light">{{text}}</p>
         </div>
-        <div class="col s12 m3">
+      </div>
+    </div>
+  </section>
+  <section v-else-if="type == 1" class="container white-text">
+    <div class="section">
+      <div class="row">
+        <h3 class="center">{{title}}</h3>
+
+        <div class="col s12 m3" v-for="content in contentMultiple" :key="content.icon">
           <div class="icon-block">
-            <h2 class="center red-text">
-              <i class="material-icons large">whatshot</i>
+            <h2 class="center" :class="content.class">
+              <i class="material-icons large">{{content.icon}}</i>
             </h2>
-            <h5 class="center">TEXTO</h5>
-            <p class="center-align light">TEXTO</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="icon-block">
-            <h2 class="center blue-text">
-              <i class="material-icons large">directions_run</i>
-            </h2>
-            <h5 class="center">TEXTO</h5>
-            <p class="center-align light">TEXTO</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="icon-block">
-            <h2 class="center green-text">
-              <i class="material-icons large">public</i>
-            </h2>
-            <h5 class="center">TEXTO</h5>
-            <p class="center-align light">TEXTO</p>
+            <h5 class="center">{{content.title}}</h5>
+            <p class="center-align light">{{content.text}}</p>
           </div>
         </div>
       </div>
@@ -47,56 +31,37 @@
 <script>
 export default {
   data: () => ({
-    ecosystem: [
+    contentMultiple: [
       {
-        text: "vuetify-loader",
-        href: "https://github.com/vuetifyjs/vuetify-loader"
+        title: "TEXTO",
+        text: "TEXTO",
+        icon: "wb_sunny",
+        class: "yellow-text"
       },
       {
-        text: "github",
-        href: "https://github.com/vuetifyjs/vuetify"
+        title: "TEXTO",
+        text: "TEXTO",
+        icon: "whatshot",
+        class: "red-text"
       },
       {
-        text: "awesome-vuetify",
-        href: "https://github.com/vuetifyjs/awesome-vuetify"
-      }
-    ],
-    importantLinks: [
-      {
-        text: "Documentation",
-        href: "https://vuetifyjs.com"
+        title: "TEXTO",
+        text: "TEXTO",
+        icon: "directions_run",
+        class: "blue-text"
       },
       {
-        text: "Chat",
-        href: "https://community.vuetifyjs.com"
-      },
-      {
-        text: "Made with Vuetify",
-        href: "https://madewithvuejs.com/vuetify"
-      },
-      {
-        text: "Twitter",
-        href: "https://twitter.com/vuetifyjs"
-      },
-      {
-        text: "Articles",
-        href: "https://medium.com/vuetify"
-      }
-    ],
-    whatsNext: [
-      {
-        text: "Explore components",
-        href: "https://vuetifyjs.com/components/api-explorer"
-      },
-      {
-        text: "Select a layout",
-        href: "https://vuetifyjs.com/layout/pre-defined"
-      },
-      {
-        text: "Frequently Asked Questions",
-        href: "https://vuetifyjs.com/getting-started/frequently-asked-questions"
+        title: "TEXTO",
+        text: "TEXTO",
+        icon: "public",
+        class: "green-text"
       }
     ]
-  })
+  }),
+  props: {
+    title: String,
+    text: String,
+    type: 0
+  }
 };
 </script>
