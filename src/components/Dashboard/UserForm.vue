@@ -56,7 +56,6 @@
                 placeholder="Telefone"
                 type="tel"
                 required
-                :value="phone"
                 v-model="phone"
                 v-imask="mask"
                 maxlength="20"
@@ -110,8 +109,6 @@
 </template>
 
 <script>
-import Editor from "./Editor";
-
 import { db } from "../../firebase";
 
 import { IMaskDirective } from "vue-imask";
@@ -135,7 +132,7 @@ export default {
 
       mask: {
         mask: "{+55} {(00)} {9} {0000}{-}{0000}",
-        lazy: false
+        lazy: true
       }
     };
   },
@@ -143,7 +140,6 @@ export default {
     imask: IMaskDirective
   },
   components: {
-    Editor
   },
   methods: {
     addUser() {

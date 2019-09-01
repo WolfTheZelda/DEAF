@@ -1,0 +1,1515 @@
+{
+  "administradores" : {
+    "+5573981017465" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Raquel",
+      "nota" : "40"
+    },
+    "+5573981495083" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Jarder",
+      "nota" : "40"
+    },
+    "+5573981597967" : {
+      "ano" : "3° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Maju",
+      "nota" : "40"
+    },
+    "+5573981663871" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://firebasestorage.googleapis.com/v0/b/acaofilosofica.appspot.com/o/administradores%2F-LmfzeHQ5p9iY3vci63w?alt=media&token=836a4954-9402-443f-a7d1-e09319029553",
+      "grupo" : "Desenvolvedor",
+      "nome" : "Wilson",
+      "nota" : "40"
+    },
+    "+5573982503207" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "Graziella",
+      "nota" : "40"
+    },
+    "+5573988010718" : {
+      "ano" : "3° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "João",
+      "nota" : "40"
+    },
+    "+5573988042072" : {
+      "ano" : "3° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "Maria",
+      "nota" : "40"
+    },
+    "+5573988182792" : {
+      "ano" : "3° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Alberto",
+      "nota" : "40"
+    },
+    "+5573988223756" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "Cawan",
+      "nota" : "40"
+    },
+    "+5573988491510" : {
+      "ano" : "Irrelevante",
+      "colegio" : "Irrelevante",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Orientador",
+      "nome" : "Welldon",
+      "nota" : "Irrelevante"
+    },
+    "+5573988619033" : {
+      "ano" : "2° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Hozana",
+      "nota" : "40"
+    },
+    "+5573988638828" : {
+      "ano" : "1° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "Bárbara",
+      "nota" : "40"
+    },
+    "+5573988652042" : {
+      "ano" : "2° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "Raphaella",
+      "nota" : "40"
+    },
+    "+5573988666579" : {
+      "ano" : "Irrelevante",
+      "colegio" : "Irrelevante",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Orientador",
+      "nome" : "Rosa",
+      "nota" : "Irrelevante"
+    },
+    "+5573988839598" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "Rodrigo",
+      "nota" : "40"
+    },
+    "+5573988958967" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "Jenyffer",
+      "nota" : "40"
+    },
+    "+5573988959937" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "Catarina",
+      "nota" : "40"
+    },
+    "+5573991336976" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Allana",
+      "nota" : 40
+    },
+    "+5573991385147" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Arthur",
+      "nota" : "40"
+    },
+    "+5573991487665" : {
+      "ano" : "3° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Thaílla",
+      "nota" : "40"
+    },
+    "+5573991562675" : {
+      "ano" : "3° Ano",
+      "colegio" : "Jorge Amado",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Vice-Líder",
+      "nome" : "José",
+      "nota" : "40"
+    },
+    "+5573991696473" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Brenda",
+      "nota" : "40"
+    },
+    "+5573991783893" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Líder",
+      "nome" : "Hiago",
+      "nota" : "40"
+    }
+  },
+  "alunos" : {
+    "+557391102800" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>Não Cumpriu (2. Atrasou 1 tarefa)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Lucas Santos",
+      "nota" : "7.0"
+    },
+    "+557391538689" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>Não Cumpriu ( 2. Atrasou 1 tarefa</strong>)</p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Louise Santos",
+      "nota" : "7.0"
+    },
+    "+557391844491" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p><span style=\"color: black;\">Critério 1: Faltou duas reuniões </span></p><p><span style=\"color: black;\">Critério 2: 2atividades sem cumprir </span></p><p><span style=\"color: black;\">Critério 3: Não participa das discussões </span></p><p><span style=\"color: black;\">Critério 7: 2 trabalhos sem executar&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Clayton Araújo",
+      "nota" : "5.5"
+    },
+    "+5573981225753" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong style=\"color: black;\">I: Faltou uma das reuniões (09/08).</strong></p><p><strong style=\"color: black;\">II: Não cumpriu uma das atividades passadas (2ª tarefa)</strong></p><p><strong style=\"color: black;\">III: Faltou a uma reunião e não cumpriu uma atividade.</strong></p><p><strong style=\"color: black;\">IV: Não participou de uma reunião e não cumpriu uma tarefa.</strong></p><p><strong style=\"color: black;\">V: Não se empenhou além do que foi pedido, deixou de cumprir uma das tarefas e faltou a uma reunião.</strong></p><p><strong style=\"color: black;\">VI: Mesmo motivo do critério acima.</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Iuri Cristian",
+      "nota" : "6.0"
+    },
+    "+5573981257684" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 5.pro-atividade)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Ricardo Gama",
+      "nota" : "7.5"
+    },
+    "+5573981272713" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em:</span></p><p><span style=\"color: black;\">Critério 1: Faltou 2 reuniões </span></p><p><span style=\"color: black;\">Critério 2: 2atividades sem cumprir </span></p><p><span style=\"color: black;\">Critério 3: Não participa das discussões </span></p><p><span style=\"color: black;\">Critério 6: Há de melhorar atuação em grupo</span></p><p><span style=\"color: black;\">Critério 7: 2trabalhos sem executar&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Ana Beatriz Dos Santos Souza",
+      "nota" : "5.5"
+    },
+    "+5573981452805" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>(1.faltou 1 reunião 0,5)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Hiago Reis",
+      "nota" : "7.5"
+    },
+    "+5573981456816" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Flávia Luiza Rocha Dos Santos",
+      "nota" : "8.0"
+    },
+    "+5573981529189" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 5.pro-atividade)&nbsp;</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Laura França",
+      "nota" : "7.5"
+    },
+    "+5573981737589" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong style=\"color: black;\">V: Não se empenhou além do que foi pedido.</strong></p><p><strong style=\"color: black;\">VI: Mesmo motivo do critério acima.</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Bruno Oliveira",
+      "nota" : "7.2"
+    },
+    "+5573981881568" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong style=\"color: black;\">V: Não se empenhou além do que foi pedido.</strong></p><p><strong style=\"color: black;\">VI: Mesmo motivo do critério acima.</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Breno Oliveira",
+      "nota" : "7.2"
+    },
+    "+5573982020296" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p><span style=\"color: black;\">Critério 2: 2atividades sem cumprir</span></p><p><span style=\"color: black;\">Critério 7: 2trabalhos sem executar </span></p><p><br></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Gabriel Vitório Dos Santos",
+      "nota" : "7.0"
+    },
+    "+5573982071864" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p>Não Cumpriu (1-2-3-4-5-6-7)</p><p> </p><p> </p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Lais Anjos",
+      "nota" : "0.5"
+    },
+    "+5573982106933" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><br></p><p><strong style=\"color: black;\">II: Não cumpriu uma das atividades passadas (2ª tarefa bônus).</strong></p><p><strong style=\"color: black;\">IV: Mesmo motivo do critério acima.</strong></p><p><strong style=\"color: black;\">VII: Não cumpriu uma das tarefas bônus. (2ª tarefa bônus)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Ayslla Luise",
+      "nota" : "7.1"
+    },
+    "+5573982119984" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p>Não&nbsp;Cumpriu (1-2-3-4-6-7-8)</p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Wendel Cayo",
+      "nota" : "1.0"
+    },
+    "+5573982433616" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em: </span></p><p><span style=\"color: black;\">Critério 1: Faltou uma reunião </span></p><p><span style=\"color: black;\">Critério 2: 2 atividades sem cumprir</span></p><p><span style=\"color: black;\">Critério 7: 2 trabalhos sem executar&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Faubert",
+      "nota" : "6.8"
+    },
+    "+5573982481413" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>não cumpriu (1-2-4-8)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Kaylane Nataly Almeida Ribeiro",
+      "nota" : "4.0"
+    },
+    "+5573982553946" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>Não cumpriu (1-2-3-5-7)</strong></p><p><strong>(0,5  4.Participação nas atividades)</strong></p><p><strong>(0,5  6.Saber atuar em grupo) </strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Adriano Santos Prazeres",
+      "nota" : "2.0"
+    },
+    "+5573988054747" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Alberto Luiz",
+      "nota" : "8.0"
+    },
+    "+5573988223756" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Cawan Barral",
+      "nota" : "8.0"
+    },
+    "+5573988337246" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em:</span></p><p><span style=\"color: black;\">Critério 1: Faltou uma reunião </span></p><p><span style=\"color: black;\">Critério 2: 2atividades sem cumprir </span></p><p><span style=\"color: black;\">Critério 7: 2 trabalhos sem executar&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "José Romar Carmo",
+      "nota" : "6.8"
+    },
+    "+5573988376255" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 5.pro-atividade)&nbsp;</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Daniel Tudes Dos Santos",
+      "nota" : "7.5"
+    },
+    "+5573988396101" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>Não cumpriu( 2. atrasou 1 tarefa)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Alexsuel Candial",
+      "nota" : "7.0"
+    },
+    "+5573988418248" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Paulo Victor Ribeiro Dos Santos",
+      "nota" : "8.0"
+    },
+    "+5573988480005" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Andrei Nascimento",
+      "nota" : "8.0"
+    },
+    "+5573988497684" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em:</span></p><p><span style=\"color: black;\">Critério 1: Faltou uma reunião </span></p><p><span style=\"color: black;\">Critério 2: 2atividades sem cumprir</span></p><p><span style=\"color: black;\">Critério 7: 2 trabalhos sem executar&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Luiz Filipe",
+      "nota" : "6.8"
+    },
+    "+5573988636237" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Kauan Alves Almeida",
+      "nota" : "7.3"
+    },
+    "+5573988681100" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Alex Ruan Gomes Silva",
+      "nota" : "8.0"
+    },
+    "+5573988749832" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 5.pro-atividade)&nbsp;</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Ulrich Costa",
+      "nota" : "7.5"
+    },
+    "+5573988777136" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Júlia Lima Nascimento",
+      "nota" : "8.0"
+    },
+    "+5573988789748" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Vitório Péricles Silva Deal",
+      "nota" : "7.3"
+    },
+    "+5573988823792" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em: </span></p><p><span style=\"color: black;\">Critério 1: Presente em 2 reuniões </span></p><p><span style=\"color: black;\">Critério 2: 2 atividades sem cumprir </span></p><p><span style=\"color: black;\">Critério 3: Não participa das discussões </span></p><p><span style=\"color: black;\">Critério 4: Atividades em campo não realizadas </span></p><p><span style=\"color: black;\">Critério 5: Não está pro-ativa</span></p><p><span style=\"color: black;\">Critério 6: Não está atuando em grupo </span></p><p><span style=\"color: black;\">Critério 7: 2 trabalhos sem executar </span></p><p><span style=\"color: black;\">Critério 8: Há de melhorar&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Luana André Vilas Bôas",
+      "nota" : "2.0"
+    },
+    "+5573988837648" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Cauã Sena",
+      "nota" : "8.0"
+    },
+    "+5573988839598" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Rodrigo Novais",
+      "nota" : "8.0"
+    },
+    "+5573988848345" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Ian Kalil",
+      "nota" : "8.0"
+    },
+    "+5573988882551" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Thainá Ferraz",
+      "nota" : "8.0"
+    },
+    "+5573988916897" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Emilia Kruschewsky",
+      "nota" : "8.0"
+    },
+    "+5573988946085" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>(1.faltou 1 reunião 0,5)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Luana Gabrielly Gomes Dos Santos",
+      "nota" : "7.5"
+    },
+    "+5573988947416" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Bruno Nascimento",
+      "nota" : "8.0"
+    },
+    "+5573988949346" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Pedro Henrique",
+      "nota" : "7.3"
+    },
+    "+5573988949672" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><br></p><p><strong style=\"color: black;\">I: Faltou uma das reuniões (25/07).</strong></p><p><strong style=\"color: black;\">II: Não cumpriu uma das atividades passadas (1ª tarefa e as duas tarefas bônus)</strong></p><p><strong style=\"color: black;\">III: Não participa das discussões nem busca os líderes para se informar sobre o grupo ou dar sugestões.</strong></p><p><strong style=\"color: black;\">IV: Faltou a uma reunião e não cumpriu 3 das 4 tarefas d grupo.</strong></p><p><strong style=\"color: black;\">V: Não cumpriu a maioria das tarefas passadas nem buscou se empenhar além.</strong></p><p><strong style=\"color: black;\">VI: Mesmo motivo do critério acima.</strong></p><p><strong style=\"color: black;\">VII: Não cumpriu nenhuma das tarefas bônus.</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "João Marcelo",
+      "nota" : "2.8"
+    },
+    "+5573988953991" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p>Não Cumpriu (1-2-3-4-5-6-7-8)</p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Paulo Jefter Smith",
+      "nota" : "0"
+    },
+    "+5573991042095" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em:</span></p><p><span style=\"color: black;\">Critério 1: Não foi a nenhuma reunião </span></p><p><span style=\"color: black;\">Critério 2: 2 atividades sem cumprir </span></p><p><span style=\"color: black;\">Critério 3: Não participa das discussões</span></p><p><span style=\"color: black;\">Critério 4: Não participou da atividade em campo</span></p><p><span style=\"color: black;\">Critério 5: Não está sendo pro-ativo</span></p><p><span style=\"color: black;\">Critério 6: Não está atuando em grupo</span></p><p><span style=\"color: black;\">Critério 7: 2 trabalhos sem executar&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Marcelo Souza de Santana",
+      "nota" : "1.0"
+    },
+    "+5573991175349" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Ícaro Oliveira",
+      "nota" : "8.0"
+    },
+    "+5573991201886" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em:</span></p><p><span style=\"color: black;\">Critério 6: Há de melhorar em equipe </span></p><p><br></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Nathália Márjorie",
+      "nota" : "7.5"
+    },
+    "+5573991240364" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em:</span></p><p><span style=\"color: black;\">Critério 1: Faltou uma reunião </span></p><p><span style=\"color: black;\">Critério 2: 2 atividades sem cumprir </span></p><p><span style=\"color: black;\">Critério 7: 2trabalhos sem executar&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Fernanda Santos",
+      "nota" : "6.8"
+    },
+    "+5573991260830" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Paulo Ricardo Menezes Dos Santos",
+      "nota" : "8.0"
+    },
+    "+5573991388555" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p>Não Cumpriu (1-2-3)</p><p> </p><p> </p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Evelin Santos Santa",
+      "nota" : "5.7"
+    },
+    "+5573991400295" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Vitório Péricles",
+      "nota" : "7.3"
+    },
+    "+5573991409403" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 5.pro-atividade)&nbsp;</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Mikael Rodrigues",
+      "nota" : "7.5"
+    },
+    "+5573991411835" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)   </li><li>Cumprir os prazos (1,0)    </li><li>Participante nas discussões (1,0) </li><li>Participação nas atividades (1,0) </li><li>Ser pro-ativo (1,0)  </li><li>Saber atuar em grupo (1,0)  </li><li>Execução de trabalhos extra (1,0) </li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>(1. não compareceu a reunião / 5. pro-atividade)&nbsp;</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Anderson Santos",
+      "nota" : "6.5"
+    },
+    "+5573991552423" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "Brenda Maria",
+      "nota" : "8.0"
+    },
+    "+5573991607883" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><span style=\"color: rgb(0, 32, 96);\">Perdeu em: </span></p><p><span style=\"color: black;\">Critério 1: Faltou 2reuniões </span></p><p><span style=\"color: black;\">Critério 2: 2 atividades sem cumprir </span></p><p><span style=\"color: black;\">Critério 3: Não participou das discussões </span></p><p><span style=\"color: black;\">Critério 7: &nbsp;2 trabalhos sem executar</span></p><p><span style=\"color: black;\">&nbsp;</span></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Arrumação",
+      "nome" : "Caio Moura",
+      "nota" : "6.0"
+    },
+    "+5573991611708" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><strong>Não cumpriu( 2. atrasou 1 tarefa)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Alimentação",
+      "nome" : "Stephany Miranda Pereira Souza",
+      "nota" : "7.0"
+    },
+    "+5573991660108" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Yasmin Exaltação Ferreira",
+      "nota" : "7.3"
+    },
+    "+5573991684335" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Weslley Gonçalves Oliveira",
+      "nota" : "7.3"
+    },
+    "+5573991701228" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 5.pro-atividade)&nbsp;</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Igor Bispo",
+      "nota" : "7.5"
+    },
+    "+5573991705119" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Ana Carolina Casagranda",
+      "nota" : "7.3"
+    },
+    "+5573991783893" : {
+      "ano" : "3° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Hiago Gomes",
+      "nota" : "8.0"
+    },
+    "+5573991832967" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 5.pro-atividade)&nbsp;</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Matheus Fraga",
+      "nota" : "7.5"
+    },
+    "+5573991962540" : {
+      "ano" : "1° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 5.pro-atividade)&nbsp;</strong></p><p><strong><span class=\"ql-cursor\">﻿</span></strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Gabriel Candido",
+      "nota" : "7.5"
+    },
+    "+5573991988389" : {
+      "ano" : "2° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p>Não Cumpriu (7-8)</p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Vinícius Gabriel",
+      "nota" : "6.0"
+    },
+    "+5573993412008" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Produção Técnica",
+      "nome" : "João Pedro",
+      "nota" : "8.0"
+    },
+    "+5573999540695" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>( 1.não compareceu a reunião/ 5.pro- atividade)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Tempo",
+      "nome" : "Ian de Jesus",
+      "nota" : "6.5"
+    },
+    "+5573999615847" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p>Não Cumpriu (1-2-3)</p><p> </p><p> </p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Fomento",
+      "nome" : "Julyane Evangelista",
+      "nota" : "5.7"
+    },
+    "+5573999838260" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p>Não cumpriu (1-2-7)</p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Aghata Santos",
+      "nota" : "4.5"
+    },
+    "+557998401766" : {
+      "ano" : "9° Ano",
+      "colegio" : "Joana D'Arc",
+      "criterios" : "<ol><li>Presença nas reuniões (1,0)</li><li>Cumprir os prazos (1,0)</li><li>Participante nas discussões (1,0)</li><li>Participação nas atividades (1,0)</li><li>Ser pro-ativo (1,0)</li><li>Saber atuar em grupo (1,0)</li><li>Execução de trabalhos extra (1,0)</li><li>Comportamento (1,0)</li><li>Atividade passada pelo Professor Welldon (2,0)</li></ol><p><br></p><p><strong>(1.Faltou a 1 reunião 0,5)</strong></p>",
+      "foto" : "https://acaofilosofica.com/assets/image/gallery.webp",
+      "grupo" : "Finanças",
+      "nome" : "Fada Maria Dos Santos França",
+      "nota" : "7.5"
+    }
+  },
+  "registros" : {
+    "-Lj7ephrGrpjX6VnWmqJ" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Welldon (Orientador) com a nota Irrelevante e com o telefone +5573988491510",
+      "timestamp" : 1562439802044
+    },
+    "-Lj85AFjb95-SYPtRn9h" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Rosa (Orientador) com a nota Irrelevante e com o telefone +5573988666579",
+      "timestamp" : 1562446968179
+    },
+    "-LjIxnjIPEuzqlVI873c" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Allana (Líder) com a nota 40 e com o telefone +5573991336976",
+      "timestamp" : 1562629323717
+    },
+    "-Ljc23kXQqvNzEPpeUV3" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Raquel (Líder) com a nota 40 e com o telefone +5573981017465",
+      "timestamp" : 1562629543215
+    },
+    "-LlYNAt41OpJg_81IKyK" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Brenda (Líder) com a nota 40 e com o telefone +5573991696473",
+      "timestamp" : 1565035380293
+    },
+    "-LlfHJTZtRazu0MrnIAK" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Arthur Aragão Souza (Fomento) com a nota 40",
+      "timestamp" : 1565168060325
+    },
+    "-LlfI59u3UjCYh4SnJQ5" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Brenda Brito Tavares (Produção Técnica) com a nota 40",
+      "timestamp" : 1565168263867
+    },
+    "-LlrlXiuSO0x5Sc07Gmx" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Cawan (Vice-Líder) com a nota 40 e com o telefone +5573988223756",
+      "timestamp" : 1565377571770
+    },
+    "-Lls0y5WMVp_LXKL3fWt" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Rodrigo (Vice-Líder) com a nota 40 e com o telefone +5573988839598",
+      "timestamp" : 1565381878177
+    },
+    "-Lls2sBYwvBsw5e1SAY4" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Jarder (Líder) com a nota 40 e com o telefone +5573981495083",
+      "timestamp" : 1565382378275
+    },
+    "-Lls3VPxiAx-zT1KNMYk" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Faubert (Arrumação) com a nota 40",
+      "timestamp" : 1565382543038
+    },
+    "-Lls3g1JcJSSgyS8Sovv" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Nathália Márjorie (Arrumação) com a nota 40",
+      "timestamp" : 1565382590612
+    },
+    "-Lls4M6_Hv3W9mwUf3M0" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Hiago (Líder) com a nota 40 e com o telefone +5573991783893",
+      "timestamp" : 1565382767077
+    },
+    "-Lls4dcopHS_-qrFLFdJ" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Luiz (Arrumação) com a nota 40",
+      "timestamp" : 1565382842932
+    },
+    "-Lls5UPK0Alcq1mhqlVC" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Bruno Oliveira (Produção Técnica) com a nota 40",
+      "timestamp" : 1565383063190
+    },
+    "-Lls5uOGvz_ghDPP56WL" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) removeu o(a) aluno(a) Arthur Aragão Souza (Fomento) com a nota 40",
+      "timestamp" : 1565383173713
+    },
+    "-Lls5v5trXpEIX_eSz1G" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) removeu o(a) aluno(a) Brenda Brito Tavares (Produção Técnica) com a nota 40",
+      "timestamp" : 1565383176633
+    },
+    "-Lls64WJQ0OtydusheUH" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Breno Oliveira (Produção Técnica) com a nota 40",
+      "timestamp" : 1565383219284
+    },
+    "-Lls6hlEwg_w1c2gSMkn" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Cauã Sena (Produção Técnica) com a nota 40",
+      "timestamp" : 1565383384143
+    },
+    "-Lls6n9CtYbSrI4HDUxs" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Jenyffer (Vice-Líder) com a nota 40 e com o telefone +5573988958967",
+      "timestamp" : 1565383406221
+    },
+    "-Lls76AMkumT3_7F7n7O" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Alberto Luiz (Produção Técnica) com a nota 40",
+      "timestamp" : 1565383488215
+    },
+    "-Lls7JrV90QO5_S9E9-r" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Thainá Ferraz (Produção Técnica) com a nota 40",
+      "timestamp" : 1565383544288
+    },
+    "-Lls7tr6lKNxNu1r1Quk" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Iuri Cristian (Produção Técnica) com a nota 40",
+      "timestamp" : 1565383695815
+    },
+    "-Lls9BMfzDpNWVP5z_5B" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Brenda Maria (Produção Técnica) com a nota 40",
+      "timestamp" : 1565384033771
+    },
+    "-Lls9yJXYMVx7o4uVBMz" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Ayslla (Produção Técnica) com a nota 40",
+      "timestamp" : 1565384238370
+    },
+    "-Lls9zbqXa6dnc9HlR_B" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Thaílla (Líder) com a nota 40 e com o telefone +5573991487665",
+      "timestamp" : 1565384243702
+    },
+    "-LlsAFTbikJibHxQosFY" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) João Pedro (Produção Técnica) com a nota 40",
+      "timestamp" : 1565384312743
+    },
+    "-LlsB0W3kxNdkvKoCMKt" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) Emilia Kruschewsky (Produção Técnica) com a nota 40",
+      "timestamp" : 1565384513604
+    },
+    "-LlsBJzhpSQCsao36rym" : {
+      "registro" : "O(a) administrador(a) Rodrigo (Vice-Líder) adicionou o(a) aluno(a) João Marcelo (Produção Técnica) com a nota 40",
+      "timestamp" : 1565384593389
+    },
+    "-LlsChK858E4qKpN1I3A" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Maju (Líder) com a nota 40 e com o telefone +5573981597967",
+      "timestamp" : 1565384955210
+    },
+    "-Llt0Yho_6HAmn829Xpj" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) aluno(a) Anderson Santos (Tempo) com a nota 40",
+      "timestamp" : 1565398547317
+    },
+    "-Llt0tFxb7fmhTZUNEGd" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) aluno(a) Gabriel Candido (Tempo) com a nota 40",
+      "timestamp" : 1565398635581
+    },
+    "-Llt15vvdABDb54EWBUk" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) aluno(a) Igor Bispo (Tempo) com a nota 40",
+      "timestamp" : 1565398691580
+    },
+    "-Llt1NWecqcvbn_ZrqBF" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) aluno(a) Laura França (Tempo) com a nota 40",
+      "timestamp" : 1565398763626
+    },
+    "-Llt1dTNbi6DsL4v1OgY" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) aluno(a) Matheus Fraga (Tempo) com a nota 40",
+      "timestamp" : 1565398833048
+    },
+    "-Llt1rv9f-sgW1oVK490" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) aluno(a) Mikael Rodrigues (Tempo) com a nota 40",
+      "timestamp" : 1565398892235
+    },
+    "-Llt2LTfB7uiVxMhq2-S" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) aluno(a) Ricardo Gama (Tempo) com a nota 40",
+      "timestamp" : 1565399017388
+    },
+    "-Llt3JoFSWoFW9D1A66a" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) aluno(a) Ulrich Costa (Tempo) com a nota 40",
+      "timestamp" : 1565399272720
+    },
+    "-LltAX5KD_DfUiDcPMH0" : {
+      "registro" : "O(a) administrador(a) Jarder (Líder) adicionou o(a) administrador(a) Arthur (Líder) com a nota 40 e com o telefone +5573991385147",
+      "timestamp" : 1565401162133
+    },
+    "-LltUbMST94SaAPepdUW" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Catarina (Vice-Líder) com a nota 40 e com o telefone +5573988959937",
+      "timestamp" : 1565406426589
+    },
+    "-LlwtcCjyOkOmqvT4WLL" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Graziella (Vice-Líder) com a nota 40 e com o telefone +5573982503207",
+      "timestamp" : 1565463577456
+    },
+    "-Llx7ruYzjG2y81_gqNo" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) João (Líder) com a nota 40 e com o telefone +5573988010718",
+      "timestamp" : 1565467573923
+    },
+    "-Llx82Xy0k8EAhRR0m0p" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) José (Vice-Líder) com a nota 40 e com o telefone +5573991562675",
+      "timestamp" : 1565467621566
+    },
+    "-Llx93p-fya_IMbsH2ql" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Hozana (Líder) com a nota 40 e com o telefone +5573988619033",
+      "timestamp" : 1565467888961
+    },
+    "-Llx9SHaX-sfEly9jny5" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Maria (Vice-Líder) com a nota 40 e com o telefone +5573988042072",
+      "timestamp" : 1565467989158
+    },
+    "-LlxB7gyTF9IIxJ1CDFY" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Kauanny (Vice-Líder) com a nota 40 e com o telefone +5573991134389",
+      "timestamp" : 1565468429118
+    },
+    "-LlxBTUbrIJMWI3pfDAT" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Raphaella (Vice-Líder) com a nota 40 e com o telefone +5573988652042",
+      "timestamp" : 1565468518376
+    },
+    "-LmMGptCM_u_pt5naGsl" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Alex Ruan Gomes Silva (Alimentação) com a nota 40",
+      "timestamp" : 1565906132557
+    },
+    "-LmMHAGxN6GuKc-QxKjT" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Ana Carolina Casagranda (Fomento) com a nota 40",
+      "timestamp" : 1565906220157
+    },
+    "-LmMHtkVMMvTBRDIlqdj" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Daniel Tudes Dos Santos (Tempo) com a nota 40",
+      "timestamp" : 1565906410528
+    },
+    "-LmMN5DC36FFTiTHRuYw" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Kauan Alves Almeida (Fomento) com a nota 40",
+      "timestamp" : 1565907772302
+    },
+    "-LmMNV9TsYKm6WHZcWpL" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Kaylane Nataly Almeida Ribeiro (Alimentação) com a nota 40",
+      "timestamp" : 1565907878558
+    },
+    "-LmRKF_1SspCqwiCWOLI" : {
+      "registro" : "O(a) administrador(a) Maju (Líder) atualizou o(a) administrador(a) Maju (Líder) com a nota 40 e com o telefone +5573981597967",
+      "timestamp" : 1565990914370
+    },
+    "-LmRLFC25AbjSPCVaRSq" : {
+      "registro" : "O(a) administrador Wilson (Desenvolvedor) removeu o(a) administrador Kauanny (Vice-Líder) com a nota 40 e com o telefone +5573991134389",
+      "timestamp" : 1565991174980
+    },
+    "-LmRLjqMjyh14MUxClBi" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Bárbara (Vice-Líder) com a nota 40 e com o telefone +5573988638828",
+      "timestamp" : 1565991304599
+    },
+    "-LmRMFt3iDEFCX0DcM_-" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) administrador(a) Alberto (Líder) com a nota 40 e com o telefone +5573988182792",
+      "timestamp" : 1565991439941
+    },
+    "-LmRm06LMFiF3QYre3LA" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Luana André Vilas Bôas (Arrumação) com a nota 40",
+      "timestamp" : 1565998453207
+    },
+    "-LmRmJyC1n6OZJn2vTZr" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Luana Gabrielly Gomes Dos Santos (Finanças) com a nota 40",
+      "timestamp" : 1565998534541
+    },
+    "-LmRnKzt6me_xhfDSBL2" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Vitório Péricles Silva Deal (Fomento) com a nota 40",
+      "timestamp" : 1565998800889
+    },
+    "-LmRnxTMGAykT1N8BWI6" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Bruno Nascimento (Alimentação) com a nota 40",
+      "timestamp" : 1565998962583
+    },
+    "-LmRoOb0Z826dZSpGQAS" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Fernanda Santos (Arrumação) com a nota 40",
+      "timestamp" : 1565999077825
+    },
+    "-LmRohYeG7guVaZrb8jI" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Hiago Reis (Tempo) com a nota 40",
+      "timestamp" : 1565999159530
+    },
+    "-LmRoubY8l1NCLWcnbZx" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Ian Kalil (Alimentação) com a nota 40",
+      "timestamp" : 1565999213027
+    },
+    "-LmRpUS4kKcvYscfbgUy" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Ícaro Oliveira (Finanças) com a nota 40",
+      "timestamp" : 1565999363909
+    },
+    "-LmRq5VTnp3Bexbo4pCj" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) José Romar Carmo (Fomento) com a nota 40",
+      "timestamp" : 1565999523870
+    },
+    "-LmRqdCW68E4mI2mSSXS" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Marcelo Souza de Santana (Fomento) com a nota 40",
+      "timestamp" : 1565999666017
+    },
+    "-LmRrBgeEoFM4lqGzekR" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Paulo Jefter Smith (Fomento) com a nota 40",
+      "timestamp" : 1565999811370
+    },
+    "-LmRrYcGgGduh0YdVDVr" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Vinícius Gabriel (Arrumação) com a nota 40",
+      "timestamp" : 1565999905297
+    },
+    "-LmSGBEGwYVnTQB5ds9-" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Andriano Santos Prazeres (Alimentação) com a nota 40",
+      "timestamp" : 1566006625233
+    },
+    "-LmSGiHEYPBjdZTXydc3" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Ana Beatriz Dos Santos Souza (Arrumação) com a nota 40",
+      "timestamp" : 1566006764687
+    },
+    "-LmSH5qlTUoKNquWabfO" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Andrei Nascimento (Finanças) com a nota 40",
+      "timestamp" : 1566006865330
+    },
+    "-LmSHX_GM8L4_IBo-phx" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Aghata Santos (Finanças) com a nota 40",
+      "timestamp" : 1566006978897
+    },
+    "-LmSICXgnuQhzliq13Rq" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Caio Moura (Arrumação) com a nota 40",
+      "timestamp" : 1566007154860
+    },
+    "-LmSJgPUb7NAxx35DmIP" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Evelin Santos Santa (Fomento) com a nota 40",
+      "timestamp" : 1566007543455
+    },
+    "-LmSKFBTWptokdTuNzdL" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Fada Maria Dos Santos França (Finanças) com a nota 40",
+      "timestamp" : 1566007690014
+    },
+    "-LmSKX79YmB9fvu7KM4l" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Flávia Luiza Rocha Dos Santos (Alimentação) com a nota 40",
+      "timestamp" : 1566007763466
+    },
+    "-LmSKlO9YWQcjFZpjQIG" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Gabriel Vitório Dos Santos (Arrumação) com a nota 40",
+      "timestamp" : 1566007825994
+    },
+    "-LmSMOTcLLa9mZjd_ePR" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Júlia Lima Nascimento (Finanças) com a nota 40",
+      "timestamp" : 1566008252328
+    },
+    "-LmSMjOT2tJom4rlza1q" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Julyane Evangelista (Fomento) com a nota 40",
+      "timestamp" : 1566008342110
+    },
+    "-LmSN74yiyWfsx4zfI_S" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Paulo Ricardo Menezes Dos Santos (Finanças) com a nota 40",
+      "timestamp" : 1566008443262
+    },
+    "-LmSNG82WY5w90IkT5wm" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Paulo Victor Ribeiro Dos Santos (Alimentação) com a nota 40",
+      "timestamp" : 1566008480323
+    },
+    "-LmSNS5NKgMXa78CQkjs" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Stephany Miranda Pereira Souza (Alimentação) com a nota 40",
+      "timestamp" : 1566008529304
+    },
+    "-LmSNoydQMF2LIHaCS92" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Wendel Cayo (Fomento) com a nota 40",
+      "timestamp" : 1566008627113
+    },
+    "-LmSO-vbchC0JozMqYUg" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Weslley Gonçalves Oliveira (Fomento) com a nota 40",
+      "timestamp" : 1566008676071
+    },
+    "-LmSOCjYm-zxDiwqfP5Q" : {
+      "registro" : "O(a) administrador(a) Wilson (Desenvolvedor) adicionou o(a) aluno(a) Yasmin Exaltação Ferreira (Fomento) com a nota 40",
+      "timestamp" : 1566008728547
+    },
+    "-Lmphmw5J1h9j3GCWKvN" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ana Beatriz Dos Santos Souza (Arrumação) com a nota 5.5",
+      "timestamp" : 1566416776966
+    },
+    "-Lmpi7rK_LOiQRfFfOaq" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Faubert (Arrumação) com a nota 6.8",
+      "timestamp" : 1566416866773
+    },
+    "-LmpiDWV1pSkiPa_eBcx" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Luiz Filipe (Arrumação) com a nota 6.8",
+      "timestamp" : 1566416889952
+    },
+    "-LmpiJWoEw2wggVgB29m" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Nathália Márjorie (Arrumação) com a nota 7.5",
+      "timestamp" : 1566416914548
+    },
+    "-LmpiNwBOL7YLEF0itTR" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Fernanda Santos (Arrumação) com a nota 6.8",
+      "timestamp" : 1566416932620
+    },
+    "-LmpiUmjBijfs6tMlj_V" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) José Romar Carmo (Fomento) com a nota 6.8",
+      "timestamp" : 1566416960687
+    },
+    "-LmpiZGoJkxCRJAu4QjP" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Marcelo Souza de Santana (Fomento) com a nota 1.0",
+      "timestamp" : 1566416979060
+    },
+    "-LmpifBvU-tDqsMZ4b9r" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Luana André Vilas Bôas (Arrumação) com a nota 2.0",
+      "timestamp" : 1566417007419
+    },
+    "-LmpjOfakQOlO4c4c3ZX" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ana Beatriz Dos Santos Souza (Arrumação) com a nota 5.5",
+      "timestamp" : 1566417197798
+    },
+    "-LmpjSiaPe6Bm0e2-M_I" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Caio Moura (Arrumação) com a nota 6.0",
+      "timestamp" : 1566417214374
+    },
+    "-Lmpk7HgmashgCbmkOEK" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Clayton Araújo (Arrumação) com a nota 5.5",
+      "timestamp" : 1566417388717
+    },
+    "-LmpkE_IfxIGol84wOtk" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Gabriel Vitório Dos Santos (Arrumação) com a nota 7.0",
+      "timestamp" : 1566417418579
+    },
+    "-Lmpkt4QtFjZcLZsvb7p" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Vinícius Gabriel (Fomento) com a nota 40",
+      "timestamp" : 1566417588571
+    },
+    "-LmtzZzFmMRP192ZOQUk" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Anderson Santos (Tempo) com a nota 6.5",
+      "timestamp" : 1566488547280
+    },
+    "-Lmu-btcrspVLp4tvWM9" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Faubert (Arrumação) com a nota 6.8",
+      "timestamp" : 1566488821352
+    },
+    "-Lmu-iHznYNl0izirSoG" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Luiz Filipe (Arrumação) com a nota 6.8",
+      "timestamp" : 1566488847551
+    },
+    "-Lmu-rf5he64eAsnr8qK" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Nathália Márjorie (Arrumação) com a nota 7.5",
+      "timestamp" : 1566488885958
+    },
+    "-Lmu-z7o1eTZT5cvT4QX" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Fernanda Santos (Arrumação) com a nota 6.8",
+      "timestamp" : 1566488916532
+    },
+    "-Lmu04pMkjWbM6iQt8J6" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) José Romar Carmo (Fomento) com a nota 6.8",
+      "timestamp" : 1566488943959
+    },
+    "-Lmu0FTtQdcgfbHRArnv" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Marcelo Souza de Santana (Fomento) com a nota 1.0",
+      "timestamp" : 1566488987577
+    },
+    "-Lmu0ND8xOB4jlfIGnof" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Luana André Vilas Bôas (Arrumação) com a nota 2.0",
+      "timestamp" : 1566489019273
+    },
+    "-Lmu0SKURgrHnM4cXWKq" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ana Beatriz Dos Santos Souza (Arrumação) com a nota 5.5",
+      "timestamp" : 1566489040223
+    },
+    "-Lmu0XTP4UznEYnDswik" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Caio Moura (Arrumação) com a nota 6.0",
+      "timestamp" : 1566489061274
+    },
+    "-Lmu0b_tOzbiGKIliBzD" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Caio Moura (Arrumação) com a nota 6.0",
+      "timestamp" : 1566489082233
+    },
+    "-Lmu0jIb93REcEfiWrLa" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Clayton Araújo (Arrumação) com a nota 5.5",
+      "timestamp" : 1566489113831
+    },
+    "-Lmu0pM-u6eOxHNxks0P" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Gabriel Vitório Dos Santos (Arrumação) com a nota 7.0",
+      "timestamp" : 1566489138624
+    },
+    "-Lmu1JrJIqs13DjgU4K9" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Evelin Santos Santa (Fomento) com a nota 5.8",
+      "timestamp" : 1566489267668
+    },
+    "-Lmu1SlfXpZ_sggVWW9S" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Julyane Evangelista (Fomento) com a nota 5.7",
+      "timestamp" : 1566489304171
+    },
+    "-Lmu1_6TYLgIdTdZeswI" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Evelin Santos Santa (Fomento) com a nota 5.7",
+      "timestamp" : 1566489334238
+    },
+    "-Lmu1hYqCgbhrXER8ii5" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Wendel Cayo (Fomento) com a nota 1.0",
+      "timestamp" : 1566489368822
+    },
+    "-Lmu1mRUFCoT9EhHmsIR" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Weslley Gonçalves Oliveira (Fomento) com a nota 7.3",
+      "timestamp" : 1566489388831
+    },
+    "-Lmu1utw5UsITNFPkLQG" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Yasmin Exaltação Ferreira (Fomento) com a nota 7.3",
+      "timestamp" : 1566489423484
+    },
+    "-Lmu1zh8io4P47ETWh7Z" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ana Carolina Casagranda (Fomento) com a nota 7.3",
+      "timestamp" : 1566489443146
+    },
+    "-Lmu24ZqkyXBx43yrm5b" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Kauan Alves Almeida (Fomento) com a nota 7.3",
+      "timestamp" : 1566489467190
+    },
+    "-Lmu2wneFIalCSpleEgE" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Lais Anjos (Fomento) com a nota 0.5",
+      "timestamp" : 1566489693418
+    },
+    "-Lmu43Q4dUVoJbRu7fAv" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Pedro Henrique (Fomento) com a nota 7.3",
+      "timestamp" : 1566489986757
+    },
+    "-Lmu4S561lIEPVdEHFHU" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Vitório Péricles (Fomento) com a nota 7.3",
+      "timestamp" : 1566490087815
+    },
+    "-Lmu4aHFZg5kiQL6zU5-" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Paulo Jefter Smith (Fomento) com a nota 0",
+      "timestamp" : 1566490125456
+    },
+    "-Lmu6YwxGbS92q0-aGHb" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Vinícius Gabriel (Fomento) com a nota 6.0",
+      "timestamp" : 1566490640189
+    },
+    "-Lmu7JeGpcTwr5BdITMn" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Anderson Santos (Tempo) com a nota 6.5",
+      "timestamp" : 1566490839697
+    },
+    "-LmuAgHKOnw70Id8Intn" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Ian de Jesus (Tempo) com a nota 6.5",
+      "timestamp" : 1566491722901
+    },
+    "-LmuBA9-4ewxGb8kQR0h" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ricardo Gama (Tempo) com a nota 7.5",
+      "timestamp" : 1566491849344
+    },
+    "-LmuBH82-t8iQe0xOfKw" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Mikael Rodrigues (Tempo) com a nota 7.5",
+      "timestamp" : 1566491877955
+    },
+    "-LmuBL1pLKwQ9VC4OAg0" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Laura França (Tempo) com a nota 7.5",
+      "timestamp" : 1566491893941
+    },
+    "-LmuBPpFiiJw96wPBWcn" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Gabriel Candido (Tempo) com a nota 7.5",
+      "timestamp" : 1566491913552
+    },
+    "-LmuBUtKj23QiL2qeZjS" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Daniel Tudes Dos Santos (Tempo) com a nota 7.5",
+      "timestamp" : 1566491934293
+    },
+    "-LmuBZkUrj0qxsXxUj7d" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Matheus Fraga (Tempo) com a nota 7.5",
+      "timestamp" : 1566491954207
+    },
+    "-LmuBdzch7vDOv_QeXIM" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Igor Bispo (Tempo) com a nota 7.5",
+      "timestamp" : 1566491975656
+    },
+    "-LmuCAojfjsn4pZpo-vN" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ulrich Costa (Tempo) com a nota 7.5",
+      "timestamp" : 1566492114223
+    },
+    "-LmuCcIi8l89RHvAIq0y" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ian Kalil (Alimentação) com a nota 8.0",
+      "timestamp" : 1566492230894
+    },
+    "-LmuCfJ1uRQhwnWl40Q2" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Alex Ruan Gomes Silva (Alimentação) com a nota 8.0",
+      "timestamp" : 1566492243202
+    },
+    "-LmuCpdnSkN9iGhwxjEY" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Bruno Nascimento (Alimentação) com a nota 8.0",
+      "timestamp" : 1566492285555
+    },
+    "-LmuDIMyR6DBKlQl6Ex3" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Paulo Ricardo Menezes Dos Santos (Finanças) com a nota 8.0",
+      "timestamp" : 1566492407294
+    },
+    "-LmuDNl14s4JzIBmIhaS" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Andrei Nascimento (Finanças) com a nota 8.0",
+      "timestamp" : 1566492429378
+    },
+    "-LmuEQng39iQHuEjkWBE" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Aghata Santos (Finanças) com a nota 4.5",
+      "timestamp" : 1566492703980
+    },
+    "-LmuEoYtUyGSgqs6Bk5l" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Fada Maria Dos Santos França (Finanças) com a nota 7.5",
+      "timestamp" : 1566492805369
+    },
+    "-LmuEz1KpIS78HzFC3-E" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Luana Gabrielly Gomes Dos Santos (Finanças) com a nota 7.5",
+      "timestamp" : 1566492848277
+    },
+    "-LmuF8SRuu9DDn2WAlWK" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Flávia Luiza Rocha Dos Santos (Alimentação) com a nota 8.0",
+      "timestamp" : 1566492890972
+    },
+    "-LmuFKF7E69T8v4K3qJo" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Bruno Nascimento (Alimentação) com a nota 8.0",
+      "timestamp" : 1566492939272
+    },
+    "-LmuFfp5HC6ABU19x0TJ" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Stephany Miranda Pereira Souza (Alimentação) com a nota 7.0",
+      "timestamp" : 1566493031750
+    },
+    "-LmuFomt6og-WjQQkzi0" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Paulo Victor Ribeiro Dos Santos (Alimentação) com a nota 8.0",
+      "timestamp" : 1566493068473
+    },
+    "-LmuG2xq4WUrlMquZFBJ" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Hiago Reis (Tempo) com a nota 7.5",
+      "timestamp" : 1566493130614
+    },
+    "-LmuGeKMMu2JhpVkf2E1" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Kaylane Nataly Almeida Ribeiro (Alimentação) com a nota 4.0",
+      "timestamp" : 1566493287767
+    },
+    "-LmuGjH1bwqp55A5H-zF" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Kaylane Nataly Almeida Ribeiro (Alimentação) com a nota 4.0",
+      "timestamp" : 1566493308034
+    },
+    "-LmuH_SOA7PebCAjPEv_" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Andriano Santos Prazeres (Alimentação) com a nota 40",
+      "timestamp" : 1566493529945
+    },
+    "-LmuI1YR6WNkMNj4BZbx" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Andriano Santos Prazeres (Alimentação) com a nota 2",
+      "timestamp" : 1566493649116
+    },
+    "-LmvFm6wbs5-4BCTllA4" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Andriano Santos Prazeres (Alimentação) com a nota 2.0",
+      "timestamp" : 1566509834748
+    },
+    "-LmvGPwB8rp7qMuwj5si" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Icaro Chaves (Finanças) com a nota 8.0",
+      "timestamp" : 1566510001932
+    },
+    "-LmvHHDBHWFastbAJpbd" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Cawan Barral (Finanças) com a nota 8.0",
+      "timestamp" : 1566510228364
+    },
+    "-LmvHjhqP-CoY3yV09RD" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Hiago Gomes (Finanças) com a nota 8.0",
+      "timestamp" : 1566510349174
+    },
+    "-LmvIYhd7S3wPadJ3MCM" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Alexsuel Candial (Alimentação) com a nota 7.0",
+      "timestamp" : 1566510562153
+    },
+    "-LmvKSZX9jP8fQ66Af4z" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Louise Santos (Alimentação) com a nota 7.0",
+      "timestamp" : 1566511061282
+    },
+    "-LmvK_iEDBr-6xWcG70j" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Alexsuel Candial (Alimentação) com a nota 7.0",
+      "timestamp" : 1566511094671
+    },
+    "-LmvKcxSMuLj5dxgnB3U" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Louise Santos (Alimentação) com a nota 7.0",
+      "timestamp" : 1566511107933
+    },
+    "-LmvKgFhApe6SyhgOvw8" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Alexsuel Candial (Alimentação) com a nota 7.0",
+      "timestamp" : 1566511121453
+    },
+    "-LmvKm1SFjP669RSs1XP" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Stephany Miranda Pereira Souza (Alimentação) com a nota 7.0",
+      "timestamp" : 1566511145117
+    },
+    "-LmvLSobS6e41RO_Rwbp" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Adriano Santos Prazeres (Alimentação) com a nota 2.0",
+      "timestamp" : 1566511324456
+    },
+    "-LmvM1e2FBxn5QXnoBg0" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Lucas Santos (Alimentação) com a nota 7.0",
+      "timestamp" : 1566511475331
+    },
+    "-LmvMLIXTAJ4wuFsOO6L" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) removeu o(a) aluno(a) Icaro Chaves (Finanças) com a nota 8.0",
+      "timestamp" : 1566511555810
+    },
+    "-LmvMPtbUSsDOrcF7xEo" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ícaro Oliveira (Finanças) com a nota 8.0",
+      "timestamp" : 1566511574632
+    },
+    "-LmvMUh5tbSEFY3Xihy6" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Júlia Lima Nascimento (Finanças) com a nota 8.0",
+      "timestamp" : 1566511594310
+    },
+    "-LmvMsz6meYr8CzvXKMy" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Vitório Péricles Silva Deal (Fomento) com a nota 7.3",
+      "timestamp" : 1566511697863
+    },
+    "-LmvOHUU1iRsL78_ybXC" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Alberto Luiz (Produção Técnica) com a nota 8.0",
+      "timestamp" : 1566512064479
+    },
+    "-LmvOUXdvV2RJqED-r9L" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Ayslla Luise (Produção Técnica) com a nota 7.1",
+      "timestamp" : 1566512117929
+    },
+    "-LmvOYswemPvP-YnrOa8" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Brenda Maria (Produção Técnica) com a nota 8.0",
+      "timestamp" : 1566512135740
+    },
+    "-LmvOfyFVkqYwhoN2Bsg" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Breno Oliveira (Produção Técnica) com a nota 7.2",
+      "timestamp" : 1566512168848
+    },
+    "-LmvOn6Nda2ApFlEAFYm" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Bruno Oliveira (Produção Técnica) com a nota 7.2",
+      "timestamp" : 1566512198104
+    },
+    "-LmvPbewIfQBhzPz4ACS" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Emilia Kruschewsky (Produção Técnica) com a nota 8.0",
+      "timestamp" : 1566512413372
+    },
+    "-LmvQFBNUw_jLQPijiOy" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Iuri Cristian (Produção Técnica) com a nota 6.0",
+      "timestamp" : 1566512579352
+    },
+    "-LmvQWQ_gnxG0F37NIx8" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) João Marcelo (Produção Técnica) com a nota 2.8",
+      "timestamp" : 1566512649957
+    },
+    "-LmvQen3u7q2NeS3FLzz" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) João Pedro (Produção Técnica) com a nota 8.0",
+      "timestamp" : 1566512688324
+    },
+    "-LmvQrIOme77onWmcGJf" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Thainá Ferraz (Produção Técnica) com a nota 8.0",
+      "timestamp" : 1566512739545
+    },
+    "-LmvRlHz4C0WVnnYH6ge" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) adicionou o(a) aluno(a) Rodrigo Novais (Apoio Pedagógico) com a nota 8.0",
+      "timestamp" : 1566512977087
+    },
+    "-LmvS-H6fw-gYPhd363i" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Cauã Sena (Produção Técnica) com a nota 8.0",
+      "timestamp" : 1566513038471
+    },
+    "-LmvSaUpCCWhdb7keZuJ" : {
+      "registro" : "O(a) administrador(a) Allana (Líder) atualizou o(a) aluno(a) Rodrigo Novais (Produção Técnica) com a nota 8.0",
+      "timestamp" : 1566513194997
+    }
+  }
+}

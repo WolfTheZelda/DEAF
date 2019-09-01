@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from "vue";
+import Router from "vue-router";
 
-import Maintenance from './views/Maintenance.vue';
+import Maintenance from "./views/Maintenance.vue";
 
 Vue.use(Router);
 
@@ -11,90 +11,99 @@ Router.prototype.push = function push(location) {
 }
 
 export default new Router({
-  mode: process.env.CORDOVA_PLATFORM ? 'hash' : 'history',
+  mode: process.env.CORDOVA_PLATFORM ? "hash" : "history",
 
-  linkExactActiveClass: 'link-active',
+  linkExactActiveClass: "link-active",
 
   routes: [{
-      path: '/',
-      name: 'home',
-      component: () => import('./views/Home'),
+      path: "/",
+      name: "home",
+      component: () => import("./views/Home"),
       meta: {
-        title: 'DEAF - Início'
+        title: "DEAF - Início"
       }
     },
     {
-      path: '/blog',
-      name: 'blog',
-      component: () => import('./views/Blog'),
+      path: "/blog",
+      name: "blog",
+      component: () => import("./views/Blog"),
       meta: {
-        title: 'DEAF - Blog'
+        title: "DEAF - Blog"
       }
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('./views/Login'),
+      path: "/login",
+      name: "login",
+      component: () => import("./views/Login"),
       meta: {
-        title: 'DEAF - Login'
+        title: "DEAF - Login"
       }
     },
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: () => import('./views/Dashboard'),
+      path: "/dashboard",
+      name: "dashboard",
+      component: () => import("./views/Dashboard"),
       children: [{
-          path: '/',
+          path: "/",
           components: {
-            dashboard: () => import('./views/Dashboard/Menu')
+            dashboard: () => import("./views/Dashboard/Menu")
           },
           meta: {
-            title: 'DEAF - Dashboard > Menu'
+            title: "DEAF - Dashboard > Menu"
           }
         },
         {
-          path: '/dashboard/students',
+          path: "/dashboard/students",
           components: {
-            dashboard: () => import('./views/Dashboard/Students')
+            dashboard: () => import("./views/Dashboard/Students")
           },
           meta: {
-            title: 'DEAF - Dashboard > Alunos'
+            title: "DEAF - Dashboard > Alunos"
           }
         },
         {
-          path: '/dashboard/students/edit/:id',
+          path: "/dashboard/students/edit/:id",
           components: {
-            dashboard: () => import('./views/Dashboard/StudentsEdit')
+            dashboard: () => import("./views/Dashboard/StudentsEdit")
           },
           meta: {
-            title: 'DEAF - Dashboard > Alunos > Editar'
+            title: "DEAF - Dashboard > Alunos > Editar"
           }
         },
         {
-          path: '/dashboard/managers',
+          path: "/dashboard/managers",
           components: {
-            dashboard: () => import('./views/Dashboard/Managers')
+            dashboard: () => import("./views/Dashboard/Managers")
           },
           meta: {
-            title: 'DEAF - Dashboard > Administradores'
+            title: "DEAF - Dashboard > Administradores"
           }
         },
         {
-          path: '/dashboard/managers/edit/:id',
+          path: "/dashboard/managers/edit/:id",
           components: {
-            dashboard: () => import('./views/Dashboard/ManagersEdit')
+            dashboard: () => import("./views/Dashboard/ManagersEdit")
           },
           meta: {
-            title: 'DEAF - Dashboard > Administradores > Editar'
+            title: "DEAF - Dashboard > Administradores > Editar"
           }
         },
         {
-          path: '/dashboard/records',
+          path: "/dashboard/records",
           components: {
-            dashboard: () => import('./views/Dashboard/Records')
+            dashboard: () => import("./views/Dashboard/Records")
           },
           meta: {
-            title: 'DEAF - Dashboard > Registros'
+            title: "DEAF - Dashboard > Registros"
+          }
+        },
+        {
+          path: "/dashboard/blog",
+          components: {
+            dashboard: Maintenance
+          },
+          meta: {
+            title: "DEAF - Dashboard > Blog"
           }
         }
       ]

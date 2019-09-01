@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <script>
-  if (location.host === "acaofilosofica.firebaseapp.com" || location.host === "acaofilosofica.web.app") location.href = "https://" + "acaofilosofica.com" + "/" + location.href.split('/')[location.href.split('/').length - 1];
+  if (location.host === "acaofilosofica.firebaseapp.com" || location.host === "acaofilosofica.web.app") location.href = "https://" + "acaofilosofica.com" + window.location.pathname;
 </script>
 
 <head>
@@ -18,11 +18,15 @@
 <body>
   <noscript>
     <strong>
-      Lamentamos, mas o Vue não funciona corretamente sem o JavaScript ativado. Ative-o para continuar.
+      # Lamentamos, mas o Vue não funciona corretamente sem o JavaScript ativado. Ative-o para continuar.
     </strong>
   </noscript>
 
   <div id="app"></div>
 </body>
+
+<script>
+  !function (n, e) { var t, o, i, c = [], f = { passive: !0, capture: !0 }, r = new Date, a = "pointerup", u = "pointercancel"; function p(n, c) { t || (t = c, o = n, i = new Date, w(e), s()) } function s() { o >= 0 && o < i - r && (c.forEach(function (n) { n(o, t) }), c = []) } function l(t) { if (t.cancelable) { var o = (t.timeStamp > 1e12 ? new Date : performance.now()) - t.timeStamp; "pointerdown" == t.type ? function (t, o) { function i() { p(t, o), r() } function c() { r() } function r() { e(a, i, f), e(u, c, f) } n(a, i, f), n(u, c, f) }(o, t) : p(o, t) } } function w(n) { ["click", "mousedown", "keydown", "touchstart", "pointerdown"].forEach(function (e) { n(e, l, f) }) } w(n), self.perfMetrics = self.perfMetrics || {}, self.perfMetrics.onFirstInputDelay = function (n) { c.push(n), s() } }(addEventListener, removeEventListener);
+</script>
 
 </html>

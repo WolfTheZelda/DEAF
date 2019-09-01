@@ -34,6 +34,9 @@ import Content from "../components/Content";
 import Iframe from "../components/Iframe";
 import Footer from "../components/Footer";
 
+import { M } from "materialize-css";
+
+
 export default {
   name: "Home",
   data() {

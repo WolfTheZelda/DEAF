@@ -1,4 +1,4 @@
-# deaf-vue
+# DEAF
 
 ## Project setup
 ```

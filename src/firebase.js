@@ -1,7 +1,9 @@
-import Firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/storage'
-import 'firebase/database'
+import Firebase from "firebase/app"
+
+import "firebase/auth"
+import "firebase/storage"
+import "firebase/database"
+import "firebase/performance"
 
 export const firebase = Firebase;
 
