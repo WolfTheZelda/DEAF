@@ -31,8 +31,10 @@ export const mixin = {
           this.$store.state.auth.id = null;
           this.$store.state.auth.phone = null;
 
-          if (this.$route.name === "dashboard") {
-            this.$router.push("login");
+          if (this.$route.path.indexOf("dashboard") > -1 && this.$route.name !== "nothing") {
+            this.$router.push({
+              path: "/login"
+            });
           }
         }
       });

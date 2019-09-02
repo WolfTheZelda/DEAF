@@ -41,7 +41,6 @@ export default new Router({
     },
     {
       path: "/dashboard",
-      name: "dashboard",
       component: () => import("./views/Dashboard"),
       children: [{
           path: "/",
@@ -110,6 +109,7 @@ export default new Router({
     },
     {
       path: "*",
+      name: "nothing",
       component: () => import("./views/Home")
     }
   ]

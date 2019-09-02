@@ -77,29 +77,54 @@ export default {
   },
   methods: {
     removeUser: function(user) {
-      if (confirm("Tenha cuidado ao cometer o ato de remover um usuário(a)")) {
+      if (
+        confirm("Tenha cuidado ao cometer o ato de remover um(a) usuário(a)")
+      ) {
         db.ref(this.tableReference)
           .child(user[".key"])
           .remove()
           .then(() => {
-            this.$store.dispatch(
-              "record",
-              "O(a) administrador(a) " +
-                this.$store.state.auth.name +
-                " (" +
-                this.$store.state.auth.group +
-                ") removeu o(a) " +
-                this.userRemovedGroup +
-                "(a) " +
-                user.nome +
-                " (" +
-                user.grupo +
-                ") com a nota " +
-                user.nota
-            );
+            if (this.tableReference === "alunos") {
+              this.$store.dispatch(
+                "record",
+                "O(a) administrador(a) " +
+                  this.$store.state.auth.name +
+                  " (" +
+                  this.$store.state.auth.group +
+                  ") removeu o(a) " +
+                  this.userRemovedGroup +
+                  "(a) " +
+                  user.nome +
+                  " (" +
+                  user.grupo +
+                  ") com a nota " +
+                  user.nota
+              );
+            } else if (this.tableReference === "administradores") {
+              this.$store.dispatch(
+                "record",
+                "O(a) administrador(a) " +
+                  this.$store.state.auth.name +
+                  " (" +
+                  this.$store.state.auth.group +
+                  ") removeu o(a) " +
+                  this.userRemovedGroup +
+                  "(a) " +
+                  user.nome +
+                  " (" +
+                  user.grupo +
+                  ") com a nota " +
+                  user.nota +
+                  " e com o telefone " +
+                  user[".key"]
+              );
+            }
           })
           .catch(() => {
-            this.$store.dispatch("toast", "Você não tem permissão para isso");
+            this.$store.dispatch(
+              "toast",
+              "Você não tem permissão para realizar o ato"
+            );
           });
       }
     },

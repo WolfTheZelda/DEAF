@@ -139,8 +139,7 @@ export default {
   directives: {
     imask: IMaskDirective
   },
-  components: {
-  },
+  components: {},
   methods: {
     addUser() {
       let photoInput = this.photo;
@@ -179,43 +178,82 @@ export default {
           })
           .then(() => {
             if (this.$route.params.id === "new") {
-              this.$store.dispatch(
-                "record",
-                "O(a) administrador(a) " +
-                  this.$store.state.auth.name +
-                  " (" +
-                  this.$store.state.auth.group +
-                  ") adicionou o(a) " +
-                  this.userRemovedGroup +
-                  "(a) " +
-                  this.nameMask(this.name) +
-                  " (" +
-                  this.group +
-                  ") com a nota " +
-                  this.note
-              );
+              if (this.databaseReference === "alunos") {
+                this.$store.dispatch(
+                  "record",
+                  "O(a) administrador(a) " +
+                    this.$store.state.auth.name +
+                    " (" +
+                    this.$store.state.auth.group +
+                    ") adicionou o(a) " +
+                    this.userRemovedGroup +
+                    "(a) " +
+                    this.nameMask(this.name) +
+                    " (" +
+                    this.group +
+                    ") com a nota " +
+                    this.note
+                );
+              } else if (this.databaseReference === "administradores") {
+                this.$store.dispatch(
+                  "record",
+                  "O(a) administrador(a) " +
+                    this.$store.state.auth.name +
+                    " (" +
+                    this.$store.state.auth.group +
+                    ") adicionou o(a) " +
+                    this.userRemovedGroup +
+                    "(a) " +
+                    this.nameMask(this.name) +
+                    " (" +
+                    this.group +
+                    ") com a nota " +
+                    this.note +
+                    " e com o telefone " +
+                    phoneInput
+                );
+              }
             } else if (this.$route.params.id.includes("+")) {
               if (this.phone !== this.$route.params.id) {
                 db.ref(this.databaseReference)
                   .child("+" + this.$route.params.id.replace(/\D/g, ""))
                   .remove();
               }
-
-              this.$store.dispatch(
-                "record",
-                "O(a) administrador(a) " +
-                  this.$store.state.auth.name +
-                  " (" +
-                  this.$store.state.auth.group +
-                  ") atualizou o(a) " +
-                  this.userRemovedGroup +
-                  "(a) " +
-                  this.nameMask(this.name) +
-                  " (" +
-                  this.group +
-                  ") com a nota " +
-                  this.note
-              );
+              if (this.databaseReference === "alunos") {
+                this.$store.dispatch(
+                  "record",
+                  "O(a) administrador(a) " +
+                    this.$store.state.auth.name +
+                    " (" +
+                    this.$store.state.auth.group +
+                    ") atualizou o(a) " +
+                    this.userRemovedGroup +
+                    "(a) " +
+                    this.nameMask(this.name) +
+                    " (" +
+                    this.group +
+                    ") com a nota " +
+                    this.note
+                );
+              } else if (this.databaseReference === "administradores") {
+                this.$store.dispatch(
+                  "record",
+                  "O(a) administrador(a) " +
+                    this.$store.state.auth.name +
+                    " (" +
+                    this.$store.state.auth.group +
+                    ") atualizou o(a) " +
+                    this.userRemovedGroup +
+                    "(a) " +
+                    this.nameMask(this.name) +
+                    " (" +
+                    this.group +
+                    ") com a nota " +
+                    this.note +
+                    " e com o telefone " +
+                    phoneInput
+                );
+              }
             }
 
             this.$router.back();
