@@ -11,22 +11,33 @@ export default {
 </script>
 
 <style>
-html {
-  height: 100%;
-}
-body {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-
-  overflow-x: hidden;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 /* Background */
 body {
   background: url("/img/background.jpg") no-repeat center center fixed;
+  background-color: rgb(205, 205, 205);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.bg {
+  display: block;
+
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  z-index: -10;
+  color: white;
+  text-align: center;
+
+  background-position: 30% 45%;
+  background: url("/img/background.jpg") no-repeat bottom center scroll;
   background-color: rgb(205, 205, 205);
   -webkit-background-size: cover;
   -moz-background-size: cover;

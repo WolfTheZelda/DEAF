@@ -22,13 +22,7 @@
               minlength="20"
               required
             />
-            <input
-              v-else
-              id="input"
-              type="password"
-              v-model="input"
-              required
-            />
+            <input v-else id="input" type="password" v-model="input" required />
 
             <label class="center-align" for="input">{{ label }}</label>
           </div>
@@ -147,8 +141,6 @@ export default {
 #login {
   min-width: 100px;
   max-width: 200px;
-
-  margin: 5% auto;
 }
 
 .grecaptcha-badge {

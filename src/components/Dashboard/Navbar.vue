@@ -18,12 +18,10 @@
 
     <nav class="orange">
       <div class="nav-wrapper">
-        <form>
           <div class="input-field">
             <input
               id="search"
               type="search"
-              required
               v-on:keypress="searchTable"
               v-on:keyup="searchTable"
               v-on:focus="searchTable"
@@ -33,7 +31,6 @@
             </label>
             <i class="material-icons">close</i>
           </div>
-        </form>
       </div>
     </nav>
   </div>
