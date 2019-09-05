@@ -6,6 +6,7 @@
     :notice="notice"
     databaseReference="alunos"
     userRemovedGroup="aluno"
+    title="Alunos"
   />
 </template>
 

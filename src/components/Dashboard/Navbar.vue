@@ -58,23 +58,25 @@ export default {
         });
     },
     searchTable() {
-      var input, filter, table, tr;
+      if(document.querySelector("table") !== null) {
+        var input, filter, table, tr;
 
-      input = document.getElementById("search");
-      table = document.querySelector("table");
-      tr = table.querySelectorAll("table tbody tr");
+        input = document.getElementById("search");
+        table = document.querySelector("table");
+        tr = table.querySelectorAll("table tbody tr");
 
-      filter = input.value.toUpperCase();
+        filter = input.value.toUpperCase();
 
-      for (var i = 0; i < tr.length; i++) {
-        if (input.value.length > 0) {
-          if (tr[i].innerText.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
+        for (var i = 0; i < tr.length; i++) {
+          if (input.value.length > 0) {
+            if (tr[i].innerText.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
           } else {
-            tr[i].style.display = "none";
+            tr[i].style.display = "";
           }
-        } else {
-          tr[i].style.display = "";
         }
       }
     }

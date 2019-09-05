@@ -10,6 +10,16 @@
             </tr>
           </thead>
           <tbody id="alunos-lista">
+            <tr v-if="tableBody.length == 0">
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+            </tr>
             <tr v-for="body in tableBody" :key="body['.key']">
               <td>{{ body.nome }}</td>
               <td>{{ body.ano }}</td>

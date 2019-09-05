@@ -6,6 +6,7 @@
     :notice="notice"
     databaseReference="administradores"
     userRemovedGroup="administrador"
+    title="Administradores"
   />
 </template>
 
@@ -17,7 +18,7 @@ export default {
   name: "ManagersEdit",
   data: () => ({
     notice:
-      "# Apenas aqueles sem liderança devem ser adicionados como Alunos...",
+      "# Apenas aqueles com liderança devem ser adicionados como Administradores...",
 
     groups: ["Líder", "Vice-Líder", "Orientador", "Desenvolvedor"],
     schools: ["Joana D'Arc", "Jorge Amado", "Irrelevante"],

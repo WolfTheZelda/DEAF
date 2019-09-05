@@ -10,6 +10,11 @@
             </tr>
           </thead>
           <tbody>
+            <tr v-if="tableBody.length == 0">
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+            </tr>
             <tr v-for="body in tableBody" :key="body['.key']">
               <td>{{ body.timestamp }}</td>
               <td>{{ body.registro }}</td>
