@@ -23,7 +23,10 @@ export const mixin = {
             this.$router.push("dashboard");
           }
 
-          this.checkPermission();
+          if (!this.$store.state.auth.verified) {
+            this.checkPermission();
+            this.$store.state.auth.verified = true;
+          }
         } else {
           this.$store.state.auth.value = false;
           this.$store.state.auth.login = false;
@@ -57,6 +60,13 @@ export const mixin = {
         console.error(XHTTP.statusText);
       };
       XHTTP.send(null);
+    }
+  },
+  watch: {
+    '$route'(to, from) {
+      if (document.querySelector(".sidenav-overlay") != null) {
+        document.querySelector(".sidenav-overlay").style.opacity = "0";
+      }
     }
   }
 }

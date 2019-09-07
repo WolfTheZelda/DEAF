@@ -21,7 +21,8 @@ export default new Vuex.Store({
       phone: "Telefone",
       note: "Nota",
       group: "Grupo",
-      criteria: defaultCriteria
+      criteria: defaultCriteria,
+      verified: false
     },
     default: {
       criteria: defaultCriteria

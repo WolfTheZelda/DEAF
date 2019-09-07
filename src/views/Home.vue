@@ -43,6 +43,8 @@ import Footer from "../components/Footer";
 
 import M from "materialize-css";
 
+import { mixin } from "../mixin";
+
 export default {
   name: "Home",
   data() {
@@ -65,6 +67,8 @@ export default {
     Content,
     Iframe,
     Footer
-  }
+  },
+
+  mixins: [mixin]
 };
 </script>

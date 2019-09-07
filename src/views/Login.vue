@@ -80,40 +80,45 @@ export default {
   methods: {
     signInAuth() {
       if (this.input) {
-        if (window.confirmationResult === undefined) {
-          auth
-            .signInWithPhoneNumber(this.input, window.recaptchaVerifier)
-            .then(confirmationResult => {
-              this.$store.dispatch(
-                "toast",
-                "Verifique a senha no seu telefone"
-              );
+        if ((this.input.length == 20 && this.type === 'tel') || (this.input.length == 6 && this.type === 'password')) {
+          if (window.confirmationResult === undefined) {
+            auth
+              .signInWithPhoneNumber(this.input, window.recaptchaVerifier)
+              .then(confirmationResult => {
+                this.$store.dispatch(
+                  "toast",
+                  "Verifique a senha no seu telefone"
+                );
 
-              window.confirmationResult = confirmationResult;
+                window.confirmationResult = confirmationResult;
 
-              this.input = "";
-              this.label = "Senha";
-              this.type = "password";
-            })
-            .catch(error => {
-              this.$store.dispatch(
-                "toast",
-                "Erro ao enviar senha para o telefone"
-              );
+                this.input = "";
+                this.label = "Senha";
+                this.type = "password";
+              })
+              .catch(error => {
+                this.$store.dispatch(
+                  "toast",
+                  "Erro ao enviar senha para o telefone"
+                );
 
-              window.recaptchaVerifier.render().then(widgetId => {
-                grecaptcha.reset(widgetId);
+                window.recaptchaVerifier.render().then(widgetId => {
+                  grecaptcha.reset(widgetId);
+                });
               });
-            });
+          } else {
+            window.confirmationResult
+              .confirm(this.input)
+              .then(result => {
+                this.$store.state.auth.verified = false;
+                this.$store.dispatch("toast", "Logado com sucesso");
+              })
+              .catch(error => {
+                this.$store.dispatch("toast", "Erro ao logar");
+              });
+          }
         } else {
-          window.confirmationResult
-            .confirm(this.input)
-            .then(result => {
-              this.$store.dispatch("toast", "Logado com sucesso");
-            })
-            .catch(error => {
-              this.$store.dispatch("toast", "Erro ao logar");
-            });
+          this.$store.dispatch("toast", "Insira o telefone corretamente");
         }
       }
     },
@@ -127,7 +132,7 @@ export default {
             size: "invisible"
           }
         );
-
+        
         window.recaptchaVerifier.render().then(function(widgetId) {
           window.recaptchaWidgetId = widgetId;
         });
