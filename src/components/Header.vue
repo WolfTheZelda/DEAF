@@ -12,6 +12,15 @@
               <a href="/blog">Blog</a>
             </li>
             <li>
+              <a href="mailto:email@acaofilosofica.com">Email</a>
+            </li>
+            <li>
+              <a
+                href="https://surveys.hotjar.com/s?siteId=1481774&surveyId=141779"
+                target="_blank"
+              >Pesquisa</a>
+            </li>
+            <li>
               <router-link class="btn green waves-effect waves-light" to="/login">
                 <span v-if="this.$store.state.auth.value">Dashboard</span>
                 <span v-else>Login</span>
@@ -30,6 +39,15 @@
       </li>
       <li>
         <router-link to="/blog">Blog</router-link>
+      </li>
+      <li>
+        <a href="mailto:email@acaofilosofica.com">Email</a>
+      </li>
+      <li>
+        <a
+          href="https://surveys.hotjar.com/s?siteId=1481774&surveyId=141779"
+          target="_blank"
+        >Pesquisa</a>
       </li>
       <li>
         <router-link to="/login">
