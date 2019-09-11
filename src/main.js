@@ -23,6 +23,8 @@ import {
   mixin
 } from "./mixin";
 
+import VueTheMask from 'vue-the-mask'
+
 // Vue Config
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
@@ -31,6 +33,7 @@ Vue.config.silent = false;
 
 // Vue Use
 Vue.use(rtdbPlugin);
+Vue.use(VueTheMask)
 
 // This callback runs before every route change, including on page load.
 router.beforeEach((to, from, next) => {

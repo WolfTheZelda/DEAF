@@ -55,6 +55,7 @@ export default {
   },
   mounted() {
     M.AutoInit();
+    document.querySelector(".background").style.zIndex  = "-10";
   },
   updated() {
     M.AutoInit();

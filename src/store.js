@@ -25,7 +25,8 @@ export default new Vuex.Store({
       verified: false
     },
     default: {
-      criteria: defaultCriteria
+      criteria: defaultCriteria,
+      dark: false
     }
   },
   mutations: {},

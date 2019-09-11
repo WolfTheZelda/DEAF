@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "deploy": "firebase deploy",
     "cordova-build-android": "cross-env CORDOVA_PLATFORM=android vue-cli-service cordova-build-android",
     "cordova-build-browser": "cross-env CORDOVA_PLATFORM=browser vue-cli-service cordova-build-browser",
     "cordova-build-ios": "cross-env CORDOVA_PLATFORM=ios vue-cli-service cordova-build-ios",
@@ -19,13 +20,13 @@
     "cordova-serve-browser": "cross-env CORDOVA_PLATFORM=browser vue-cli-service cordova-serve-browser",
     "cordova-serve-ios": "cross-env CORDOVA_PLATFORM=ios vue-cli-service cordova-serve-ios",
     "cordova-serve-osx": "cross-env CORDOVA_PLATFORM=osx vue-cli-service cordova-serve-osx",
-    
     "cordova-keytool": "keytool -genkey -v -keystore deaf.keystore -alias DEAF -keyalg RSA -keysize 2048 -validity 365000",
     "cordova-jarsigner": "jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore deaf.keystore app-release-unsigned.apk DEAF"
   },
   "dependencies": {
     "animate.css": "^3.7.2",
     "core-js": "^2.6.9",
+    "darkreader": "^4.7.15",
     "firebase": "^6.4.2",
     "material-icons": "^0.3.1",
     "materialize-css": "^1.0.0",
@@ -33,6 +34,7 @@
     "vue": "^2.6.10",
     "vue-imask": "^5.2.1",
     "vue-router": "^3.0.3",
+    "vue-the-mask": "^0.11.1",
     "vuefire": "^2.1.2",
     "vuex": "^3.0.1"
   },
@@ -41,16 +43,16 @@
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-plugin-router": "^4.0.0-alpha.4",
     "@vue/cli-service": "^3.11.0",
+    "async": "^3.1.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "firebase-admin": "^8.4.0",
     "firebase-tools": "^7.3.0",
     "sass": "^1.17.4",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-cordova": "^2.3.6",
-    "vue-template-compiler": "^2.6.10",
-    "async": "^3.1.0",
-    "firebase-admin": "^8.4.0"
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,

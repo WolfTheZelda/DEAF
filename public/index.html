@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<!-- Redirect -->
 <script>
-  if (location.host === "acaofilosofica.firebaseapp.com" || location.host === "acaofilosofica.web.app") location.href = "https://" + "acaofilosofica.com" + window.location.pathname;
+  if (location.host === "acaofilosofica.firebaseapp.com" || location.host === "acaofilosofica.web.app") location.href = "https://acaofilosofica.com" + window.location.pathname;
 </script>
 
 <head>
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144834380-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "UA-144834380-1");
+  </script>
+    
+  <!-- Hotjar -->
+  <script>
+    (function (h, o, t, j, a, r) { h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) }; h._hjSettings = { hjid: 1481774, hjsv: 6 }; a = o.getElementsByTagName("head")[0]; r = o.createElement("script"); r.async = 1; r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv; a.appendChild(r); })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+  </script>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel='canonical' href='https://acaofilosofica.com'>
+  <link rel="canonical" href="https://acaofilosofica.com">
   <link rel="icon" href="/favicon.ico">
+
   <base href="/">
 </head>
 
 <body>
-  <div class="bg"></div>
+  <div class="background"></div>
 
   <noscript>
     <strong>
-      # Lamentamos, mas o Vue não funciona corretamente sem o JavaScript ativado. Ative-o para continuar.
+      # Lamentamos, mas o DEAF não funciona corretamente sem o JavaScript ativado. Ative-o para continuar.
     </strong>
   </noscript>
 
   <div id="app"></div>
 </body>
 
+<!-- Perfomance -->
 <script>
   !function (n, e) { var t, o, i, c = [], f = { passive: !0, capture: !0 }, r = new Date, a = "pointerup", u = "pointercancel"; function p(n, c) { t || (t = c, o = n, i = new Date, w(e), s()) } function s() { o >= 0 && o < i - r && (c.forEach(function (n) { n(o, t) }), c = []) } function l(t) { if (t.cancelable) { var o = (t.timeStamp > 1e12 ? new Date : performance.now()) - t.timeStamp; "pointerdown" == t.type ? function (t, o) { function i() { p(t, o), r() } function c() { r() } function r() { e(a, i, f), e(u, c, f) } n(a, i, f), n(u, c, f) }(o, t) : p(o, t) } } function w(n) { ["click", "mousedown", "keydown", "touchstart", "pointerdown"].forEach(function (e) { n(e, l, f) }) } w(n), self.perfMetrics = self.perfMetrics || {}, self.perfMetrics.onFirstInputDelay = function (n) { c.push(n), s() } }(addEventListener, removeEventListener);
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="row animated bounceIn" id="login" v-show="!this.$store.state.auth.login">
+  <div class="row animated bounceIn login-page" v-show="!this.$store.state.auth.login && type !== 2">
     <div class="col s12 z-depth-4 card-panel">
       <form onsubmit="return false">
         <div class="row">
@@ -12,17 +12,19 @@
 
         <div class="row margin">
           <div class="input-field col s12">
-            <input
-              v-if="type === 'tel'"
+            <the-mask
+              v-show="type === 0"
               id="input"
               type="tel"
-              v-model="input"
-              v-imask="mask"
+              v-model="phone"
+              mask="+55 (##) 9 ####-####"
+              :masked="true"
               maxlength="20"
               minlength="20"
               required
             />
-            <input v-else id="input" type="password" v-model="input" required />
+
+            <input v-show="type === 1" id="input" type="password" v-model="password" required />
 
             <label class="center-align" for="input">{{ label }}</label>
           </div>
@@ -37,11 +39,17 @@
             >Continuar</button>
           </div>
         </div>
-
-        <div class>
-          <div id="recaptcha-container"></div>
-        </div>
       </form>
+    </div>
+
+    <div class="center-align">
+      <p class="white-text">{{ notice }}</p>
+      <p class="white-text">{{ example }}</p>
+      <P class="white-text">-</p>
+    </div>
+
+    <div>
+      <div id="recaptcha-container"></div>
     </div>
   </div>
 </template>
@@ -51,24 +59,18 @@ import { firebase, auth } from "../firebase";
 
 import { mixin } from "../mixin";
 
-import { IMaskDirective } from "vue-imask";
-
 export default {
   name: "Login",
   data() {
     return {
       title: "Acesso Restrito",
       label: "Telefone",
-      type: "tel",
-      input: null,
-      mask: {
-        mask: "{+55} {(00)} {9} {0000}{-}{0000}",
-        lazy: true
-      }
+      type: 0,
+      phone: null,
+      password: null,
+      notice: "# Insira o número telefone com o DDD e o 9 inclusos. Exemplo:",
+      example: "+55 (00) 9 0000-0000"
     };
-  },
-  directives: {
-    imask: IMaskDirective
   },
   beforeMount() {
     this.checkAuth();
@@ -79,11 +81,14 @@ export default {
   mixins: [mixin],
   methods: {
     signInAuth() {
-      if (this.input) {
-        if ((this.input.length == 20 && this.type === 'tel') || (this.input.length == 6 && this.type === 'password')) {
+      if (this.phone || this.password) {
+        if (
+          (this.phone.length == 20 && this.type === 0) ||
+          (this.password.length == 6 && this.type === 1)
+        ) {
           if (window.confirmationResult === undefined) {
             auth
-              .signInWithPhoneNumber(this.input, window.recaptchaVerifier)
+              .signInWithPhoneNumber(this.phone, window.recaptchaVerifier)
               .then(confirmationResult => {
                 this.$store.dispatch(
                   "toast",
@@ -92,9 +97,9 @@ export default {
 
                 window.confirmationResult = confirmationResult;
 
-                this.input = "";
+                this.type = 1;
+                this.phone = "";
                 this.label = "Senha";
-                this.type = "password";
               })
               .catch(error => {
                 this.$store.dispatch(
@@ -108,10 +113,13 @@ export default {
               });
           } else {
             window.confirmationResult
-              .confirm(this.input)
+              .confirm(this.password)
               .then(result => {
                 this.$store.state.auth.verified = false;
                 this.$store.dispatch("toast", "Logado com sucesso");
+                
+                this.type = 2;
+                this.password = "";
               })
               .catch(error => {
                 this.$store.dispatch("toast", "Erro ao logar");
@@ -132,7 +140,7 @@ export default {
             size: "invisible"
           }
         );
-        
+
         window.recaptchaVerifier.render().then(function(widgetId) {
           window.recaptchaWidgetId = widgetId;
         });
@@ -143,7 +151,7 @@ export default {
 </script>
 
 <style>
-#login {
+.login-page {
   min-width: 100px;
   max-width: 200px;
 }

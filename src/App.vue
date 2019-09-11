@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  mounted() {
+    document.body.style.backgroundColor = "transparent";
+  }
 };
 </script>
 
@@ -16,27 +19,33 @@ export default {
   margin: 0;
 }
 
-/* Background */
-body {
+/*
+html {
+  width: 100%;
+  height: 100%;
+
   background: url("/img/background.jpg") no-repeat center center fixed;
-  background-color: rgb(205, 205, 205);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-.bg {
+*/
+
+body {  
+  overflow-x: hidden;
+}
+
+.background {
   display: block;
 
   width: 100vw;
   height: 100vh;
   position: fixed;
-
-  z-index: -10;
+  
   color: white;
   text-align: center;
 
-  background-position: 30% 45%;
   background: url("/img/background.jpg") no-repeat bottom center scroll;
   background-color: rgb(205, 205, 205);
   -webkit-background-size: cover;
@@ -80,41 +89,5 @@ body {
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
-}
-
-/* Animations Off On Mobile */
-@media only screen and (max-width: 768px) {
-  * {
-    -o-transition-property: none !important;
-    -moz-transition-property: none !important;
-    -ms-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
-
-    -webkit-animation: none !important;
-    -moz-animation: none !important;
-    -o-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
-  }
-  .animated {
-    -o-transition-property: none !important;
-    -moz-transition-property: none !important;
-    -ms-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
-
-    -o-transform: none !important;
-    -moz-transform: none !important;
-    -ms-transform: none !important;
-    -webkit-transform: none !important;
-    transform: none !important;
-
-    -webkit-animation: none !important;
-    -moz-animation: none !important;
-    -o-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
-  }
 }
 </style>

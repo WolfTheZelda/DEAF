@@ -57,7 +57,7 @@
                 type="tel"
                 required
                 v-model="phone"
-                v-imask="mask"
+                v-mask="'+55 (##) 9 ####-####'"
                 maxlength="20"
                 minlength="20"
               />
@@ -111,8 +111,6 @@
 <script>
 import { db } from "../../firebase";
 
-import { IMaskDirective } from "vue-imask";
-
 import Quill from "quill";
 
 export default {
@@ -128,16 +126,8 @@ export default {
       school: "",
       group: "",
 
-      editor: "",
-
-      mask: {
-        mask: "{+55} {(00)} {9} {0000}{-}{0000}",
-        lazy: true
-      }
+      editor: ""
     };
-  },
-  directives: {
-    imask: IMaskDirective
   },
   components: {},
   methods: {

@@ -53,6 +53,12 @@ export default {
 
       links: [
         {
+          name: "Home",
+          icon: "home",
+          href: "/",
+          external: false
+        },
+        {
           name: "Menu",
           icon: "dashboard",
           href: "/dashboard",

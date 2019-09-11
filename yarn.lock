@@ -3381,6 +3381,13 @@ d@1:
     es5-ext "^0.10.50"
     type "^1.0.1"
 
+darkreader@^4.7.15:
+  version "4.7.15"
+  resolved "https://registry.yarnpkg.com/darkreader/-/darkreader-4.7.15.tgz#f40b78379fb48db88d385bafb658c4dd3d8524d6"
+  integrity sha512-i9OzIGJqmbghZ42MI0pHD9hIlEu5LDfOP5TWAg+OyZoO0XsW0D2HoFdCebS4OLRrEr3/TflzDYvUMVnosWR4uA==
+  dependencies:
+    malevic "0.16.3"
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -6683,6 +6690,11 @@ make-dir@^3.0.0:
   integrity sha512-grNJDhb8b1Jm1qeqW5R/O63wUo4UXo2v2HMic6YT9i/HBlF93S8jkMgH7yugvY9ABDShH4VZMn8I+U8+fCNegw==
   dependencies:
     semver "^6.0.0"
+
+malevic@0.16.3:
+  version "0.16.3"
+  resolved "https://registry.yarnpkg.com/malevic/-/malevic-0.16.3.tgz#acf1bfef2dbcca4789295cf1f33629794f3fb95c"
+  integrity sha512-/ekZOKILDitU6igF0zxkuTNLQgNTTs+NafyQ19RXwT+VKN9K3qTngQ+TdqcaZJbhSzRqVIXBw6iso6WV56QlhQ==
 
 mamacro@^0.0.3:
   version "0.0.3"
@@ -10377,6 +10389,11 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue-the-mask@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/vue-the-mask/-/vue-the-mask-0.11.1.tgz#91ee01008354ae57bccc79bb61b65f32d971d9d5"
+  integrity sha512-UquSfnSWejD0zAfcD+3jJ1chUAkOAyoxya9Lxh9acCRtrlmGcAIvd0cQYraWqKenbuZJUdum+S174atv2AuEHQ==
 
 vue@^2.6.10:
   version "2.6.10"
