@@ -5,6 +5,7 @@ import {
 export const mixin = {
   mounted() {
     this.checkAuth();
+    this.cleanOverlay();
   },
   updated() {
     this.checkAuth();
@@ -60,13 +61,24 @@ export const mixin = {
         console.error(XHTTP.statusText);
       };
       XHTTP.send(null);
+    },
+    cleanOverlay() {
+      let links = document.querySelectorAll(".sidenav li");
+      for (let link of links) {
+        link.addEventListener("click", function () {
+
+          let sidenavs = document.querySelectorAll('.sidenav');
+
+          for (let sidenav of sidenavs) {
+            M.Sidenav.getInstance(sidenav).close();
+          }
+        });
+      }
     }
   },
   watch: {
-    '$route'(to, from) {
-      if (document.querySelector(".sidenav-overlay") != null) {
-        document.querySelector(".sidenav-overlay").style.opacity = "0";
-      }
+    "$route"(to, from) {
+      this.cleanOverlay();
     }
   }
 }

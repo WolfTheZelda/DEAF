@@ -47,7 +47,9 @@ body {
   text-align: center;
 
   background: url("/img/background.jpg") no-repeat bottom center scroll;
-  background-color: rgb(205, 205, 205);
+  background-color: white;
+  background-position: 30% 45%;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

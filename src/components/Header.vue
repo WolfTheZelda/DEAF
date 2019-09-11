@@ -26,10 +26,10 @@
     </div>
     <ul class="sidenav" id="nav-mobile">
       <li>
-        <a href="/">Home</a>
+        <router-link to="/">Home</router-link>
       </li>
       <li>
-        <a href="/blog">Blog</a>
+        <router-link to="/blog">Blog</router-link>
       </li>
       <li>
         <router-link to="/login">
