@@ -9,6 +9,15 @@ export default {
   name: "App",
   mounted() {
     document.body.style.backgroundColor = "transparent";
+
+    if(document.querySelector("#_hj-f5b2a1eb-9b07_hotjar_branding") !== null) {
+      document.querySelector("#_hj-f5b2a1eb-9b07_hotjar_branding").remove();
+    }
+  },
+  updated() {
+    if(document.querySelector("#_hj-f5b2a1eb-9b07_hotjar_branding") !== null) {
+      document.querySelector("#_hj-f5b2a1eb-9b07_hotjar_branding").remove();
+    }
   }
 };
 </script>

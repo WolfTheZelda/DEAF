@@ -119,7 +119,7 @@ export default {
                       ? snapStudent.val().criterios
                       : this.$store.state.default.criteria;
                   } else {
-                    this.$store.dispatch("toast", "Acesso não autorizado");
+                    this.$store.dispatch("toast", "Acesso não autorizado detectado, contate um Administrador");
 
                     auth.signOut();
                   }

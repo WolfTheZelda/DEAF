@@ -66,11 +66,14 @@ export const mixin = {
       let links = document.querySelectorAll(".sidenav a");
       for (let link of links) {
         link.addEventListener("click", function () {
-          if (document.querySelectorAll(".sidenav-overlay").length > 0) {
-            let sidenavs = document.querySelectorAll('.sidenav');
+          let overlays = document.querySelectorAll(".sidenav-overlay");
+          for (let overlay of overlays) {
+            if (overlay.style.opacity == 1) {
+              let sidenavs = document.querySelectorAll('.sidenav');
 
-            for (let sidenav of sidenavs) {
-              M.Sidenav.getInstance(sidenav).close();
+              for (let sidenav of sidenavs) {
+                M.Sidenav.getInstance(sidenav).close();
+              }
             }
           }
         });

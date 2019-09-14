@@ -35,6 +35,7 @@
                 required
                 v-on:change="nameMask(name)"
                 v-model="name"
+                data-hj-whitelist
               />
             </div>
             <div class="input-field col s4">
@@ -48,6 +49,7 @@
                 value="40"
                 step="0.1"
                 v-model="note"
+                data-hj-whitelist
               />
             </div>
             <div class="input-field col s4">
@@ -60,6 +62,7 @@
                 v-mask="'+55 (##) 9 ####-####'"
                 maxlength="20"
                 minlength="20"
+                data-hj-whitelist
               />
             </div>
           </div>

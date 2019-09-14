@@ -22,6 +22,7 @@
               maxlength="20"
               minlength="20"
               required
+              data-hj-whitelist
             />
 
             <input v-show="type === 1" id="input" type="password" v-model="password" required />
@@ -118,8 +119,12 @@ export default {
                 this.$store.state.auth.verified = false;
                 this.$store.dispatch("toast", "Logado com sucesso");
                 
-                this.type = 2;
+                this.type = 0;
                 this.password = "";
+                this.label = "Telefone";
+                
+                window.confirmationResult = undefined;
+                window.recaptchaVerifier = undefined;
               })
               .catch(error => {
                 this.$store.dispatch("toast", "Erro ao logar");

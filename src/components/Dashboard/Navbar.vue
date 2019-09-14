@@ -25,6 +25,7 @@
               v-on:keypress="searchTable"
               v-on:keyup="searchTable"
               v-on:focus="searchTable"
+              data-hj-whitelist
             />
             <label class="label-icon" for="search">
               <i class="material-icons">search</i>
