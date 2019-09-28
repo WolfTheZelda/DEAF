@@ -24,11 +24,11 @@ export default new Router({
       }
     },
     {
-      path: "/blog",
-      name: "blog",
-      component: () => import("./views/Blog"),
+      path: "/timer",
+      name: "timer",
+      component: () => import("./views/Timer"),
       meta: {
-        title: "DEAF - Blog"
+        title: "DEAF - Timer"
       }
     },
     {
@@ -97,12 +97,12 @@ export default new Router({
           }
         },
         {
-          path: "/dashboard/blog",
+          path: "/dashboard/timer",
           components: {
-            dashboard: Maintenance
+            dashboard: () => import("./views/Dashboard/Timer")
           },
           meta: {
-            title: "DEAF - Dashboard > Blog"
+            title: "DEAF - Dashboard > Timer"
           }
         }
       ]

@@ -83,9 +83,9 @@ export default {
           external: false
         },
         {
-          name: "Postagens",
-          icon: "description",
-          href: "/dashboard/blog",
+          name: "Temporizador",
+          icon: "timer",
+          href: "/dashboard/timer",
           external: false
         },
         {
