@@ -50,7 +50,8 @@ export default {
   data() {
     return {
       text1:
-        "O Debate Filosófico é um evento realizado pelos alunos  do 9º ano do Ensino Fundamental ao Ensino Médio que busca promover uma discussão, em que há um confronto de ideias sobre determinado assunto que revigora no Brasil ou no mundo, e tem como seu principal objetivo garantir que nas discussões ambos os lados argumentem mostrando os pontos que os levam a concordar ou discordar do tema proposto. O evento não pretende fazer nenhuma apologia a nenhum dos lados do debate, apenas oferecer um espaço propício para que se possa construir opiniões e pensamentos justificáveis. Esse projeto é uma iniciativa, do professor de filosofia Moisés Welldon que conta com a colaboração ativa dos professores Domingos da Cruz, Rosália Ramos e Vivyanne Jesus, em que os alunos do Colégio Jorge Amado e Instituto de Ensino Joana D'arc participam integralmente para poder proporcionar um debate sério com dados verídicos."
+        "<p>O Debate Filosófico é um evento realizado pelos alunos  do 9º ano do Ensino Fundamental ao Ensino Médio que busca promover uma discussão, em que há um confronto de ideias sobre determinado assunto que revigora no Brasil ou no mundo, e tem como seu principal objetivo garantir que nas discussões ambos os lados argumentem mostrando os pontos que os levam a concordar ou discordar do tema proposto. O evento não pretende fazer nenhuma apologia a nenhum dos lados do debate, apenas oferecer um espaço propício para que se possa construir opiniões e pensamentos justificáveis. Esse projeto é uma iniciativa, do professor de filosofia Moisés Welldon que conta com a colaboração ativa dos professores Domingos da Cruz, Rosália Ramos e Vivyanne Jesus, em que os alunos do Colégio Jorge Amado e Instituto de Ensino Joana D'arc participam integralmente para poder proporcionar um debate sério com dados verídicos.</p>",
+      
     };
   },
   mounted() {
