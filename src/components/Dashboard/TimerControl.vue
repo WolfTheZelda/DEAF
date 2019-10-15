@@ -56,6 +56,7 @@ export default {
           if (snap.exists()) {
             db.ref("temporizadores/instancia").update({
               titulo: snap.val().titulo_backup,
+              grupo: snap.val().grupo_backup,
               pausa: false,
               timestamp: snap.val().timestamp + (Date.now() - snap.val().timestamp_pausa)
             });
@@ -64,7 +65,8 @@ export default {
     },
     pauseTimer() {
       db.ref("temporizadores/instancia").update({
-        titulo: "PAUSA",
+        titulo: "MEDIAÇÃO",
+        grupo: "blue",
         pausa: true,
         timestamp_pausa: Date.now()
       });

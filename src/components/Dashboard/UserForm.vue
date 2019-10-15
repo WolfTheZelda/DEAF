@@ -207,7 +207,7 @@ export default {
                 );
               }
             } else if (this.$route.params.id.includes("+")) {
-              if (this.phone !== this.$route.params.id) {
+              if (phoneInput.replace(/\D/g, "") !== this.$route.params.id.replace(/\D/g, "")) {
                 db.ref(this.databaseReference)
                   .child("+" + this.$route.params.id.replace(/\D/g, ""))
                   .remove();

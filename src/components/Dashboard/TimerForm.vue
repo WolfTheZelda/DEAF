@@ -9,6 +9,7 @@
           <option value="green">Favor</option>
           <option value="red">Contra</option>
           <option value="blue">Mediador</option>
+          <option value="yellow">Outro</option>
         </select>
       </td>
       <td>
@@ -70,6 +71,7 @@
           <option value="green">Favor</option>
           <option value="red">Contra</option>
           <option value="blue">Mediador</option>
+          <option value="yellow">Outro</option>
         </select>
       </td>
       <td>
@@ -115,14 +117,14 @@
       </td>
     </tr>
 
-    <tr style="height: 100px;" class="white-text">
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
+    <tr style="height: 175px;">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </fragment>
 </template>
@@ -240,32 +242,47 @@ export default {
               timestamp
             })
             .then(() => {
-              this.$store.dispatch(
-                "record",
-                "O(a) administrador(a) " +
-                  this.$store.state.auth.name +
-                  " (" +
-                  this.$store.state.auth.group +
-                  ") atualizou o tempo " +
-                  body.titulo.toUpperCase() +
-                  " (" +
-                  body.minutos +
-                  "m " +
-                  body.segundos +
-                  "s) para " +
-                  titulo.toUpperCase() +
-                  " (" +
-                  minutos +
-                  "m " +
-                  segundos +
-                  "s)"
-              );
-
               if (creation) {
+                this.$store.dispatch(
+                  "record",
+                  "O(a) administrador(a) " +
+                    this.$store.state.auth.name +
+                    " (" +
+                    this.$store.state.auth.group +
+                    ") adicionou o tempo " +
+                    titulo.toUpperCase() +
+                    " (" +
+                    minutos +
+                    "m " +
+                    segundos +
+                    "s)"
+                );
+                
                 this.input.titulo = "";
                 this.input.grupo = "Green";
                 this.input.minutos = "0";
                 this.input.segundos = "0";
+              } else {
+                this.$store.dispatch(
+                  "record",
+                  "O(a) administrador(a) " +
+                    this.$store.state.auth.name +
+                    " (" +
+                    this.$store.state.auth.group +
+                    ") atualizou o tempo " +
+                    body.titulo.toUpperCase() +
+                    " (" +
+                    body.minutos +
+                    "m " +
+                    body.segundos +
+                    "s) para " +
+                    titulo.toUpperCase() +
+                    " (" +
+                    minutos +
+                    "m " +
+                    segundos +
+                    "s)"
+                );
               }
             })
             .catch(() => {
@@ -277,6 +294,7 @@ export default {
               titulo: body.titulo,
               titulo_backup: body.titulo,
               grupo: body.grupo,
+              grupo_backup: body.grupo,
               minutos: body.minutos,
               segundos: body.segundos,
               pausa: false,

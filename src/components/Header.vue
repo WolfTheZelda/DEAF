@@ -6,10 +6,10 @@
           <a class="brand-logo" id="logo-container" href="#">DEAF</a>
           <ul class="right hide-on-med-and-down">
             <li>
-              <router-link href="/">Home</router-link>
+              <a href="/">Home</a>
             </li>
             <li>
-              <router-link href="/timer">Timer</router-link>
+              <a href="/timer">Timer</a>
             </li>
             <li>
               <a href="mailto:email@acaofilosofica.com" target="_blank">Email</a>

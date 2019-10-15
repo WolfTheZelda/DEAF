@@ -133,6 +133,8 @@ export default {
             db.ref("temporizadores/instancia").update({
               // timestamp: this.target + 1000
             });
+
+            this.now = "PAUSA";
           }
         }
 
@@ -165,6 +167,7 @@ export default {
       document.getElementById(this.parent).classList.remove("red");
 
       document.getElementById(this.parent).classList.remove("blue");
+      document.getElementById(this.parent).classList.remove("yellow");
 
       document.getElementById(this.parent).classList.remove("orange");
       document.getElementById(this.parent).classList.remove("purple");
