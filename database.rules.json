@@ -18,7 +18,7 @@
       ".read": true,
       ".write": "auth != null && root.child('administradores').child(auth.token.phone_number).exists()"
     },
-    "cronometro": {
+    "temporizadores": {
       ".read": true,
       ".write": "auth != null && root.child('administradores').child(auth.token.phone_number).exists()"
     }

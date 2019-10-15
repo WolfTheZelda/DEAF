@@ -23,7 +23,10 @@ import {
   mixin
 } from "./mixin";
 
-import VueTheMask from 'vue-the-mask'
+import VueTheMask from 'vue-the-mask';
+
+import { Plugin } from "vue-fragment";
+Vue.use(Plugin);
 
 // Vue Config
 Vue.config.productionTip = false;
