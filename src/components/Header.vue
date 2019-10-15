@@ -6,13 +6,13 @@
           <a class="brand-logo" id="logo-container" href="#">DEAF</a>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a href="/">Home</a>
+              <router-link href="/">Home</router-link>
             </li>
             <li>
-              <a href="/blog">Blog</a>
+              <router-link href="/timer">Timer</router-link>
             </li>
             <li>
-              <a href="mailto:email@acaofilosofica.com">Email</a>
+              <a href="mailto:email@acaofilosofica.com" target="_blank">Email</a>
             </li>
             <li>
               <a
@@ -38,7 +38,7 @@
         <router-link to="/">Home</router-link>
       </li>
       <li>
-        <router-link to="/blog">Blog</router-link>
+        <router-link to="/timer">Timer</router-link>
       </li>
       <li>
         <a href="mailto:email@acaofilosofica.com">Email</a>

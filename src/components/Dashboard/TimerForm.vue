@@ -17,7 +17,7 @@
           class="validate"
           placeholder="Minutos"
           min="0"
-          max="9"
+          max="59"
           required
           value="0"
           data-hj-whitelist
@@ -289,9 +289,9 @@ export default {
             .catch(() => {
               this.$store.dispatch("toast", "Você não tem permissão para isso");
             });
-        } else {
-          this.$store.dispatch("toast", "Preencha todos os campos");
         }
+      } else {
+        this.$store.dispatch("toast", "Preencha todos os campos");
       }
     },
     startInterval() {
