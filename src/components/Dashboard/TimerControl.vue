@@ -74,6 +74,7 @@ export default {
     removeTimer() {
       db.ref("temporizadores/instancia").set({
         grupo: "blue",
+        grupo_backup: "blue",
         timestamp: 0,
         titulo: "TEMPORIZADOR",
         titulo_backup: "TEMPORIZADOR",
