@@ -76,6 +76,7 @@ export default {
         grupo: "blue",
         grupo_backup: "blue",
         timestamp: 0,
+        timestamp_pausa: 0,
         titulo: "TEMPORIZADOR",
         titulo_backup: "TEMPORIZADOR",
         pausa: false,
