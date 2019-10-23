@@ -5,11 +5,12 @@
         <input class="validate" required type="text" v-model="input.titulo" placeholder="Título" />
       </td>
       <td>
-        <select v-model="input.grupo">
-          <option value="green">Favor</option>
-          <option value="red">Contra</option>
-          <option value="blue">Mediador</option>
-          <option value="yellow">Outro</option>
+        <select v-model="input.grupo" class="browser-default">
+          <option selected value="green" class="green-text">Favor</option>
+          <option value="red" class="red-text">Contra</option>
+          <option value="blue" class="blue-text">Mediador</option>
+          <option value="yellow" class="yellow-text">Outro</option>
+          <option value="grey" class="grey-text">Divisor</option>
         </select>
       </td>
       <td>
@@ -56,75 +57,96 @@
     </tr>
 
     <tr v-for="body in tableBody" :key="body['.key']">
-      <td>
-        <input
-          class="validate"
-          required
-          placeholder="Título"
-          type="text"
-          :value="body.titulo"
-          :id="body['.key'] + '-' + body.titulo"
-        />
-      </td>
-      <td>
-        <select :id="body['.key'] + '-' + body.grupo" :value="body.grupo">
-          <option value="green">Favor</option>
-          <option value="red">Contra</option>
-          <option value="blue">Mediador</option>
-          <option value="yellow">Outro</option>
-        </select>
-      </td>
-      <td>
-        <input
-          type="number"
-          class="validate"
-          placeholder="Minutos"
-          min="0"
-          max="9"
-          required
-          data-hj-whitelist
-          :value="body.minutos"
-          :id="body['.key'] + '-' + body.minutos"
-        />
-      </td>
-      <td>
-        <input
-          type="number"
-          class="validate"
-          placeholder="Segundos"
-          min="0"
-          max="59"
-          required
-          :value="body.segundos"
-          :id="body['.key'] + '-' + body.segundos"
-          data-hj-whitelist
-        />
-      </td>
-      <td>
-        <button class="btn blue" v-on:click="updateTimer(body, 1)">
-          <i class="material-icons">play_arrow</i>
-        </button>
-      </td>
-      <td>
-        <button class="btn blue" v-on:click="updateTimer(body, 0)">
-          <i class="material-icons">refresh</i>
-        </button>
-      </td>
-      <td>
-        <button class="btn red" v-on:click="removeTimer(body)">
-          <i class="material-icons">delete</i>
-        </button>
-      </td>
+      <fragment v-if="body.grupo != 'grey'">
+        <td>
+          <input
+            class="validate"
+            required
+            placeholder="Título"
+            type="text"
+            :value="body.titulo"
+            :id="body['.key'] + '-' + body.titulo"
+          />
+        </td>
+        <td>
+          <select
+            :id="body['.key'] + '-' + body.grupo"
+            :value="body.grupo"
+            class="browser-default"
+            :class="body.grupo + '-text'"
+          >
+            <option selected value="green" class="green-text">Favor</option>
+            <option value="red" class="red-text">Contra</option>
+            <option value="blue" class="blue-text">Mediador</option>
+            <option value="yellow" class="yellow-text">Outro</option>
+            <option value="grey" class="grey-text">Divisor</option>
+          </select>
+        </td>
+        <td>
+          <input
+            type="number"
+            class="validate"
+            placeholder="Minutos"
+            min="0"
+            max="9"
+            required
+            data-hj-whitelist
+            :value="body.minutos"
+            :id="body['.key'] + '-' + body.minutos"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            class="validate"
+            placeholder="Segundos"
+            min="0"
+            max="59"
+            required
+            :value="body.segundos"
+            :id="body['.key'] + '-' + body.segundos"
+            data-hj-whitelist
+          />
+        </td>
+        <td>
+          <button class="btn blue" v-on:click="updateTimer(body, 1)">
+            <i class="material-icons">play_arrow</i>
+          </button>
+        </td>
+        <td>
+          <button class="btn blue" v-on:click="updateTimer(body, 0)">
+            <i class="material-icons">refresh</i>
+          </button>
+        </td>
+        <td>
+          <button class="btn red" v-on:click="removeTimer(body)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </fragment>
+      <fragment v-else>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>
+          <button class="btn red" v-on:click="removeTimer(body)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </fragment>
     </tr>
 
-    <tr style="height: 175px;">
+    <tr style="height: 75px;">
       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td style="width: 12.5%"></td>
+      <td style="width: 7.5%"></td>
+      <td style="width: 7.5%"></td>
+      <td style="width: 7.5%"></td>
+      <td style="width: 7.5%"></td>
+      <td style="width: 7.5%"></td>
     </tr>
   </fragment>
 </template>
@@ -230,6 +252,11 @@ export default {
 
       let timestamp = minutos * 60 * 1000 + segundos * 1000;
 
+      titulo = grupo != "grey" ? titulo.toUpperCase() : "DIVISOR";
+      minutos = grupo != "grey" ? minutos : 0;
+      segundos = grupo != "grey" ? segundos : 0;
+      timestamp = grupo != "grey" ? timestamp : 1000;
+
       if (String(titulo) && String(titulo) !== "" && timestamp > 0) {
         if (mode == 0) {
           db.ref("temporizadores/tabela")
@@ -257,9 +284,9 @@ export default {
                     segundos +
                     "s)"
                 );
-                
+
                 this.input.titulo = "";
-                this.input.grupo = "Green";
+                this.input.grupo = "green";
                 this.input.minutos = "0";
                 this.input.segundos = "0";
               } else {

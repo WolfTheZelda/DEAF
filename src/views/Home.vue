@@ -26,7 +26,7 @@
 
     <Parallax src="/img/weapon-4.jpg" text="A JUSTIÇA" />
 
-    <Content title="FICOU INTERESSADO?" text="TEXTO" type="0" />
+    <Content title="FICOU INTERESSADO?" text="email@acaofilosofica.com" type="0" />
 
     <Parallax src="/img/weapon-5.jpg" text="O PRESIDENTE" />
 
