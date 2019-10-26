@@ -3,17 +3,18 @@
     class="center"
     style="display: flex; flex-direction: column; align-items: center; justify-content: center;"
   >
-    <h1 class="timer-text">{{ title }}</h1>
+    <h1 class="timer-text truncate">{{ title }}</h1>
 
     <h1 id="timer-count" class="timer-text">{{ now }}</h1>
 
-    <h1 class="timer-text">{{ notice }}</h1>
+    <h1 class="timer-text truncate">{{ notice }}</h1>
   </div>
 </template>
 
 <style scoped>
 .timer-text {
   text-shadow: 5px 5px black;
+  padding: 5px;
 }
 #timer-count {
   font-size: 25vh;

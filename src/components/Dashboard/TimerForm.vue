@@ -140,8 +140,8 @@
     </tr>
 
     <tr style="height: 75px;">
-      <td></td>
-      <td style="width: 12.5%"></td>
+      <td style="min-width: 115px;"></td>
+      <td style="width: 12.5%; min-width: 115px;"></td>
       <td style="width: 7.5%"></td>
       <td style="width: 7.5%"></td>
       <td style="width: 7.5%"></td>

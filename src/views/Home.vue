@@ -10,7 +10,7 @@
     />
 
     <Iframe
-      src="https://www.youtube.com/embed/OAgVYzUoDo8"
+      src="https://www.youtube.com/embed/live_stream?channel=UC0DRZ6GoPOBbt7bRFxTwd_Q"
       align="center"
       justify="center"
       title="O QUE É O DEBATE FILOSÓFICO?"

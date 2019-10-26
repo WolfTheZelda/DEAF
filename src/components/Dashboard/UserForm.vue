@@ -13,6 +13,7 @@
               height="256px"
             />
           </div>
+          <!--
           <div class="row center">
             <label class="btn green" for="file">
               Escolher
@@ -26,6 +27,7 @@
               onchange="EnviarArquivo('aluno-foto-arquivo', 'aluno-foto-imagem', '/alunos/')"
             />
           </div>
+          -->
           <div class="row">
             <div class="input-field col s4">
               <input

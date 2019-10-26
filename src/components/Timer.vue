@@ -29,8 +29,19 @@ export default {
         let minutes = Math.floor((distance % oneHour) / oneMinute);
         let seconds = Math.floor((distance % oneMinute) / oneSecond);
 
-        this.now =
-          days + " D : " + hours + " H : " + minutes + " M : " + seconds + " S";
+        if (distance <= 0) {
+          this.now = "COMEÇOU, ESTAMOS AO VIVO!";
+        } else if (distance > 0) {
+          this.now =
+            days +
+            " D : " +
+            hours +
+            " H : " +
+            minutes +
+            " M : " +
+            seconds +
+            " S";
+        }
       }, 1000);
     }
   },
